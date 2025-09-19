@@ -30,6 +30,7 @@ class VariantSelects extends HTMLElement {
       this.updateVariantInput();
       this.renderProductInfo();
       this.updateShareUrl();
+      this.updateBadges();
     }
   }
 
@@ -108,6 +109,36 @@ class VariantSelects extends HTMLElement {
     const shareButton = document.getElementById(`Share-${this.dataset.section}`);
     if (!shareButton || !shareButton.updateUrl) return;
     shareButton.updateUrl(`${window.shopUrl}${this.dataset.url}?variant=${this.currentVariant.id}`);
+  }
+
+  updateBadges() {
+    if (!this.currentVariant) return;
+
+    const badgeContainer = document.querySelector('.badges');
+    if (!badgeContainer) return;
+
+    // Check if current variant is on sale
+    const isOnSale = this.currentVariant.compare_at_price &&
+                     this.currentVariant.compare_at_price > 0 &&
+                     this.currentVariant.compare_at_price > this.currentVariant.price;
+
+    // Find existing sale badge
+    let saleBadge = badgeContainer.querySelector('.badge.sale');
+
+    if (isOnSale && !saleBadge) {
+      // Create and add sale badge
+      saleBadge = document.createElement('span');
+      saleBadge.className = 'badge sale';
+      saleBadge.style.cssText = `
+        --text-color: var(--badge-sale-foreground, #ffffff);
+        --background-color: var(--badge-sale-background, #e74c3c);
+      `;
+      saleBadge.textContent = 'Sale'; // Will use translation if available
+      badgeContainer.appendChild(saleBadge);
+    } else if (!isOnSale && saleBadge) {
+      // Remove sale badge
+      saleBadge.remove();
+    }
   }
 
   updateVariantInput() {
@@ -261,13 +292,6 @@ class VariantSelects extends HTMLElement {
         if (skuSource && skuDestination) {
           skuDestination.innerHTML = skuSource.innerHTML;
           skuDestination.classList.toggle('hidden', skuSource.classList.contains('hidden'));
-        }
-
-        // Update badges based on selected variant
-        const badgeSource = html.querySelector('.badges');
-        const badgeDestination = document.querySelector('.badges');
-        if (badgeSource && badgeDestination) {
-          badgeDestination.innerHTML = badgeSource.innerHTML;
         }
 
         const price = document.getElementById(`price-${this.dataset.section}`);
