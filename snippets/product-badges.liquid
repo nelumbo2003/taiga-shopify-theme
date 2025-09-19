@@ -14,18 +14,17 @@
   endif
 
   assign is_sale = false
-  assign variant_to_check = current_variant | default: product.selected_or_first_available_variant
-  if variant_to_check and variant_to_check.compare_at_price != blank and variant_to_check.compare_at_price != nil and variant_to_check.compare_at_price > 0 and variant_to_check.compare_at_price > variant_to_check.price
+  if product.compare_at_price_max > product.price_min
     assign is_sale = true
     assign show_badges = true
   endif
 
   assign is_sold_out = false
-  if variant_to_check.inventory_management == 'shopify' and variant_to_check.inventory_policy == 'deny' and variant_to_check.inventory_quantity <= 0
+  if current_variant.inventory_management == 'shopify' and current_variant.inventory_policy == 'deny' and current_variant.inventory_quantity <= 0
     assign is_sold_out = true
     assign show_badges = true
   endif
-  if variant_to_check.available == false
+  if product.available == false
     assign is_sold_out = true
     assign show_badges = true
   endif
@@ -43,24 +42,16 @@
   endif
 -%}
 
-{%- comment -%} Always render badges for JavaScript show/hide functionality {%- endcomment -%}
+{%- if show_badges -%}
   <div class="badges">
-    {%- comment -%} Sale badge - always rendered but with conditional visibility {%- endcomment -%}
-    <span class="badge sale{% unless is_sale == true %} badge--hidden{% endunless %}" style="
-      --text-color: {{ settings.badge_sale_foreground }};
-      --background-color: {{ settings.badge_sale_background }};
-      ">
-      {{ 'products.product.badges.on_sale' | t }}
-    </span>
-
-    {%- comment -%} Sold out badge - always rendered but with conditional visibility {%- endcomment -%}
-    <span class="badge soldout{% unless is_sold_out == true %} badge--hidden{% endunless %}" style="
-      --text-color: {{ settings.badge_sold_out_foreground }};
-      --background-color: {{ settings.badge_sold_out_background }};
-      ">
-      {{ 'products.product.badges.soldout' | t }}
-    </span>
-
+    {%- if is_sale == true -%}
+      <span class="badge sale" style="
+        --text-color: {{ settings.badge_sale_foreground }};
+        --background-color: {{ settings.badge_sale_background }};
+        ">
+        {{ 'products.product.badges.on_sale' | t }}
+      </span>
+    {%- endif -%}
     {%- if is_preorder == true -%}
       <span class="badge preorder" style="
         --text-color: {{ settings.badge_preorder_foreground }};
@@ -77,5 +68,14 @@
         {{ 'products.product.badges.new' | t }}
       </span>
     {%- endif -%}
+    {%- if is_sold_out == true -%}
+      <span class="badge soldout" style="
+        --text-color: {{ settings.badge_sold_out_foreground }};
+        --background-color: {{ settings.badge_sold_out_background }};
+        ">
+        {{ 'products.product.badges.soldout' | t }}
+      </span>
+    {%- endif -%}
     {{ custom_badges_html }}
   </div>
+{%- endif -%}

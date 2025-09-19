@@ -151,6 +151,31 @@
           "preselect_variant": true
         }
       },
+      "3953314366958760213": {
+        "type": "shopify://apps/conversagent/blocks/gqa-embed/9dcb9616-f02a-40f7-b434-36f4866f2140",
+        "disabled": false,
+        "settings": {
+          "gqa_agentName": "Anna",
+          "gqa_agentTagLine": "AI Assistant",
+          "gqa_theme_badgeBg": "#479e96",
+          "gqa_theme_badgeIconColor": "#555555",
+          "gqa_launchBottom": 10,
+          "gqa_launchRight": 20,
+          "gqa_launchDelay": 2,
+          "gqa_isGreetingsEnabled": false,
+          "gqa_greetingsDelay": 10,
+          "gqa_isSearchSuggestion": false,
+          "gqa_theme_bodyBg": "#ffffff",
+          "gqa_theme_bodyBorderColor": "#bfbfbf",
+          "gqa_theme_msgBubbleUserBg": "#479e96",
+          "gqa_theme_msgBubbleUserTextColor": "#ffffff",
+          "gqa_theme_msgBubbleAgentBg": "#f0f0f0",
+          "gqa_theme_msgBubbleAgentTextColor": "#000000",
+          "gqa_theme_headerBg": "#c5c5c5",
+          "gqa_theme_headerTextColor": "#000000",
+          "gqa_customCSS": ""
+        }
+      },
       "5043070786800498925": {
         "type": "shopify://apps/ecomsend-restock/blocks/bis-switch/b190bced-3b7b-47da-a05f-6ea4821c3a77",
         "disabled": false,
@@ -185,35 +210,6 @@
           "customSearchTemplateLoader": "{%- capture searchTemplate -%}{% render 'globo.filter.search' %}{%- endcapture -%}{%- unless searchTemplate contains 'Liquid error' -%}<script id=\"gspfSearchResult\" type=\"template/html\">{{- searchTemplate | replace: \"script>\", \"scripttag>\" -}}</script>{%- endunless -%}",
           "customPaginationTemplateLoader": "{%- capture paginationTemplate -%}{% render 'globo.filter.pagination' %}{%- endcapture -%}{%- unless paginationTemplate contains 'Liquid error' -%}<script id=\"gspfPagination\" type=\"template/html\">{{- paginationTemplate | replace: \"script>\", \"scripttag>\" -}}</script>{%- endunless -%}",
           "customYMMTemplateLoader": "{%- capture YMMTemplate -%}{% render 'globo.filter.form' %}{%- endcapture -%}{%- unless YMMTemplate contains 'Liquid error' -%}<script id=\"gspfForm\" type=\"template/html\">{{- YMMTemplate | replace: \"script>\", \"scripttag>\" -}}</script>{%- endunless -%}"
-        }
-      },
-      "3953314366958760213": {
-        "type": "shopify://apps/conversagent/blocks/gqa-embed/9dcb9616-f02a-40f7-b434-36f4866f2140",
-        "disabled": false,
-        "settings": {
-          "gqa_agentName": "Anna",
-          "gqa_agentTagLine": "AI Assistant",
-          "gqa_theme_badgeBg": "#479e96",
-          "gqa_theme_badgeIconColor": "#555555",
-          "gqa_launchStyle": "image",
-          "gqa_launchBottom": 10,
-          "gqa_launchRight": 10,
-          "gqa_launchDelay": 2,
-          "gqa_isGreetingsEnabled": false,
-          "gqa_greetingsDelay": 10,
-          "gqa_isSearchSuggestion": false,
-          "gqa_theme_setting": "cb",
-          "gqa_theme_color": "CUSTOM",
-          "gqa_theme_bodyBg": "#ffffff",
-          "gqa_theme_bodyBorderColor": "#bfbfbf",
-          "gqa_theme_msgBubbleUserBg": "#479e96",
-          "gqa_theme_msgBubbleUserTextColor": "#ffffff",
-          "gqa_theme_msgBubbleAgentBg": "#f0f0f0",
-          "gqa_theme_msgBubbleAgentTextColor": "#000000",
-          "gqa_theme_headerBg": "#c5c5c5",
-          "gqa_theme_headerTextColor": "#000000",
-          "gqa_loading_style": "default",
-          "gqa_customCSS": ""
         }
       }
     },

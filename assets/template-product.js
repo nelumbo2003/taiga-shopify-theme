@@ -30,7 +30,6 @@ class VariantSelects extends HTMLElement {
       this.updateVariantInput();
       this.renderProductInfo();
       this.updateShareUrl();
-      this.updateBadges();
     }
   }
 
@@ -109,36 +108,6 @@ class VariantSelects extends HTMLElement {
     const shareButton = document.getElementById(`Share-${this.dataset.section}`);
     if (!shareButton || !shareButton.updateUrl) return;
     shareButton.updateUrl(`${window.shopUrl}${this.dataset.url}?variant=${this.currentVariant.id}`);
-  }
-
-  updateBadges() {
-    if (!this.currentVariant) return;
-
-    const saleBadge = document.querySelector('.badge.sale');
-    const soldOutBadge = document.querySelector('.badge.soldout');
-
-    if (!saleBadge || !soldOutBadge) return;
-
-    // Check variant status
-    const isOnSale = this.currentVariant.compare_at_price &&
-                     this.currentVariant.compare_at_price > 0 &&
-                     this.currentVariant.compare_at_price > this.currentVariant.price;
-    const isSoldOut = !this.currentVariant.available;
-
-    // Handle sold out badge (priority over sale)
-    if (isSoldOut) {
-      soldOutBadge.classList.remove('badge--hidden');
-      saleBadge.classList.add('badge--hidden'); // Hide sale badge when sold out
-    } else {
-      soldOutBadge.classList.add('badge--hidden');
-
-      // Handle sale badge (only when not sold out)
-      if (isOnSale) {
-        saleBadge.classList.remove('badge--hidden');
-      } else {
-        saleBadge.classList.add('badge--hidden');
-      }
-    }
   }
 
   updateVariantInput() {
@@ -447,151 +416,40 @@ class VariantRadios extends VariantSelects {
 
 customElements.define('variant-radios', VariantRadios);
 
-class FloatingAddToCart {
+class ProductBuyBar extends HTMLElement {
   constructor() {
-    this.floatingButton = document.querySelector('.floating-add-to-cart');
-    this.addToCartBtn = document.querySelector('.floating-add-to-cart-btn');
-    this.cartBadge = document.querySelector('.cart-count-badge');
-    this.productForm = document.querySelector('.product-form');
+    "use strict";
+    super();
 
-    if (this.addToCartBtn && this.productForm) {
-      this.init();
-    }
-  }
+    let classes = { show: "show" };
+    let mainProductForm = document.querySelector(".product-form");
 
-  init() {
-    // Add click event listener to floating button
-    this.addToCartBtn.addEventListener('click', this.handleAddToCart.bind(this));
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // In view -> Hide bar
+            this.classList.remove(classes.show);
+          } else if (window.scrollY > 200) {
+            // Out of view AND scrolled a little from top -> Show bar
+            this.classList.add(classes.show);
+          }
+        });
+      },
+      { threshold: 0.25 }
+    );
 
-    // Listen for cart updates using same events as header cart blip
-    document.addEventListener('ajaxProduct:added', this.updateCartBadge.bind(this));
-    document.addEventListener('cart:update', this.updateCartBadge.bind(this));
+    observer.observe(mainProductForm);
 
-    // Trigger entrance animation after a short delay
-    this.showEntranceAnimation();
-  }
-
-  async handleAddToCart(evt) {
-    evt.preventDefault();
-
-    if (this.addToCartBtn.disabled) return;
-
-    // Get current variant from main product form
-    const variantInput = this.productForm.querySelector('[name="id"]');
-    const quantityInput = this.productForm.querySelector('[name="quantity"]') || { value: 1 };
-
-    if (!variantInput || !variantInput.value) {
-      console.error('No variant selected');
-      return;
-    }
-
-    // Disable button and show loading state
-    this.addToCartBtn.disabled = true;
-    this.addToCartBtn.style.opacity = '0.7';
-
-    try {
-      const formData = new FormData();
-      formData.append('id', variantInput.value);
-      formData.append('quantity', quantityInput.value || 1);
-
-      const response = await fetch(window.routes.cart_add_url + '.js', {
-        method: 'POST',
-        headers: {
-          'X-Requested-With': 'XMLHttpRequest',
-        },
-        body: formData
-      });
-
-      if (response.ok) {
-        const result = await response.json();
-        this.onAddToCartSuccess(result);
-      } else {
-        const error = await response.json();
-        this.onAddToCartError(error);
-      }
-    } catch (error) {
-      console.error('Add to cart error:', error);
-      this.onAddToCartError(error);
-    } finally {
-      // Re-enable button
-      this.addToCartBtn.disabled = false;
-      this.addToCartBtn.style.opacity = '1';
-    }
-  }
-
-  onAddToCartSuccess(item) {
-    // Trigger the same event that existing cart system uses
-    document.dispatchEvent(new CustomEvent('ajaxProduct:added', { detail: item }));
-
-    // Show brief success feedback
-    this.showSuccessFeedback();
-
-    // Open cart drawer to show the added item
-    this.openCartDrawer();
-  }
-
-  onAddToCartError(error) {
-    console.error('Failed to add to cart:', error);
-    // Could show error feedback here
-  }
-
-  async updateCartBadge(e) {
-    // Use exact same logic as header cart blip in global.js
-    const cart = e.detail && e.detail.cart && e.detail.cart.item_count || await (async function () {
-      const res = await fetch('/cart.json');
-      const cart = await res.json();
-      return cart;
-    })();
-
-    if (this.cartBadge) {
-      this.cartBadge.textContent = cart.item_count || 0;
-      if (cart && cart.item_count == 0) {
-        this.cartBadge.setAttribute('hidden', true);
-      } else {
-        this.cartBadge.removeAttribute('hidden');
-      }
-    }
-  }
-
-  openCartDrawer() {
-    // Find the cart link and trigger it to open the drawer
-    const cartLink = document.querySelector('a[href="#drawer-cart"]');
-    if (cartLink) {
-      cartLink.click();
-    } else {
-      // Fallback: directly trigger drawer opening
-      const drawer = document.getElementById('drawer-cart');
-      if (drawer) {
-        drawer.classList.add('is-open');
-        drawer.style.opacity = '1';
-        drawer.style.display = 'block';
-        document.body.classList.add('overflow-hidden');
-      }
-    }
-  }
-
-  showEntranceAnimation() {
-    // Smooth entrance animation with delay for better page load experience
-    setTimeout(() => {
-      if (this.floatingButton) {
-        this.floatingButton.classList.add('show');
-      }
-    }, 300); // 300ms delay after DOM ready
-  }
-
-  showSuccessFeedback() {
-    // Brief scale animation to show success
-    this.addToCartBtn.style.transform = 'scale(1.2)';
-    setTimeout(() => {
-      this.addToCartBtn.style.transform = '';
-    }, 200);
+    // This script is loaded in product-template.liquid --> Footer observer after DOM ready
+    document.addEventListener("DOMContentLoaded", function () {
+      let siteFooter = document.querySelector("footer.footer");
+      if (!siteFooter) return;
+      observer.observe(siteFooter);
+    });
   }
 }
-
-// Initialize floating add to cart when DOM is ready
-document.addEventListener('DOMContentLoaded', () => {
-  new FloatingAddToCart();
-});
+customElements.define("product-buy-bar", ProductBuyBar);
 
 class UpsellCard extends HTMLElement {
   constructor() {

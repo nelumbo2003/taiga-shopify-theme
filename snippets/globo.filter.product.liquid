@@ -10,41 +10,17 @@
   {%- assign featured_image            = product.featured_image -%}
   {%- assign product_price             = product.price -%}
   {%- assign product_compare_at_price  = product.compare_at_price -%}
-
-  {%- comment -%} Find first available (in-stock) variant instead of just first available {%- endcomment -%}
-  {%- assign selected_or_first_available_variant = null -%}
-  {%- for variant in product.variants -%}
-    {%- if variant.available -%}
-      {%- assign selected_or_first_available_variant = variant -%}
-      {%- break -%}
-    {%- endif -%}
-  {%- endfor -%}
-
-  {%- comment -%} Fallback to product's first available variant if no in-stock variant found {%- endcomment -%}
-  {%- unless selected_or_first_available_variant -%}
-    {%- assign selected_or_first_available_variant = product.selected_or_first_available_variant -%}
-  {%- endunless -%}
-
+  {%- assign selected_or_first_available_variant = product.selected_or_first_available_variant -%}
   {%- assign variant_url = '' -%}
-  {%- if selected_or_first_available_variant -%}
-    {%- assign variant_url = '?variant=' | append: selected_or_first_available_variant.id -%}
+    {%- if product.selected_or_first_available_variant -%}
+    {%- assign variant_url = '?variant=' | append: product.selected_or_first_available_variant.id -%}
   {%- endif -%}
-
-  {% if product.selected_variant %}
+      {% if product.selected_variant %}
     {% assign selected_or_first_available_variant = product.selected_variant %}
     {% assign product_price             = selected_or_first_available_variant.price %}
     {% assign product_compare_at_price  = selected_or_first_available_variant.compare_at_price %}
     {% if selected_or_first_available_variant.image %}
       {% assign featured_image = selected_or_first_available_variant.image %}
-    {% endif %}
-  {% else %}
-    {%- comment -%} Use the first in-stock variant's data {%- endcomment -%}
-    {% if selected_or_first_available_variant %}
-      {% assign product_price             = selected_or_first_available_variant.price %}
-      {% assign product_compare_at_price  = selected_or_first_available_variant.compare_at_price %}
-      {% if selected_or_first_available_variant.image %}
-        {% assign featured_image = selected_or_first_available_variant.image %}
-      {% endif %}
     {% endif %}
   {% endif %}
               {%- assign images_count = product.images | size -%}

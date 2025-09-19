@@ -119,7 +119,7 @@
   assign badges_block = section.blocks | where: 'type', 'badges' | first
   if badges_block
     capture the_badges
-      render 'product-badges', product: product, current_variant: product.selected_or_first_available_variant
+      render 'product-badges', product: product
     endcapture
   endif
 

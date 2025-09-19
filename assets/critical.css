@@ -1735,9 +1735,6 @@ a:focus-visible > .media img {
   padding: 0.6rem 1.2rem;
   line-height: 1;
 }
-.badge--hidden {
-  display: none !important;
-}
 
 /* Extra typography */
 .link-list-heading {
