@@ -263,6 +263,13 @@ class VariantSelects extends HTMLElement {
           skuDestination.classList.toggle('hidden', skuSource.classList.contains('hidden'));
         }
 
+        // Update badges based on selected variant
+        const badgeSource = html.querySelector('.badges');
+        const badgeDestination = document.querySelector('.badges');
+        if (badgeSource && badgeDestination) {
+          badgeDestination.innerHTML = badgeSource.innerHTML;
+        }
+
         const price = document.getElementById(`price-${this.dataset.section}`);
 
         if (price) price.classList.remove('hidden');
