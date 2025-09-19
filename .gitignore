@@ -1,7 +1,3 @@
-# Shopify theme files to ignore
-# NOTE: We include settings_data.json to preserve theme configuration
-# config/settings_data.json
-
 # OS generated files
 .DS_Store
 .DS_Store?
@@ -11,28 +7,8 @@
 ehthumbs.db
 Thumbs.db
 
-# IDE files
+# IDE files (optional - you can remove these if you want to include IDE settings)
 .vscode/
 .idea/
 *.sublime-project
 *.sublime-workspace
-
-# Node modules (if using build tools)
-node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Environment files
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# Build outputs
-dist/
-build/
-
-# Logs
-*.log
