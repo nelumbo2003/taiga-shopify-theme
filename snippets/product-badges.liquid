@@ -21,11 +21,11 @@
   endif
 
   assign is_sold_out = false
-  if current_variant.inventory_management == 'shopify' and current_variant.inventory_policy == 'deny' and current_variant.inventory_quantity <= 0
+  if variant_to_check.inventory_management == 'shopify' and variant_to_check.inventory_policy == 'deny' and variant_to_check.inventory_quantity <= 0
     assign is_sold_out = true
     assign show_badges = true
   endif
-  if product.available == false
+  if variant_to_check.available == false
     assign is_sold_out = true
     assign show_badges = true
   endif
@@ -43,7 +43,7 @@
   endif
 -%}
 
-{%- if show_badges or settings.product_card_badges -%}
+{%- comment -%} Always render badges for JavaScript show/hide functionality {%- endcomment -%}
   <div class="badges">
     {%- comment -%} Sale badge - always rendered but with conditional visibility {%- endcomment -%}
     <span class="badge sale{% unless is_sale == true %} badge--hidden{% endunless %}" style="
@@ -79,4 +79,3 @@
     {%- endif -%}
     {{ custom_badges_html }}
   </div>
-{%- endif -%}
