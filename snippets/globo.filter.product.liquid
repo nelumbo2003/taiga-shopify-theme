@@ -60,40 +60,17 @@
         <a class="spf-product-card__image-wrapper" href="{{root_url}}{{ product.url }}{{variant_url}}" style="padding-top:140%;">
             {%- if images_count > 0 -%}
             {%- for image in product.images -%}
-              {%- comment -%} Only show images that are associated with available variants or have no variant association {%- endcomment -%}
-              {%- assign show_image = false -%}
-
-              {%- if image.variant_ids.size == 0 -%}
-                {%- comment -%} Show images that aren't associated with specific variants {%- endcomment -%}
-                {%- assign show_image = true -%}
-              {%- else -%}
-                {%- comment -%} Check if this image is associated with any available variants {%- endcomment -%}
-                {%- for variant_id in image.variant_ids -%}
-                  {%- for variant in product.variants -%}
-                    {%- if variant.id == variant_id and variant.available -%}
-                      {%- assign show_image = true -%}
-                      {%- break -%}
-                    {%- endif -%}
-                  {%- endfor -%}
-                  {%- if show_image -%}
-                    {%- break -%}
-                  {%- endif -%}
-                {%- endfor -%}
-              {%- endif -%}
-
-              {%- if show_image -%}
-                <img
-                  data-variants="{% if image.variant_ids %}{{image.variant_ids | join: ','}}{% endif %}"
-                  class="gflazyload spf-product-card__image spf-product-card__image-{% if featured_image.id == image.id %}main{% elsif image.id == product.second_image.id %}secondary{% else %}hidden{% endif %}"
-                  srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                  src="{{image.src | img_url: image_size}}"
-                  data-src="{{image.src | img_lazyload_url}}"
-                  data-sizes="auto"
-                  data-aspectratio="{{image.aspect_ratio}}"
-                  data-parent-fit="contain"
-                  alt="{{image.alt | escape}}"
-                />
-              {%- endif -%}
+              <img
+                data-variants="{% if image.variant_ids %}{{image.variant_ids | join: ','}}{% endif %}"
+                class="gflazyload spf-product-card__image spf-product-card__image-{% if featured_image.id == image.id %}main{% elsif image.id == product.second_image.id %}secondary{% else %}hidden{% endif %}"
+                srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                src="{{image.src | img_url: image_size}}"
+                data-src="{{image.src | img_lazyload_url}}"
+                data-sizes="auto"
+                data-aspectratio="{{image.aspect_ratio}}"
+                data-parent-fit="contain"
+                alt="{{image.alt | escape}}"
+              />
             {%- endfor -%}
             {% else %}
             <img data-variants="" class="gflazyload spf-product-card__image spf-product-card__image-main" src="{{no_image}}" alt="{{product.title | escape}}">
@@ -148,11 +125,8 @@
         </div>
                 <form class="spf-product__form" action="{{ root_url }}/cart/add" method="post">
             <select name="id" class="spf-product__variants">
-            {%- comment -%} Only show available (in-stock) variants {%- endcomment -%}
             {%- for variant in product.variants -%}
-              {%- if variant.available -%}
-                <option data-option1="{{variant.option1 | escape}}" data-option2="{{variant.option2 | escape}}" data-option3="{{variant.option3 | escape}}" data-price="{{variant.price}}" data-compare_at_price="{{variant.compare_at_price}}" data-available="{{variant.available}}" data-image="{% if variant.image.src %}{{variant.image.src | img_url: image_size }}{% endif %}" {% if variant.id == selected_or_first_available_variant.id %} selected="selected" {% endif %} value="{{ variant.id }}">{{ variant.title }}</option>
-              {%- endif -%}
+            <option data-option1="{{variant.option1 | escape}}" data-option2="{{variant.option2 | escape}}" data-option3="{{variant.option3 | escape}}" data-price="{{variant.price}}" data-compare_at_price="{{variant.compare_at_price}}" data-available="{{variant.available}}" data-image="{% if variant.image.src %}{{variant.image.src | img_url: image_size }}{% endif %}" {% if variant.id == selected_or_first_available_variant.id %} selected="selected" {% endif %} value="{{ variant.id }}">{{ variant.title }}</option>
             {%- endfor -%}
             </select>
                                 </form>
