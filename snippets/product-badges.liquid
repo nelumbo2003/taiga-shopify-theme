@@ -15,7 +15,7 @@
 
   assign is_sale = false
   assign variant_to_check = current_variant | default: product.selected_or_first_available_variant
-  if variant_to_check and variant_to_check.compare_at_price and variant_to_check.compare_at_price > variant_to_check.price
+  if variant_to_check and variant_to_check.compare_at_price != blank and variant_to_check.compare_at_price != nil and variant_to_check.compare_at_price > 0 and variant_to_check.compare_at_price > variant_to_check.price
     assign is_sale = true
     assign show_badges = true
   endif
