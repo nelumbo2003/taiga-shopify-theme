@@ -114,30 +114,30 @@ class VariantSelects extends HTMLElement {
   updateBadges() {
     if (!this.currentVariant) return;
 
-    const badgeContainer = document.querySelector('.badges');
-    if (!badgeContainer) return;
+    const saleBadge = document.querySelector('.badge.sale');
+    const soldOutBadge = document.querySelector('.badge.soldout');
 
-    // Check if current variant is on sale
+    if (!saleBadge || !soldOutBadge) return;
+
+    // Check variant status
     const isOnSale = this.currentVariant.compare_at_price &&
                      this.currentVariant.compare_at_price > 0 &&
                      this.currentVariant.compare_at_price > this.currentVariant.price;
+    const isSoldOut = !this.currentVariant.available;
 
-    // Find existing sale badge
-    let saleBadge = badgeContainer.querySelector('.badge.sale');
+    // Handle sold out badge (priority over sale)
+    if (isSoldOut) {
+      soldOutBadge.classList.remove('badge--hidden');
+      saleBadge.classList.add('badge--hidden'); // Hide sale badge when sold out
+    } else {
+      soldOutBadge.classList.add('badge--hidden');
 
-    if (isOnSale && !saleBadge) {
-      // Create and add sale badge
-      saleBadge = document.createElement('span');
-      saleBadge.className = 'badge sale';
-      saleBadge.style.cssText = `
-        --text-color: var(--badge-sale-foreground, #ffffff);
-        --background-color: var(--badge-sale-background, #e74c3c);
-      `;
-      saleBadge.textContent = 'Sale'; // Will use translation if available
-      badgeContainer.appendChild(saleBadge);
-    } else if (!isOnSale && saleBadge) {
-      // Remove sale badge
-      saleBadge.remove();
+      // Handle sale badge (only when not sold out)
+      if (isOnSale) {
+        saleBadge.classList.remove('badge--hidden');
+      } else {
+        saleBadge.classList.add('badge--hidden');
+      }
     }
   }
 

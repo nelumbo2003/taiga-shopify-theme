@@ -43,16 +43,24 @@
   endif
 -%}
 
-{%- if show_badges -%}
+{%- if show_badges or settings.product_card_badges -%}
   <div class="badges">
-    {%- if is_sale == true -%}
-      <span class="badge sale" style="
-        --text-color: {{ settings.badge_sale_foreground }};
-        --background-color: {{ settings.badge_sale_background }};
-        ">
-        {{ 'products.product.badges.on_sale' | t }}
-      </span>
-    {%- endif -%}
+    {%- comment -%} Sale badge - always rendered but with conditional visibility {%- endcomment -%}
+    <span class="badge sale{% unless is_sale == true %} badge--hidden{% endunless %}" style="
+      --text-color: {{ settings.badge_sale_foreground }};
+      --background-color: {{ settings.badge_sale_background }};
+      ">
+      {{ 'products.product.badges.on_sale' | t }}
+    </span>
+
+    {%- comment -%} Sold out badge - always rendered but with conditional visibility {%- endcomment -%}
+    <span class="badge soldout{% unless is_sold_out == true %} badge--hidden{% endunless %}" style="
+      --text-color: {{ settings.badge_sold_out_foreground }};
+      --background-color: {{ settings.badge_sold_out_background }};
+      ">
+      {{ 'products.product.badges.soldout' | t }}
+    </span>
+
     {%- if is_preorder == true -%}
       <span class="badge preorder" style="
         --text-color: {{ settings.badge_preorder_foreground }};
@@ -67,14 +75,6 @@
         --background-color: {{ settings.badge_new_background }};
         ">
         {{ 'products.product.badges.new' | t }}
-      </span>
-    {%- endif -%}
-    {%- if is_sold_out == true -%}
-      <span class="badge soldout" style="
-        --text-color: {{ settings.badge_sold_out_foreground }};
-        --background-color: {{ settings.badge_sold_out_background }};
-        ">
-        {{ 'products.product.badges.soldout' | t }}
       </span>
     {%- endif -%}
     {{ custom_badges_html }}
