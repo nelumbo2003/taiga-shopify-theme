@@ -1,5 +1,6 @@
 # Shopify theme files to ignore
-config/settings_data.json
+# NOTE: We include settings_data.json to preserve theme configuration
+# config/settings_data.json
 
 # OS generated files
 .DS_Store
