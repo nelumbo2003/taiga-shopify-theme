@@ -16,11 +16,12 @@
       class="the-buy-bar col-12 col-sm-10 col-sm-offset-2 col-md-6 col-md-offset-4"
       style="--border-radius: {{ buy_bar_br | append: 'px;' }}; gap: 2.4rem;">
 
-      <button class="buy-bar-close" type="button" aria-label="Close buy bar">
-        {% render 'icon-close' %}
-      </button>
+      <div class="buy-bar-content">
+        <button class="buy-bar-close" type="button" aria-label="Close buy bar">
+          {% render 'icon-close' %}
+        </button>
 
-      <div class="image-and-titles flex vertical-center" style="gap: 1.2rem">
+        <div class="image-and-titles flex vertical-center" style="gap: 1.2rem">
         {%- if buy_bar_image != blank -%}
           <figure class="media contain square">
             {{ buy_bar_image | image_url: width: '160' | image_tag: loading: 'lazy' }}
@@ -71,6 +72,7 @@
 
         {%- endform -%}
       </product-form>
+      </div>
     </div>
   </div>
 </product-buy-bar>
