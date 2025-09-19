@@ -1,0 +1,300 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "",
+        "heading_text_align": "text-align-left",
+        "sm_size_multiplier": "sm-size--default",
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "size_multiplier": "size--default",
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
+    },
+    "095a8ed9-10ab-4aaf-bd0e-b0f126f14d05": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20073004990811__095a8ed9-10ab-4aaf-bd0e-b0f126f14d05-subtitle-1": {
+          "type": "subtitle",
+          "disabled": true,
+          "settings": {
+            "subtitle": "Subheading",
+            "heading_tag": "h3",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "template--20073004990811__095a8ed9-10ab-4aaf-bd0e-b0f126f14d05-title-1": {
+          "type": "title",
+          "settings": {
+            "title": "FREQUENTLY ASKED QUESTIONS (FAQ)",
+            "heading_tag": "h2",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "template--20073004990811__095a8ed9-10ab-4aaf-bd0e-b0f126f14d05-text-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Tell more about your products or brand or use this section to tell more about a single product on the product template. Use content and layout options to fit your preferences.</p>",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "template--20073004990811__095a8ed9-10ab-4aaf-bd0e-b0f126f14d05-buttons-1": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_1": "",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "",
+            "button_label_3": "",
+            "button_link_3": "",
+            "button_style_3": "",
+            "sm_full_width_buttons": false,
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 24,
+            "full_width_buttons": false,
+            "size_multiplier": "size--default",
+            "margin_top": 24
+          }
+        }
+      },
+      "block_order": [
+        "template--20073004990811__095a8ed9-10ab-4aaf-bd0e-b0f126f14d05-subtitle-1",
+        "template--20073004990811__095a8ed9-10ab-4aaf-bd0e-b0f126f14d05-title-1",
+        "template--20073004990811__095a8ed9-10ab-4aaf-bd0e-b0f126f14d05-text-1",
+        "template--20073004990811__095a8ed9-10ab-4aaf-bd0e-b0f126f14d05-buttons-1"
+      ],
+      "settings": {
+        "color_scheme": "color-main",
+        "text_gradient_color": "",
+        "content_width": 100,
+        "desktop_content_alignment": "center",
+        "desktop_alignment": "sm-text-align-center",
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "mobile_alignment": "text-align-left",
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "bf07d7ee-c497-4064-bf33-6746f69cd589": {
+      "type": "faq",
+      "blocks": {
+        "template--20073004990811__bf07d7ee-c497-4064-bf33-6746f69cd589-text-1": {
+          "type": "text",
+          "settings": {
+            "title": "PLACING AN ORDER",
+            "text": ""
+          }
+        },
+        "template--20073004990811__bf07d7ee-c497-4064-bf33-6746f69cd589-question-1": {
+          "type": "question",
+          "settings": {
+            "title": "How do I find the right size?",
+            "text": "<p>Size charts on the product pages will help you choose the right size. In general, the size charts are based on body measurements unless otherwise stated. Please compare the measurement chart with your own body measurements. Also, product descriptions and reviews may mention the fit of the product. If you are still wondering about the right size, you can always send us a message at <strong>info@weekendbee.com</strong>, we will be happy to help!</p>"
+          }
+        },
+        "template--20073004990811__bf07d7ee-c497-4064-bf33-6746f69cd589-question-2": {
+          "type": "question",
+          "settings": {
+            "title": "Can I still cancel or make changes to my order?",
+            "text": "<p>You can send us a message immediately after placing your order at <strong>info@weekendbee.com </strong>and if your shipment has not yet left our warehouse, we may still be able to make some changes.<br/><br/>It is not possible to change the delivery address of an order after the order has been shipped.</p>"
+          }
+        },
+        "8a918ffd-3e72-4b80-b2d6-8976840afb17": {
+          "type": "question",
+          "settings": {
+            "title": "Can I combine my two orders?",
+            "text": "<p>If you wish to combine two existing orders or add products to your order, please send us an email at <strong>info@weekendbee.com</strong>. If your order has not yet left our warehouse we may still be able to make changes to your order.</p>"
+          }
+        },
+        "70660881-e704-4d4f-ad15-94b68d888177": {
+          "type": "question",
+          "settings": {
+            "title": "What is the delivery time for my order?",
+            "text": "<p>You can find our country-specific delivery times <a href=\"https://www.weekendbee.com/pages/shipping-methods-prices\" title=\"https://www.weekendbee.com/pages/shipping-methods-prices\">here.</a></p><p>Once your order has been shipped, you can also track the progress of your order with the tracking code that you will receive with the delivery confirmation.</p>"
+          }
+        },
+        "42d97538-0958-46c9-9751-0cda2b19cfe2": {
+          "type": "question",
+          "settings": {
+            "title": "My gift card is not working, what should I do?",
+            "text": "<p>If your gift card does not work when you try to enter it into your order, please contact our customer service by email info@weekendbee.com<br/>Please include your gift card code in the message and we will check the situation.</p>"
+          }
+        },
+        "dc1c8b91-dc90-4d2f-b0ad-96a5d769ad33": {
+          "type": "question",
+          "settings": {
+            "title": "I don't have time to collect my parcell, what should I do?",
+            "text": "<p>If the parcel cannot be picked up or you were not present at the time of delivery, it will be automatically returned to our warehouse. If you still want the products you ordered, please contact us by email at <strong>info@weekendbee.com</strong></p>"
+          }
+        },
+        "8e32de4c-6d99-4be5-b37c-46633bcbdf57": {
+          "type": "question",
+          "settings": {
+            "title": "There was an error in the product I ordered, what should I do?",
+            "text": "<p>Please contact us immediately by email at <strong>info@weekendbee.com </strong>and include a photo and details of the defect in your message. We will endeavour to resolve complaints as soon as possible.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--20073004990811__bf07d7ee-c497-4064-bf33-6746f69cd589-text-1",
+        "template--20073004990811__bf07d7ee-c497-4064-bf33-6746f69cd589-question-1",
+        "template--20073004990811__bf07d7ee-c497-4064-bf33-6746f69cd589-question-2",
+        "8a918ffd-3e72-4b80-b2d6-8976840afb17",
+        "70660881-e704-4d4f-ad15-94b68d888177",
+        "42d97538-0958-46c9-9751-0cda2b19cfe2",
+        "dc1c8b91-dc90-4d2f-b0ad-96a5d769ad33",
+        "8e32de4c-6d99-4be5-b37c-46633bcbdf57"
+      ],
+      "settings": {
+        "color_scheme": "color-main",
+        "title_style": "h3",
+        "enable_full_width": false,
+        "media_position": "media_first",
+        "md_padding_top": 0,
+        "md_padding_bottom": 40,
+        "padding_top": 0,
+        "padding_bottom": 24
+      }
+    },
+    "1205d130-fb78-423d-8244-46a81265c3ba": {
+      "type": "faq",
+      "blocks": {
+        "template--20073004990811__1205d130-fb78-423d-8244-46a81265c3ba-text-1": {
+          "type": "text",
+          "settings": {
+            "title": "RETURNS",
+            "text": ""
+          }
+        },
+        "template--20073004990811__1205d130-fb78-423d-8244-46a81265c3ba-question-1": {
+          "type": "question",
+          "settings": {
+            "title": "How do I return a product?",
+            "text": "<p>You can find detailed country-specific return instructions on our website <a href=\"https://www.weekendbee.com/pages/returns-exchanges\" title=\"https://www.weekendbee.com/pages/returns-exchanges\">here.</a></p>"
+          }
+        },
+        "template--20073004990811__1205d130-fb78-423d-8244-46a81265c3ba-question-2": {
+          "type": "question",
+          "disabled": true,
+          "settings": {
+            "title": "How do I deal with a Klarna invoice in a refund situation?",
+            "text": "<p>If you chose to pay your order by Klarna invoice, you must notify Klarna of the return in the Klarna portal. In this case, your invoice will be put on hold and you will not have to pay the invoice yet.</p><p>Once the return has been processed by our warehouse, the invoice will be updated in Klarna and you can then pay the final invoice. If your entire order is returned, Klarna will invalidate the invoice. You will receive a confirmation email once your return has been processed. By logging in to the Klarna portal, you can also check whether your return has been received and download the updated invoice.</p><p>For more information, please visit the Klarna website (fin): https://www.klarna.com/fi/asiakaspalvelu/csc/toimitukset-ja-palautukset/https://www.klarna.com/fi/asiakaspalvelu/mita-laskulleni-tapahtuu-kun-olen-tehnyt-palautuksen/</p>"
+          }
+        },
+        "0095f2f7-26dd-4db4-9610-c9b2eba9ef5c": {
+          "type": "question",
+          "settings": {
+            "title": "Where can I find the return form?",
+            "text": "<p>You can find the return form for our online shop <a href=\"https://www.weekendbee.com/pages/returns-form\" title=\"https://www.weekendbee.com/pages/returns-form\">here.</a></p>"
+          }
+        },
+        "564e9c4e-8e6f-4d9d-961e-bc68e25f2987": {
+          "type": "question",
+          "settings": {
+            "title": "When will my return be processed?",
+            "text": "<p>Returns will take approximately <strong>2 weeks to process from the time the package arrives at our warehouse. </strong></p><p>Once the product is returned to our warehouse we will refund the cost of the return to the same payment method you used for the original order. You will receive a message from us when your return has been processed.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--20073004990811__1205d130-fb78-423d-8244-46a81265c3ba-text-1",
+        "template--20073004990811__1205d130-fb78-423d-8244-46a81265c3ba-question-1",
+        "template--20073004990811__1205d130-fb78-423d-8244-46a81265c3ba-question-2",
+        "0095f2f7-26dd-4db4-9610-c9b2eba9ef5c",
+        "564e9c4e-8e6f-4d9d-961e-bc68e25f2987"
+      ],
+      "settings": {
+        "color_scheme": "color-main",
+        "title_style": "h3",
+        "enable_full_width": false,
+        "media_position": "media_first",
+        "md_padding_top": 0,
+        "md_padding_bottom": 40,
+        "padding_top": 0,
+        "padding_bottom": 24
+      }
+    },
+    "c655b099-3060-478a-9113-0fdb115b33b0": {
+      "type": "faq",
+      "blocks": {
+        "template--20073004990811__c655b099-3060-478a-9113-0fdb115b33b0-text-1": {
+          "type": "text",
+          "settings": {
+            "title": "EXCHANGE",
+            "text": ""
+          }
+        },
+        "template--20073004990811__c655b099-3060-478a-9113-0fdb115b33b0-question-1": {
+          "type": "question",
+          "settings": {
+            "title": "I want to exchange a product, what do I do?",
+            "text": "<p>Fill our exchange/return form on our website and return the exchanged product in accordance with our return instructions.<br/><br/>After the return notification, our customer service will prepare a shopping cart for you for the product to be exchanged. After payment of the cart, we will send you the new product without delay.<br/><br/>Note! If you want to exchange the product for a completely different product (not a different size / color of the same product), make a return notice as a normal return and contact our customer service to place a new order if your original order had a discount code and you wish to use it on the exchange too. </p><p>Please note that we <strong>do not exchange products directly, you must always place a new order</strong>. Our customer service will send you an exchange order of the products you have indicated on exchange / return form within the next working day at the latest. </p><p><br/>The returned product(s) will be credited to your original order using the payment method you used when it is returned to our warehouse and our warehouse has processed the return.</p>"
+          }
+        },
+        "template--20073004990811__c655b099-3060-478a-9113-0fdb115b33b0-question-2": {
+          "type": "question",
+          "settings": {
+            "title": "Can I change the product to another size without a new transaction?",
+            "text": "<p>We do not exchange products directly, you must always place a new order. Our customer service will send you an exchange order of the products you have indicated on exchange / return form within the next working day at the latest.</p>"
+          }
+        },
+        "6665636f-7485-48a9-a5f2-748ca0be1d5f": {
+          "type": "question",
+          "settings": {
+            "title": "Does it cost to exchange the product?",
+            "text": "<p>You can find all the info about returns/exchanges <a href=\"https://www.weekendbee.com/pages/returns-exchanges\" target=\"_blank\" title=\"Returns & exchanges\">here!</a></p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--20073004990811__c655b099-3060-478a-9113-0fdb115b33b0-text-1",
+        "template--20073004990811__c655b099-3060-478a-9113-0fdb115b33b0-question-1",
+        "template--20073004990811__c655b099-3060-478a-9113-0fdb115b33b0-question-2",
+        "6665636f-7485-48a9-a5f2-748ca0be1d5f"
+      ],
+      "settings": {
+        "color_scheme": "color-main",
+        "title_style": "h3",
+        "enable_full_width": false,
+        "media_position": "media_first",
+        "md_padding_top": 0,
+        "md_padding_bottom": 40,
+        "padding_top": 0,
+        "padding_bottom": 24
+      }
+    }
+  },
+  "order": [
+    "main",
+    "095a8ed9-10ab-4aaf-bd0e-b0f126f14d05",
+    "bf07d7ee-c497-4064-bf33-6746f69cd589",
+    "1205d130-fb78-423d-8244-46a81265c3ba",
+    "c655b099-3060-478a-9113-0fdb115b33b0"
+  ]
+}

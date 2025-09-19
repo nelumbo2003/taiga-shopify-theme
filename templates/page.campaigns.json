@@ -1,0 +1,213 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "",
+        "heading_text_align": "text-align-left",
+        "sm_size_multiplier": "sm-size--default",
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "size_multiplier": "size--default",
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
+    },
+    "60173aac-a404-451c-9076-896115dc8537": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20144161554779__60173aac-a404-451c-9076-896115dc8537-subtitle-1": {
+          "type": "subtitle",
+          "settings": {
+            "subtitle": "Come and celebrate the opening of the POP UP store with us also online! All products with 20% discount.",
+            "heading_tag": "h2",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "template--20144161554779__60173aac-a404-451c-9076-896115dc8537-title-1": {
+          "type": "title",
+          "settings": {
+            "title": "",
+            "heading_tag": "h4",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "template--20144161554779__60173aac-a404-451c-9076-896115dc8537-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><br/>You get <strong>20% discount</strong> on all our products between 8.-17.11.2024. </p><p><strong>Get the discount with a code:</strong></p><h2><strong>POPUP20</strong></h2><p></p><p>The discount cannot be combined with any other discount codes.</p>",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "template--20144161554779__60173aac-a404-451c-9076-896115dc8537-buttons-1": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Use the code here!",
+            "button_link_1": "https://www.weekendbee.com/discount/POPUP20?redirect=%2Fcollections%2Fall-products",
+            "button_style_1": "",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "",
+            "button_label_3": "",
+            "button_link_3": "",
+            "button_style_3": "",
+            "sm_full_width_buttons": false,
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 24,
+            "full_width_buttons": false,
+            "size_multiplier": "size--default",
+            "margin_top": 24
+          }
+        }
+      },
+      "block_order": [
+        "template--20144161554779__60173aac-a404-451c-9076-896115dc8537-subtitle-1",
+        "template--20144161554779__60173aac-a404-451c-9076-896115dc8537-title-1",
+        "template--20144161554779__60173aac-a404-451c-9076-896115dc8537-text-1",
+        "template--20144161554779__60173aac-a404-451c-9076-896115dc8537-buttons-1"
+      ],
+      "settings": {
+        "color_scheme": "color-main",
+        "text_gradient_color": "",
+        "content_width": 100,
+        "desktop_content_alignment": "center",
+        "desktop_alignment": "sm-text-align-center",
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "mobile_alignment": "text-align-center",
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "rich_text_PFdUpY": {
+      "type": "rich-text",
+      "blocks": {
+        "subtitle_rDgTYQ": {
+          "type": "subtitle",
+          "settings": {
+            "subtitle": "Subheading",
+            "heading_tag": "h3",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "title_wFxmzy": {
+          "type": "title",
+          "disabled": true,
+          "settings": {
+            "title": "Rich text heading",
+            "heading_tag": "h2",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "text_ACz7Np": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Tell more about your products or brand or use this section to tell more about a single product on the product template. Use content and layout options to fit your preferences.</p>",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "buttons_P3L8dE": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Read more about POP UP",
+            "button_link_1": "shopify://pages/weekendbee-store-in-helsinki-lauttasaari",
+            "button_style_1": "",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "",
+            "button_label_3": "",
+            "button_link_3": "",
+            "button_style_3": "",
+            "sm_full_width_buttons": false,
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "full_width_buttons": false,
+            "size_multiplier": "size--default",
+            "margin_top": 24
+          }
+        }
+      },
+      "block_order": [
+        "subtitle_rDgTYQ",
+        "title_wFxmzy",
+        "text_ACz7Np",
+        "buttons_P3L8dE"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "",
+        "text_gradient_color": "",
+        "content_width": 100,
+        "desktop_content_alignment": "center",
+        "desktop_alignment": "sm-text-align-left",
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "mobile_alignment": "text-align-left",
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "63e77ba7-224d-4506-a784-e36c8c790bdd": {
+      "type": "featured-collection-or-products",
+      "settings": {
+        "color_scheme": "color-main",
+        "collection": "best-selling-products",
+        "product_list": [],
+        "product_limit": 19,
+        "view_all": true,
+        "enable_full_width": false,
+        "sm_enable_card_thumbnail": false,
+        "layout_desktop": "slide",
+        "products_per_row_desktop": 5,
+        "sm_custom_gap": -1,
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "products_per_row_tablet": 4,
+        "sm_down_enable_card_thumbnail": false,
+        "layout_mobile": "slide",
+        "products_per_row_mobile": 1,
+        "custom_gap": -1,
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "sliding_behavior": "single"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "60173aac-a404-451c-9076-896115dc8537",
+    "rich_text_PFdUpY",
+    "63e77ba7-224d-4506-a784-e36c8c790bdd"
+  ]
+}

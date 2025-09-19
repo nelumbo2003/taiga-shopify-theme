@@ -1,0 +1,1166 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "color_scheme": "",
+        "heading_text_align": "text-align-left",
+        "sm_size_multiplier": "sm-size--default",
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "size_multiplier": "size--default",
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
+    },
+    "752d2a26-7ea0-4135-a1e8-76c7e1e53ca5": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20162569797979__752d2a26-7ea0-4135-a1e8-76c7e1e53ca5-title-1": {
+          "type": "title",
+          "settings": {
+            "title": "Read more about the sustainability of our brands:",
+            "heading_tag": "h2",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        }
+      },
+      "block_order": [
+        "template--20162569797979__752d2a26-7ea0-4135-a1e8-76c7e1e53ca5-title-1"
+      ],
+      "settings": {
+        "color_scheme": "color-main",
+        "text_gradient_color": "",
+        "content_width": 100,
+        "desktop_content_alignment": "center",
+        "desktop_alignment": "sm-text-align-center",
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "mobile_alignment": "text-align-center",
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "33ba423a-cd4f-4bcd-8810-187541264441": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--20162569797979__33ba423a-cd4f-4bcd-8810-187541264441-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/210316_avr_banner_weekendbee_4.jpg",
+            "video_url": "",
+            "media_aspect_ratio": "natural",
+            "media_toggle": "show_image",
+            "media_link": ""
+          }
+        },
+        "template--20162569797979__33ba423a-cd4f-4bcd-8810-187541264441-title-1": {
+          "type": "title",
+          "settings": {
+            "title": "Aevor",
+            "heading_tag": "h2",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "template--20162569797979__33ba423a-cd4f-4bcd-8810-187541264441-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Aevor is working hard so that the products are high quality, durable and produced responsibly. They want to offer products for a flexible, spontaneous lifestyle.</p><p>The cornerstone of Aevor's sustainability strategy is to use recycled PET bottles in its products and 100% organic cotton in its clothing. Aevor products are safe and Bluesign and GOTS certified. Aevor has also made progress in making its production completely PFC-free in 2020.</p>",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "template--20162569797979__33ba423a-cd4f-4bcd-8810-187541264441-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Read more",
+            "button_link": "shopify://pages/aevors-sustainability",
+            "button_style": "",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 24,
+            "size_multiplier": "size--default",
+            "margin_top": 24
+          }
+        }
+      },
+      "block_order": [
+        "template--20162569797979__33ba423a-cd4f-4bcd-8810-187541264441-image-1",
+        "template--20162569797979__33ba423a-cd4f-4bcd-8810-187541264441-title-1",
+        "template--20162569797979__33ba423a-cd4f-4bcd-8810-187541264441-text-1",
+        "template--20162569797979__33ba423a-cd4f-4bcd-8810-187541264441-button-1"
+      ],
+      "settings": {
+        "color_scheme": "color-main",
+        "enable_full_width": false,
+        "media_position": "media_first",
+        "content_width": "col-sm-max-4",
+        "desktop_alignment": "sm-text-align-left",
+        "sm_full_width_buttons": false,
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "mobile_alignment": "text-align-left",
+        "full_width_buttons": false,
+        "padding_top": 0,
+        "padding_bottom": 24
+      }
+    },
+    "1ed6eb7c-cedc-4b83-876d-24984a4a74d2": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--20162569797979__1ed6eb7c-cedc-4b83-876d-24984a4a74d2-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Devold_Nibba_230614-272391.jpg",
+            "video_url": "",
+            "media_aspect_ratio": "natural",
+            "media_toggle": "show_image",
+            "media_link": ""
+          }
+        },
+        "template--20162569797979__1ed6eb7c-cedc-4b83-876d-24984a4a74d2-title-1": {
+          "type": "title",
+          "settings": {
+            "title": "Devold",
+            "heading_tag": "h2",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "template--20162569797979__1ed6eb7c-cedc-4b83-876d-24984a4a74d2-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At Devold, they design clothes based on the following concept: Clothes should be created to last. Designs should be timeless so they don’t go out of fashion. </p><p>They work tirelessly on going the extra mile to create the most environmentally friendly production process possible: they seek to manufacture garments that are not only good to wear outdoors but also gentle on nature.</p>",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "template--20162569797979__1ed6eb7c-cedc-4b83-876d-24984a4a74d2-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Read more",
+            "button_link": "shopify://pages/devolds-sustainability",
+            "button_style": "",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 24,
+            "size_multiplier": "size--default",
+            "margin_top": 24
+          }
+        }
+      },
+      "block_order": [
+        "template--20162569797979__1ed6eb7c-cedc-4b83-876d-24984a4a74d2-image-1",
+        "template--20162569797979__1ed6eb7c-cedc-4b83-876d-24984a4a74d2-title-1",
+        "template--20162569797979__1ed6eb7c-cedc-4b83-876d-24984a4a74d2-text-1",
+        "template--20162569797979__1ed6eb7c-cedc-4b83-876d-24984a4a74d2-button-1"
+      ],
+      "settings": {
+        "color_scheme": "color-main",
+        "enable_full_width": false,
+        "media_position": "media_last",
+        "content_width": "col-sm-max-4",
+        "desktop_alignment": "sm-text-align-left",
+        "sm_full_width_buttons": false,
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "mobile_alignment": "text-align-left",
+        "full_width_buttons": false,
+        "padding_top": 0,
+        "padding_bottom": 24
+      }
+    },
+    "image_with_text_prD9Pm": {
+      "type": "image-with-text",
+      "blocks": {
+        "image_wk9AF6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/didriksons_ss2024_DTC_MCQ6693_c241.jpg",
+            "video_url": "",
+            "media_aspect_ratio": "natural",
+            "media_toggle": "show_image",
+            "media_link": ""
+          }
+        },
+        "title_3FC9gG": {
+          "type": "title",
+          "settings": {
+            "title": "Didriksons",
+            "heading_tag": "h2",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "text_6inGxn": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Didriksons is dedicated to sustainability by prioritizing the creation of long-lasting products that minimize environmental impact. </p><p>Their commitment to durability ensures that each item is designed to endure through time, reducing the need for frequent replacements and supporting a more sustainable approach to fashion.</p>",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "button_JmUkCh": {
+          "type": "button",
+          "settings": {
+            "button_label": "Read more",
+            "button_link": "shopify://pages/didriksons-sustainability",
+            "button_style": "",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 24,
+            "size_multiplier": "size--default",
+            "margin_top": 24
+          }
+        }
+      },
+      "block_order": [
+        "image_wk9AF6",
+        "title_3FC9gG",
+        "text_6inGxn",
+        "button_JmUkCh"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "enable_full_width": false,
+        "media_position": "media_first",
+        "content_width": "col-sm-max-4",
+        "desktop_alignment": "sm-text-align-left",
+        "sm_full_width_buttons": false,
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "mobile_alignment": "text-align-left",
+        "full_width_buttons": false,
+        "padding_top": 0,
+        "padding_bottom": 24
+      }
+    },
+    "a8102aa2-9ae5-4912-94d2-a67bd1387645": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--20162569797979__a8102aa2-9ae5-4912-94d2-a67bd1387645-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Midnight_Moon_campaign2.jpg",
+            "video_url": "",
+            "media_aspect_ratio": "natural",
+            "media_toggle": "show_image",
+            "media_link": ""
+          }
+        },
+        "template--20162569797979__a8102aa2-9ae5-4912-94d2-a67bd1387645-title-1": {
+          "type": "title",
+          "settings": {
+            "title": "Girlfriend Collective",
+            "heading_tag": "h2",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "template--20162569797979__a8102aa2-9ae5-4912-94d2-a67bd1387645-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The eco-friendly brand, Girlfriend Collective, was founded in 2016. Girlfriend Collective's first goal was to be as transparent as possible and it is still one of the most important values for them. Girlfriend Collective's factory is SA8000 certified, which promises that their operations comply with very strict regulations.<br/></p><p>Their recycled fabrics are certified Standard 100 by Oeko-Tex, the world leader in testing fabrics for harmful substances. They ensure that the origin and content of every fabric is fully transparent, so you know exactly what you're putting against your body.</p>",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "template--20162569797979__a8102aa2-9ae5-4912-94d2-a67bd1387645-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Read more",
+            "button_link": "shopify://pages/girlfriend-collectives-sustainability",
+            "button_style": "",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 24,
+            "size_multiplier": "size--default",
+            "margin_top": 24
+          }
+        }
+      },
+      "block_order": [
+        "template--20162569797979__a8102aa2-9ae5-4912-94d2-a67bd1387645-image-1",
+        "template--20162569797979__a8102aa2-9ae5-4912-94d2-a67bd1387645-title-1",
+        "template--20162569797979__a8102aa2-9ae5-4912-94d2-a67bd1387645-text-1",
+        "template--20162569797979__a8102aa2-9ae5-4912-94d2-a67bd1387645-button-1"
+      ],
+      "settings": {
+        "color_scheme": "color-main",
+        "enable_full_width": false,
+        "media_position": "media_last",
+        "content_width": "col-sm-max-4",
+        "desktop_alignment": "sm-text-align-left",
+        "sm_full_width_buttons": false,
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "mobile_alignment": "text-align-left",
+        "full_width_buttons": false,
+        "padding_top": 0,
+        "padding_bottom": 24
+      }
+    },
+    "09adaf4c-46f3-4911-aad2-4911fa43b3b5": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--20162569797979__09adaf4c-46f3-4911-aad2-4911fa43b3b5-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/DSC09950.jpg",
+            "video_url": "",
+            "media_aspect_ratio": "natural",
+            "media_toggle": "show_image",
+            "media_link": ""
+          }
+        },
+        "template--20162569797979__09adaf4c-46f3-4911-aad2-4911fa43b3b5-title-1": {
+          "type": "title",
+          "settings": {
+            "title": "Gymnation",
+            "heading_tag": "h2",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "template--20162569797979__09adaf4c-46f3-4911-aad2-4911fa43b3b5-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Gymnation is a Finnish workout clothing brand, founded in Oulu in 2019. They design their products in Finland and manufacture their clothing responsibly close to Europe, without trying to find the cheapest production. </p><p>Right from the start, it was clear that the cornerstones of the Gymnation brand would be comfort and high quality, as well as responsible production. Their product design is always based on high-quality materials and an excellent fit - resulting in a garment that you will want to wear again and again.</p>",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "template--20162569797979__09adaf4c-46f3-4911-aad2-4911fa43b3b5-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Read more",
+            "button_link": "shopify://pages/gymnations-sustainability",
+            "button_style": "",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 24,
+            "size_multiplier": "size--default",
+            "margin_top": 24
+          }
+        }
+      },
+      "block_order": [
+        "template--20162569797979__09adaf4c-46f3-4911-aad2-4911fa43b3b5-image-1",
+        "template--20162569797979__09adaf4c-46f3-4911-aad2-4911fa43b3b5-title-1",
+        "template--20162569797979__09adaf4c-46f3-4911-aad2-4911fa43b3b5-text-1",
+        "template--20162569797979__09adaf4c-46f3-4911-aad2-4911fa43b3b5-button-1"
+      ],
+      "settings": {
+        "color_scheme": "color-main",
+        "enable_full_width": false,
+        "media_position": "media_first",
+        "content_width": "col-sm-max-4",
+        "desktop_alignment": "sm-text-align-left",
+        "sm_full_width_buttons": false,
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "mobile_alignment": "text-align-left",
+        "full_width_buttons": false,
+        "padding_top": 0,
+        "padding_bottom": 24
+      }
+    },
+    "be9a9cf6-8490-4872-830e-b85bf1c701a7": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--20162569797979__be9a9cf6-8490-4872-830e-b85bf1c701a7-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Houdini-Sportswear_F22_090_72ppi.jpg",
+            "video_url": "",
+            "media_aspect_ratio": "natural",
+            "media_toggle": "show_image",
+            "media_link": ""
+          }
+        },
+        "template--20162569797979__be9a9cf6-8490-4872-830e-b85bf1c701a7-title-1": {
+          "type": "title",
+          "settings": {
+            "title": "Houdini",
+            "heading_tag": "h2",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "template--20162569797979__be9a9cf6-8490-4872-830e-b85bf1c701a7-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Houdini’s purpose and vision is about inspiring and enabling mankind to reconnect to nature, to lead a healthier and happier lifestyle in partnership with nature, to evolve as individuals and form a prosperous society on a thriving planet, for us and future generations. </p><p>Sustainability is at the heart of everything they do. There is no contradiction between sustainability and good business. It's essential in the long run.</p>",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "template--20162569797979__be9a9cf6-8490-4872-830e-b85bf1c701a7-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Read more",
+            "button_link": "shopify://pages/houdinis-sustainability",
+            "button_style": "",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 24,
+            "size_multiplier": "size--default",
+            "margin_top": 24
+          }
+        }
+      },
+      "block_order": [
+        "template--20162569797979__be9a9cf6-8490-4872-830e-b85bf1c701a7-image-1",
+        "template--20162569797979__be9a9cf6-8490-4872-830e-b85bf1c701a7-title-1",
+        "template--20162569797979__be9a9cf6-8490-4872-830e-b85bf1c701a7-text-1",
+        "template--20162569797979__be9a9cf6-8490-4872-830e-b85bf1c701a7-button-1"
+      ],
+      "settings": {
+        "color_scheme": "color-main",
+        "enable_full_width": false,
+        "media_position": "media_last",
+        "content_width": "col-sm-max-4",
+        "desktop_alignment": "sm-text-align-left",
+        "sm_full_width_buttons": false,
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "mobile_alignment": "text-align-left",
+        "full_width_buttons": false,
+        "padding_top": 0,
+        "padding_bottom": 24
+      }
+    },
+    "984a8ffd-3828-45e6-b0f2-71792e22542c": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--20162569797979__984a8ffd-3828-45e6-b0f2-71792e22542c-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/LiljaTheLabel-Mar-Onepiece_1.jpg",
+            "video_url": "",
+            "media_aspect_ratio": "natural",
+            "media_toggle": "show_image",
+            "media_link": ""
+          }
+        },
+        "template--20162569797979__984a8ffd-3828-45e6-b0f2-71792e22542c-title-1": {
+          "type": "title",
+          "settings": {
+            "title": "Lilja the Label",
+            "heading_tag": "h2",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "template--20162569797979__984a8ffd-3828-45e6-b0f2-71792e22542c-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Lilja the Label is a sustainable Finnish swimwear brand established in 2016 and their products are designed in Helsinki. </p><p>Their aim is to create high-quality swimwear both ethically and sustainably. They don't have seasonality and their products are meant to last both time and use. Wear them throughout your winter swims and throughout your warmest beach days.</p>",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "template--20162569797979__984a8ffd-3828-45e6-b0f2-71792e22542c-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Read more",
+            "button_link": "shopify://pages/lilja-the-labels-sustainability",
+            "button_style": "",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 24,
+            "size_multiplier": "size--default",
+            "margin_top": 24
+          }
+        }
+      },
+      "block_order": [
+        "template--20162569797979__984a8ffd-3828-45e6-b0f2-71792e22542c-image-1",
+        "template--20162569797979__984a8ffd-3828-45e6-b0f2-71792e22542c-title-1",
+        "template--20162569797979__984a8ffd-3828-45e6-b0f2-71792e22542c-text-1",
+        "template--20162569797979__984a8ffd-3828-45e6-b0f2-71792e22542c-button-1"
+      ],
+      "settings": {
+        "color_scheme": "color-main",
+        "enable_full_width": false,
+        "media_position": "media_first",
+        "content_width": "col-sm-max-4",
+        "desktop_alignment": "sm-text-align-left",
+        "sm_full_width_buttons": false,
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "mobile_alignment": "text-align-left",
+        "full_width_buttons": false,
+        "padding_top": 0,
+        "padding_bottom": 24
+      }
+    },
+    "20015d82-b8b7-4c63-b361-84d71f909d8c": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--20162569797979__20015d82-b8b7-4c63-b361-84d71f909d8c-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/nepra_summer_2021_suomenlinna_wearnepra__103.jpg",
+            "video_url": "",
+            "media_aspect_ratio": "natural",
+            "media_toggle": "show_image",
+            "media_link": ""
+          }
+        },
+        "template--20162569797979__20015d82-b8b7-4c63-b361-84d71f909d8c-title-1": {
+          "type": "title",
+          "settings": {
+            "title": "Népra",
+            "heading_tag": "h2",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "template--20162569797979__20015d82-b8b7-4c63-b361-84d71f909d8c-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Népra was founded in 2015 by two women who had the same vision. They wondered why there wasn’t any ethically made, sustainable, but reasonably priced quality activewear available for an active lifestyle. So they decided to start making ones!</p><p>Népra creates ethical activewear with a minimalistic and holistic mindset. They aim to create long-lasting, timeless, and perfect-fitting items, keep the production chain as short as possible, and be honest and transparent throughout the entire process.</p>",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "template--20162569797979__20015d82-b8b7-4c63-b361-84d71f909d8c-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Read more",
+            "button_link": "shopify://pages/nepras-sustainability",
+            "button_style": "",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 24,
+            "size_multiplier": "size--default",
+            "margin_top": 24
+          }
+        }
+      },
+      "block_order": [
+        "template--20162569797979__20015d82-b8b7-4c63-b361-84d71f909d8c-image-1",
+        "template--20162569797979__20015d82-b8b7-4c63-b361-84d71f909d8c-title-1",
+        "template--20162569797979__20015d82-b8b7-4c63-b361-84d71f909d8c-text-1",
+        "template--20162569797979__20015d82-b8b7-4c63-b361-84d71f909d8c-button-1"
+      ],
+      "settings": {
+        "color_scheme": "color-main",
+        "enable_full_width": false,
+        "media_position": "media_last",
+        "content_width": "col-sm-max-4",
+        "desktop_alignment": "sm-text-align-left",
+        "sm_full_width_buttons": false,
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "mobile_alignment": "text-align-left",
+        "full_width_buttons": false,
+        "padding_top": 0,
+        "padding_bottom": 24
+      }
+    },
+    "8ccdb94e-c1c7-4b4e-9229-48f3d05e4aee": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--20162569797979__8ccdb94e-c1c7-4b4e-9229-48f3d05e4aee-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/North-Outdoor-fall20_20.jpg",
+            "video_url": "",
+            "media_aspect_ratio": "natural",
+            "media_toggle": "show_image",
+            "media_link": ""
+          }
+        },
+        "template--20162569797979__8ccdb94e-c1c7-4b4e-9229-48f3d05e4aee-title-1": {
+          "type": "title",
+          "settings": {
+            "title": "North Outdoor",
+            "heading_tag": "h2",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "template--20162569797979__8ccdb94e-c1c7-4b4e-9229-48f3d05e4aee-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>North Outdoor is a Finnish brand. Every garment, detail and purpose is designed in Finland, for the varied conditions of the North. North Outdoor’s own deep experience of the changing seasons, biting frost, drizzle and warm summer days has trained them to design clothing that works in all four seasons. </p><p>North Outdoor's main raw material is merino wool and they take responsibility for the ethics and ecology of merino wool and the brand. The wool in their products is mulesing free and the textiles are OEKO-Tex 100 certified.</p>",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "template--20162569797979__8ccdb94e-c1c7-4b4e-9229-48f3d05e4aee-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Read more",
+            "button_link": "shopify://pages/north-outdoors-sustainability",
+            "button_style": "",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 24,
+            "size_multiplier": "size--default",
+            "margin_top": 24
+          }
+        }
+      },
+      "block_order": [
+        "template--20162569797979__8ccdb94e-c1c7-4b4e-9229-48f3d05e4aee-image-1",
+        "template--20162569797979__8ccdb94e-c1c7-4b4e-9229-48f3d05e4aee-title-1",
+        "template--20162569797979__8ccdb94e-c1c7-4b4e-9229-48f3d05e4aee-text-1",
+        "template--20162569797979__8ccdb94e-c1c7-4b4e-9229-48f3d05e4aee-button-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "color-main",
+        "enable_full_width": false,
+        "media_position": "media_last",
+        "content_width": "col-sm-max-4",
+        "desktop_alignment": "sm-text-align-left",
+        "sm_full_width_buttons": false,
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "mobile_alignment": "text-align-left",
+        "full_width_buttons": false,
+        "padding_top": 0,
+        "padding_bottom": 24
+      }
+    },
+    "d5f038ac-dfbe-46ef-bc9b-fd3e5f75cb2c": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--20162569797979__d5f038ac-dfbe-46ef-bc9b-fd3e5f75cb2c-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Web_Large-etzel_k_1915_BP.jpg",
+            "video_url": "",
+            "media_aspect_ratio": "natural",
+            "media_toggle": "show_image",
+            "media_link": ""
+          }
+        },
+        "template--20162569797979__d5f038ac-dfbe-46ef-bc9b-fd3e5f75cb2c-title-1": {
+          "type": "title",
+          "settings": {
+            "title": "Patagonia",
+            "heading_tag": "h2",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "template--20162569797979__d5f038ac-dfbe-46ef-bc9b-fd3e5f75cb2c-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>\"We're in business to save our home planet.\" </p><p>From the beginning, Patagonia has always wanted to do everything differently from other textile companies and they have pledged 1% of sales to the preservation and restoration of the natural environment.</p>",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "template--20162569797979__d5f038ac-dfbe-46ef-bc9b-fd3e5f75cb2c-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Read more",
+            "button_link": "shopify://pages/patagonias-sustainability",
+            "button_style": "",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 24,
+            "size_multiplier": "size--default",
+            "margin_top": 24
+          }
+        }
+      },
+      "block_order": [
+        "template--20162569797979__d5f038ac-dfbe-46ef-bc9b-fd3e5f75cb2c-image-1",
+        "template--20162569797979__d5f038ac-dfbe-46ef-bc9b-fd3e5f75cb2c-title-1",
+        "template--20162569797979__d5f038ac-dfbe-46ef-bc9b-fd3e5f75cb2c-text-1",
+        "template--20162569797979__d5f038ac-dfbe-46ef-bc9b-fd3e5f75cb2c-button-1"
+      ],
+      "settings": {
+        "color_scheme": "color-main",
+        "enable_full_width": false,
+        "media_position": "media_first",
+        "content_width": "col-sm-max-4",
+        "desktop_alignment": "sm-text-align-left",
+        "sm_full_width_buttons": false,
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "mobile_alignment": "text-align-left",
+        "full_width_buttons": false,
+        "padding_top": 0,
+        "padding_bottom": 24
+      }
+    },
+    "b8515efa-d0ad-4f54-b753-5ae97f4c53d3": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--20162569797979__b8515efa-d0ad-4f54-b753-5ae97f4c53d3-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/C155UG.NY1_-_C427UG.BK1_3.jpg",
+            "video_url": "",
+            "media_aspect_ratio": "natural",
+            "media_toggle": "show_image",
+            "media_link": ""
+          }
+        },
+        "template--20162569797979__b8515efa-d0ad-4f54-b753-5ae97f4c53d3-title-1": {
+          "type": "title",
+          "settings": {
+            "title": "People Tree",
+            "heading_tag": "h2",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "template--20162569797979__b8515efa-d0ad-4f54-b753-5ae97f4c53d3-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A pioneer in sustainable Fair Trade fashion and ethical sportswear, People Tree story started in 1991. </p><p>The core mission has stayed the same over the past three decades since award-winning social entrepreneur Safia Minney founded the company. Every product is made to the highest ethical and environmental standards from start to finish.</p>",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "template--20162569797979__b8515efa-d0ad-4f54-b753-5ae97f4c53d3-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Read more",
+            "button_link": "shopify://pages/people-trees-sustainability",
+            "button_style": "",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 24,
+            "size_multiplier": "size--default",
+            "margin_top": 24
+          }
+        }
+      },
+      "block_order": [
+        "template--20162569797979__b8515efa-d0ad-4f54-b753-5ae97f4c53d3-image-1",
+        "template--20162569797979__b8515efa-d0ad-4f54-b753-5ae97f4c53d3-title-1",
+        "template--20162569797979__b8515efa-d0ad-4f54-b753-5ae97f4c53d3-text-1",
+        "template--20162569797979__b8515efa-d0ad-4f54-b753-5ae97f4c53d3-button-1"
+      ],
+      "settings": {
+        "color_scheme": "color-main",
+        "enable_full_width": false,
+        "media_position": "media_last",
+        "content_width": "col-sm-max-4",
+        "desktop_alignment": "sm-text-align-left",
+        "sm_full_width_buttons": false,
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "mobile_alignment": "text-align-left",
+        "full_width_buttons": false,
+        "padding_top": 0,
+        "padding_bottom": 24
+      }
+    },
+    "567ab763-678a-41d9-8d03-814a491574f2": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--20162569797979__567ab763-678a-41d9-8d03-814a491574f2-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/WVT321_B_6-U68_JKT-SEA_FOG_WPT109_B_6-U62_BIB_PANTS-SEA_FOG_1.jpg",
+            "video_url": "",
+            "media_aspect_ratio": "natural",
+            "media_toggle": "show_image",
+            "media_link": ""
+          }
+        },
+        "template--20162569797979__567ab763-678a-41d9-8d03-814a491574f2-title-1": {
+          "type": "title",
+          "settings": {
+            "title": "Picture Organic",
+            "heading_tag": "h2",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "template--20162569797979__567ab763-678a-41d9-8d03-814a491574f2-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Picture Organic was founded by Julien, Jeremy and Vincent who are lifelong friends and passionate skate- and snowboarders from France. They are producing organic, recycled & bio-sourced products for snowboarding, skiing, surfing and the outdoors.</p><p>Their goal is to be fully committed to being responsible with the whole cycle of products: the design, raw materials, the making, the use, the 2nd life and end of life. After sales service processes products through repair to recycling or donation. Picture's products are made from 100% recycled, organic or responsibly sourced materials. </p>",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "template--20162569797979__567ab763-678a-41d9-8d03-814a491574f2-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Read more",
+            "button_link": "shopify://pages/picture-organics-sustainability",
+            "button_style": "",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 24,
+            "size_multiplier": "size--default",
+            "margin_top": 24
+          }
+        }
+      },
+      "block_order": [
+        "template--20162569797979__567ab763-678a-41d9-8d03-814a491574f2-image-1",
+        "template--20162569797979__567ab763-678a-41d9-8d03-814a491574f2-title-1",
+        "template--20162569797979__567ab763-678a-41d9-8d03-814a491574f2-text-1",
+        "template--20162569797979__567ab763-678a-41d9-8d03-814a491574f2-button-1"
+      ],
+      "settings": {
+        "color_scheme": "color-main",
+        "enable_full_width": false,
+        "media_position": "media_first",
+        "content_width": "col-sm-max-4",
+        "desktop_alignment": "sm-text-align-left",
+        "sm_full_width_buttons": false,
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "mobile_alignment": "text-align-left",
+        "full_width_buttons": false,
+        "padding_top": 0,
+        "padding_bottom": 24
+      }
+    },
+    "0a162e45-5b69-493b-ac9d-ce80e549713d": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--20162569797979__0a162e45-5b69-493b-ac9d-ce80e549713d-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Pure_Waste_Unisex_Loose_Fit_Hoody_Fiian_kuva_2.jpg",
+            "video_url": "",
+            "media_aspect_ratio": "natural",
+            "media_toggle": "show_image",
+            "media_link": ""
+          }
+        },
+        "template--20162569797979__0a162e45-5b69-493b-ac9d-ce80e549713d-title-1": {
+          "type": "title",
+          "settings": {
+            "title": "Pure Waste",
+            "heading_tag": "h2",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "template--20162569797979__0a162e45-5b69-493b-ac9d-ce80e549713d-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pure Waste is a Helsinki-based pioneer in textile recycling. They make products from 100% recycled fabric and save at least some of the unused cotton. Pure Waste's raw material is scraps from the textile industry. </p><p>The waste is mechanically recycled into high quality yarn, fabrics and garments. Pure Waste products are made from 100% recycled fibers and contain 60% recycled cotton fiber and 40% polyester fiber from recycled bottles. Their recycled textiles offer the same quality and the same comfort as comparable products made from virgin materials. </p>",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "template--20162569797979__0a162e45-5b69-493b-ac9d-ce80e549713d-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Read more",
+            "button_link": "shopify://pages/pure-wastes-sustainability",
+            "button_style": "",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 24,
+            "size_multiplier": "size--default",
+            "margin_top": 24
+          }
+        }
+      },
+      "block_order": [
+        "template--20162569797979__0a162e45-5b69-493b-ac9d-ce80e549713d-image-1",
+        "template--20162569797979__0a162e45-5b69-493b-ac9d-ce80e549713d-title-1",
+        "template--20162569797979__0a162e45-5b69-493b-ac9d-ce80e549713d-text-1",
+        "template--20162569797979__0a162e45-5b69-493b-ac9d-ce80e549713d-button-1"
+      ],
+      "settings": {
+        "color_scheme": "color-main",
+        "enable_full_width": false,
+        "media_position": "media_last",
+        "content_width": "col-sm-max-4",
+        "desktop_alignment": "sm-text-align-left",
+        "sm_full_width_buttons": false,
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "mobile_alignment": "text-align-left",
+        "full_width_buttons": false,
+        "padding_top": 0,
+        "padding_bottom": 24
+      }
+    },
+    "image_with_text_8qjTV8": {
+      "type": "image-with-text",
+      "blocks": {
+        "image_zrKFPc": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/AW24_WINTER_ALPINE_-_HAMISH_FROST_31.jpg",
+            "video_url": "",
+            "media_aspect_ratio": "natural",
+            "media_toggle": "show_image",
+            "media_link": ""
+          }
+        },
+        "title_LwXHnB": {
+          "type": "title",
+          "settings": {
+            "title": "Rab",
+            "heading_tag": "h2",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "text_zHzzCP": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Rab prioritizes sustainability across its operations, striving to minimize environmental impact while promoting ethical production and responsible supply chains. </p><p>Through initiatives focused on reducing carbon footprint, sourcing sustainable materials, and supporting fair labor practices, Rab is dedicated to building a more sustainable future for both people and the planet.</p>",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "button_6ziB9N": {
+          "type": "button",
+          "settings": {
+            "button_label": "Read more",
+            "button_link": "shopify://pages/rabs-sustainability",
+            "button_style": "",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 24,
+            "size_multiplier": "size--default",
+            "margin_top": 24
+          }
+        }
+      },
+      "block_order": [
+        "image_zrKFPc",
+        "title_LwXHnB",
+        "text_zHzzCP",
+        "button_6ziB9N"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "enable_full_width": false,
+        "media_position": "media_first",
+        "content_width": "col-sm-max-4",
+        "desktop_alignment": "sm-text-align-left",
+        "sm_full_width_buttons": false,
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "mobile_alignment": "text-align-left",
+        "full_width_buttons": false,
+        "padding_top": 0,
+        "padding_bottom": 24
+      }
+    },
+    "image_with_text_XPmBBP": {
+      "type": "image-with-text",
+      "blocks": {
+        "image_Jr44eX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/09_065.jpg",
+            "video_url": "",
+            "media_aspect_ratio": "natural",
+            "media_toggle": "show_image",
+            "media_link": ""
+          }
+        },
+        "title_gKbNFF": {
+          "type": "title",
+          "settings": {
+            "title": "Röhnisch",
+            "heading_tag": "h2",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "text_htCfyR": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Röhnisch is dedicated to sustainability across its operations. The brand prioritizes environmental responsibility by disclosing product footprints and striving to reduce overall climate impact. </p><p>Röhnisch upholds fair labor standards, partnering with suppliers certified by BSCI or WRAP.  Röhnisch's commitment to sustainability is evident in its proactive measures and ongoing efforts to promote ethical and environmentally friendly practices.</p>",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "button_NLbbMz": {
+          "type": "button",
+          "settings": {
+            "button_label": "Read more",
+            "button_link": "shopify://pages/rohnischs-sustainability",
+            "button_style": "",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 24,
+            "size_multiplier": "size--default",
+            "margin_top": 24
+          }
+        }
+      },
+      "block_order": [
+        "image_Jr44eX",
+        "title_gKbNFF",
+        "text_htCfyR",
+        "button_NLbbMz"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "enable_full_width": false,
+        "media_position": "media_last",
+        "content_width": "col-sm-max-4",
+        "desktop_alignment": "sm-text-align-left",
+        "sm_full_width_buttons": false,
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "mobile_alignment": "text-align-left",
+        "full_width_buttons": false,
+        "padding_top": 0,
+        "padding_bottom": 24
+      }
+    },
+    "image_with_text_cnnJgT": {
+      "type": "image-with-text",
+      "blocks": {
+        "image_gJ6YxQ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ms-campo-chromefree-sneakers-chromefree-leather-shoes-veja-655689_kopio.jpg",
+            "video_url": "",
+            "media_aspect_ratio": "natural",
+            "media_toggle": "show_image",
+            "media_link": ""
+          }
+        },
+        "title_VLN3zr": {
+          "type": "title",
+          "settings": {
+            "title": "Veja",
+            "heading_tag": "h2",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "text_dJhfFR": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Veja's sustainability ethos is woven into every aspect of their brand. From transparent sourcing and ethical labor practices to innovative materials and renewable energy use, Veja is committed to reducing its environmental footprint and promoting social responsibility. </p><p>With certifications like SMETA Pillar 4 and a focus on renewable energy sources, Veja continues to lead the way toward a more sustainable future for the fashion industry.</p>",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "button_t8Vtf8": {
+          "type": "button",
+          "settings": {
+            "button_label": "Read more",
+            "button_link": "shopify://pages/vejas-sustainability",
+            "button_style": "",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 24,
+            "size_multiplier": "size--default",
+            "margin_top": 24
+          }
+        }
+      },
+      "block_order": [
+        "image_gJ6YxQ",
+        "title_VLN3zr",
+        "text_dJhfFR",
+        "button_t8Vtf8"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "enable_full_width": false,
+        "media_position": "media_first",
+        "content_width": "col-sm-max-4",
+        "desktop_alignment": "sm-text-align-left",
+        "sm_full_width_buttons": false,
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "mobile_alignment": "text-align-left",
+        "full_width_buttons": false,
+        "padding_top": 0,
+        "padding_bottom": 24
+      }
+    }
+  },
+  "order": [
+    "main",
+    "752d2a26-7ea0-4135-a1e8-76c7e1e53ca5",
+    "33ba423a-cd4f-4bcd-8810-187541264441",
+    "1ed6eb7c-cedc-4b83-876d-24984a4a74d2",
+    "image_with_text_prD9Pm",
+    "a8102aa2-9ae5-4912-94d2-a67bd1387645",
+    "09adaf4c-46f3-4911-aad2-4911fa43b3b5",
+    "be9a9cf6-8490-4872-830e-b85bf1c701a7",
+    "984a8ffd-3828-45e6-b0f2-71792e22542c",
+    "20015d82-b8b7-4c63-b361-84d71f909d8c",
+    "8ccdb94e-c1c7-4b4e-9229-48f3d05e4aee",
+    "d5f038ac-dfbe-46ef-bc9b-fd3e5f75cb2c",
+    "b8515efa-d0ad-4f54-b753-5ae97f4c53d3",
+    "567ab763-678a-41d9-8d03-814a491574f2",
+    "0a162e45-5b69-493b-ac9d-ce80e549713d",
+    "image_with_text_8qjTV8",
+    "image_with_text_XPmBBP",
+    "image_with_text_cnnJgT"
+  ]
+}

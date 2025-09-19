@@ -1,0 +1,81 @@
+{%- liquid
+  assign show_badges = false
+
+  assign is_preorder = false
+  if product.tags contains 'Preorder' or product.tags contains 'preorder'
+    assign is_preorder = true
+    assign show_badges = true
+  endif
+
+  assign is_new = false
+  if product.tags contains 'New' or product.tags contains 'new'
+    assign is_new = true
+    assign show_badges = true
+  endif
+
+  assign is_sale = false
+  if product.compare_at_price_max > product.price_min
+    assign is_sale = true
+    assign show_badges = true
+  endif
+
+  assign is_sold_out = false
+  if current_variant.inventory_management == 'shopify' and current_variant.inventory_policy == 'deny' and current_variant.inventory_quantity <= 0
+    assign is_sold_out = true
+    assign show_badges = true
+  endif
+  if product.available == false
+    assign is_sold_out = true
+    assign show_badges = true
+  endif
+
+  if settings.custom_badges != empty
+    assign custom_badges_array = settings.custom_badges | split: ';'
+    assign custom_badges_html = ''
+    for custom_badge in custom_badges_array
+      assign custom_badge_array = custom_badge | split: ':'
+      if product.tags contains custom_badge_array[0]
+        assign show_badges = true
+        assign custom_badges_html = custom_badges_html | append: '<span class="badge custom" style="--text-color:' | append: custom_badge_array[2] | append: ';--background-color:' | append: custom_badge_array[1] | append: ';">' | append: custom_badge_array[0] | append: '</span>'
+      endif
+    endfor
+  endif
+-%}
+
+{%- if show_badges -%}
+  <div class="badges">
+    {%- if is_sale == true -%}
+      <span class="badge sale" style="
+        --text-color: {{ settings.badge_sale_foreground }};
+        --background-color: {{ settings.badge_sale_background }};
+        ">
+        {{ 'products.product.badges.on_sale' | t }}
+      </span>
+    {%- endif -%}
+    {%- if is_preorder == true -%}
+      <span class="badge preorder" style="
+        --text-color: {{ settings.badge_preorder_foreground }};
+        --background-color: {{ settings.badge_preorder_background }};
+        ">
+        {{ 'products.product.badges.preorder' | t }}
+      </span>
+    {%- endif -%}
+    {%- if is_new == true -%}
+      <span class="badge new" style="
+        --text-color: {{ settings.badge_new_foreground }};
+        --background-color: {{ settings.badge_new_background }};
+        ">
+        {{ 'products.product.badges.new' | t }}
+      </span>
+    {%- endif -%}
+    {%- if is_sold_out == true -%}
+      <span class="badge soldout" style="
+        --text-color: {{ settings.badge_sold_out_foreground }};
+        --background-color: {{ settings.badge_sold_out_background }};
+        ">
+        {{ 'products.product.badges.soldout' | t }}
+      </span>
+    {%- endif -%}
+    {{ custom_badges_html }}
+  </div>
+{%- endif -%}

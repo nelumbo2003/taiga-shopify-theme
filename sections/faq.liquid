@@ -1,0 +1,334 @@
+{%- liquid
+  assign sizes_string = '(min-width: 768px) calc((100vw - 72px) / 2), 100vw)'
+  assign the_image = section.blocks | where: 'type', 'image' | first
+  assign the_text = section.blocks | where: 'type', 'text' | first
+  assign the_questions = section.blocks | where: 'type', 'question'
+
+  if section.settings.enable_full_width == false
+    assign max_media_width = settings.content_ideal_width | minus: 72 | divided_by: 2
+    assign sizes_string = '(min-width:' | append: settings.content_ideal_width | append: 'px) ' | append: max_media_width | append: 'px, (min-width: 768px) calc((100vw - 72px) / 2), 100vw)'
+  endif
+
+  if section.settings.title_style == 'h3'
+    assign title_html = '<h3 class="h5 size--small">[title]</h3>'
+  elsif section.settings.title_style == 'subheading'
+    assign title_html = '<h3 class="h5 size--small subheading">[title]</h3>'
+  elsif section.settings.title_style == 'body-text'
+    assign title_html = '<h3 class="h6 font-body">[title]</h3>'
+  else
+    assign title_html = '<h3 class="h6 font-body"><strong>[title]</strong></h3>'
+  endif
+-%}
+
+{%- if the_image != blank or the_text != blank -%}
+  {% capture content_element %}
+    <div class="col-12 col-sm-6 {% if section.settings.media_position == 'media_last' %}col-sm-order-2{% endif %}" {{ the_image.shopify_attributes }}>
+      {%- if the_image != blank and the_image.settings.media_toggle == 'show_image' -%}
+        {%- render 'img',
+          src: the_image.settings.image,
+          sizes: sizes_string,
+          aspect_ratio: the_image.settings.media_aspect_ratio,
+          custom_classes: 'sm-br-img' -%}
+      {%- elsif the_image != blank -%}
+        {%- render 'video',
+          src: the_image.settings.video_url,
+          autoplay: true,
+          loop: true,
+          aspect_ratio: the_image.settings.media_aspect_ratio,
+          lazyload: true,
+          custom_classes: 'sm-br-img'
+        -%}
+      {%- else -%}
+        <div class="flex {% if section.settings.media_position == 'media_last' %}horizontal-right{% else %}horizontal-left{% endif %}" {{ the_text.shopify_attributes }}>
+          <div class="text-align-left sm-text-align-left col-sm-max-5">
+            {% if the_text.settings.title != blank %}
+              <h2 class="mb-16">
+                {{ the_text.settings.title }}
+              </h2>
+            {% endif %}
+            {% if the_text.settings.text != blank %}
+              <div class="rte mb-16">
+                {{the_text.settings.text}}
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      {%- endif -%}
+    </div>
+  {% endcapture %}
+{%- endif -%}
+
+
+<div
+  id="{{ section.id }}"
+  class="pt pb sm-pt sm-pb container{% if section.settings.enable_full_width %} sm-edge-to-edge sm-p-page{% endif %} color-{{ section.settings.color_scheme }}"
+  style="
+    --pt: {{ section.settings.padding_top | append: 'px' }};
+    --pb: {{ section.settings.padding_bottom | append: 'px' }};
+    --sm-pt: {{ section.settings.md_padding_top | append: 'px' }};
+    --sm-pb: {{ section.settings.md_padding_bottom | append: 'px' }};
+  ">
+  <div class="grid col-align-items-center faq">
+    {{content_element}}
+    {%- if section.blocks.size > 0 -%}
+      <div class="col-12 col-sm-6 questions__wrapper col-sm-max-6 text-align-left sm-text-align-left">
+        {%- if the_image != blank -%}
+          {% if the_text.settings.title != blank %}
+            <h2 class="mb-16">
+              {{ the_text.settings.title }}
+            </h2>
+          {% endif %}
+          {% if the_text.settings.text != blank %}
+            <div class="rte mb-16">
+              {{the_text.settings.text}}
+            </div>
+          {% endif %}
+        {%- endif -%}
+
+        {%- for question in the_questions -%}
+          <details class="faq-item" {{ question.shopify_attributes }}>
+            <summary>
+              {{ title_html | replace: '[title]', question.settings.title }}
+              {% render 'icon-caret' %}
+            </summary>
+            <div class="content faq-item__body rte">
+              {{ question.settings.text }}
+            </div>
+          </details>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+{%- render 'schema-faq', items: the_questions, context: 'block' -%}
+
+{% schema %}
+  {
+    "name": "t:sections.faq.name",
+    "disabled_on": {
+      "groups": ["header", "aside"]
+    },
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "t:sections.faq.info"
+      },
+      {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "default": "default",
+        "label": "t:sections.colors.color_scheme.label"
+      },
+      {
+        "type": "select",
+        "id": "title_style",
+        "label": "t:sections.typography.style_options.question_style_label",
+        "default": "h3",
+        "info": "t:sections.banner-grid.blocks.title_style__info",
+        "options": [
+          {
+            "value": "h3",
+            "label": "t:sections.typography.style_options.heading"
+          },
+          {
+            "value": "subheading",
+            "label": "t:sections.inputs.text.subtitle"
+          },
+          {
+            "value": "body-text",
+            "label": "t:sections.typography.style_options.body_text"
+          },
+          {
+            "value": "body-text-bold",
+            "label": "t:sections.typography.style_options.body_text_bold"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "content": "t:sections.headers.desktop_layout"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_full_width",
+        "label": "t:sections.layout.section_width.full_width",
+        "default": false
+      },
+      {
+        "type": "select",
+        "id": "media_position",
+        "label": "t:sections.layout.media_position.label",
+        "options": [
+          {
+            "value": "media_first",
+            "label": "t:sections.layout.media_position.media_first"
+          },
+          {
+            "value": "media_last",
+            "label": "t:sections.layout.media_position.media_last"
+          }
+        ],
+        "default": "media_first"
+      },
+      {
+        "type": "range",
+        "id": "md_padding_top",
+        "min": 0,
+        "max": 160,
+        "step": 8,
+        "unit": "px",
+        "label": "t:sections.layout.margin_top",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "md_padding_bottom",
+        "min": 0,
+        "max": 160,
+        "step": 8,
+        "unit": "px",
+        "label": "t:sections.layout.margin_bottom",
+        "default": 40
+      },
+      {
+        "type": "header",
+        "content": "t:sections.headers.mobile_layout"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 160,
+        "step": 8,
+        "unit": "px",
+        "label": "t:sections.layout.margin_top",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 160,
+        "step": 8,
+        "unit": "px",
+        "label": "t:sections.layout.margin_bottom",
+        "default": 24
+      }
+    ],
+    "blocks": [
+      {
+        "name": "t:sections.blocks.image_or_video.name",
+        "type": "image",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "t:sections.inputs.image_picker.image"
+          },
+          {
+            "type": "text",
+            "id": "video_url",
+            "label": "t:sections.inputs.url.video_url",
+            "info": "t:sections.inputs.url.video_url__info"
+          },
+          {
+            "id": "media_aspect_ratio",
+            "type": "select",
+            "label": "t:sections.images.aspect_ratio.label",
+            "options": [
+              {
+                "value": "natural",
+                "label": "t:sections.images.aspect_ratio.natural"
+              },
+              {
+                "value": "portrait",
+                "label": "t:sections.images.aspect_ratio.portrait_2_3"
+              },
+              {
+                "value": "portrait_alt",
+                "label": "t:sections.images.aspect_ratio.portrait_3_4"
+              },
+              {
+                "value": "square",
+                "label": "t:sections.images.aspect_ratio.square"
+              },
+              {
+                "value": "landscape",
+                "label": "t:sections.images.aspect_ratio.landscape_4_3"
+              }
+            ]
+          },
+          {
+            "type": "radio",
+            "id": "media_toggle",
+            "label": "t:sections.images.media_toggle.label",
+            "options": [
+              {
+              "value": "show_image",
+              "label": "t:sections.images.media_toggle.show_image"
+              },
+              {
+                "value": "show_video",
+                "label": "t:sections.images.media_toggle.show_video"
+              }
+            ],
+            "default": "show_image"
+          }
+        ]
+      },
+      {
+        "name": "t:sections.blocks.text.name",
+        "type": "text",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "inline_richtext",
+            "id": "title",
+            "label": "t:sections.inputs.text.title",
+            "default": "FAQ section"
+          },
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "t:sections.inputs.text.text",
+            "default": "<p>Show usually asked questions with answers and pair with image</p>"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "name": "Question",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "t:sections.inputs.text.title",
+            "default": "Do you ship to my country?"
+          },
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "t:sections.inputs.text.text",
+            "default": "<p>Yes. We ship orders worldwide. See more information from other shipping related FAQ questions.</p>"
+          }
+        ]
+      }
+    ],
+    "presets": [{
+      "name": "t:sections.faq.name",
+      "blocks": [
+        {
+          "type": "text"
+        },
+        {
+          "type": "question"
+        },
+        {
+          "type": "question"
+        }
+      ]
+    }]
+  }
+{% endschema %}

@@ -1,0 +1,68 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "cart-items": {
+      "type": "main-cart",
+      "settings": {
+        "color_scheme": ""
+      }
+    },
+    "featured_collection_or_products_cxtJND": {
+      "type": "featured-collection-or-products",
+      "blocks": {
+        "section_header_ebR6Vr": {
+          "type": "section_header",
+          "settings": {
+            "subtitle": "",
+            "subtitle_tag": "h3",
+            "title": "You might also like",
+            "title_tag": "h2",
+            "text": "",
+            "text_alignment": "text-align-center",
+            "sm_size_multiplier": "sm-size--default",
+            "size_multiplier": "size--default"
+          }
+        }
+      },
+      "block_order": [
+        "section_header_ebR6Vr"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "collection": "add-on-sales",
+        "product_list": [],
+        "product_limit": 12,
+        "view_all": true,
+        "enable_full_width": false,
+        "sm_enable_card_thumbnail": false,
+        "layout_desktop": "slide",
+        "products_per_row_desktop": 4,
+        "sm_custom_gap": -1,
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "products_per_row_tablet": 4,
+        "sm_down_enable_card_thumbnail": false,
+        "layout_mobile": "slide",
+        "products_per_row_mobile": 1,
+        "custom_gap": -1,
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "sliding_behavior": "single"
+      }
+    }
+  },
+  "order": [
+    "cart-items",
+    "featured_collection_or_products_cxtJND"
+  ]
+}

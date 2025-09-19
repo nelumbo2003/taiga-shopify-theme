@@ -1,0 +1,96 @@
+/* ===============================
+   Blog Filters (Existing Rules)
+=============================== */
+.blog-filters {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.blog-filters > *:not(:last-child) {
+  margin-right: var(--gutter);
+}
+
+.blog-filters .filter-select {
+  padding-right: 4rem;
+}
+
+.blog-filters .link-icon.dropmenu-arrow {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* ===============================
+   Responsive & Scalable Images
+=============================== */
+
+/* Constrain the container for the featured image to 100% width */
+.article-block__featured_image,
+.article-block__featured_image .article-image,
+.article-block__featured_image figure {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* Force the featured image to scale responsively */
+.article-block__featured_image img {
+  display: block;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  object-fit: cover; /* Optional: crops the image to cover container */
+}
+
+/* Ensure all images in blog content scale responsively */
+.blog-post img,
+.article-block img,
+.article-template img {
+  display: block;
+  max-width: 100% !important;
+  height: auto !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===============================
+   Global Blog Content Styles
+=============================== */
+
+/* Constrain and center blog content to align with the main theme */
+.blog-post,
+.article-block,
+.article-template {
+  max-width: 800px;      /* Adjust to match your main theme width */
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+  font-family: inherit;
+  color: inherit;
+}
+
+/* Ensure headings, paragraphs, and lists are aligned with the main theme */
+.blog-post h1,
+.blog-post h2,
+.blog-post h3,
+.blog-post h4,
+.blog-post p,
+.blog-post ul,
+.blog-post ol,
+.article-template h1,
+.article-template h2,
+.article-template h3,
+.article-template h4,
+.article-template p,
+.article-template ul,
+.article-template ol {
+  text-align: left;
+  margin: 0 0 1em;
+  line-height: 1.6;
+}

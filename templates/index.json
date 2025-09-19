@@ -1,0 +1,1074 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero_QUe3Na": {
+      "type": "hero",
+      "blocks": {
+        "image_qAbD8d": {
+          "type": "image",
+          "settings": {
+            "media_toggle": "show_image",
+            "image": "shopify://shop_images/home-banner.jpg",
+            "video_url": "",
+            "video_url_mobile": ""
+          }
+        },
+        "title_eydGCj": {
+          "type": "title",
+          "settings": {
+            "title": "Outlet",
+            "heading_tag": "h1",
+            "sm_size_multiplier": "sm-size--outrageous",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "text_tnPJER": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Products up to 75% off</p>",
+            "sm_size_multiplier": "sm-size--gigantic",
+            "sm_margin_top": 1,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "buttons_7F8piw": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop women's",
+            "button_link_1": "/collections/womens-sale?gf_722940=1%3A75&sort_by=sale-descending&tab=products",
+            "button_style_1": "",
+            "button_label_2": "Shop men's",
+            "button_link_2": "/collections/mens-sale?gf_722940=1%3A75&sort_by=sale-descending&tab=products",
+            "button_style_2": "",
+            "button_label_3": "Shop kid's",
+            "button_link_3": "/collections/kids-outlet?gf_722940=1%3A75&sort_by=sale-descending&tab=products",
+            "button_style_3": "",
+            "sm_full_width_buttons": false,
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 24,
+            "full_width_buttons": false,
+            "size_multiplier": "size--default",
+            "margin_top": 24
+          }
+        }
+      },
+      "block_order": [
+        "image_qAbD8d",
+        "title_eydGCj",
+        "text_tnPJER",
+        "buttons_7F8piw"
+      ],
+      "disabled": true,
+      "name": "OUTLET banner",
+      "settings": {
+        "color_scheme": "scheme-e92155d1-8666-4666-bf59-08e392145cf3",
+        "overlay_opacity": 30,
+        "media_link": "",
+        "enable_full_width": true,
+        "section_height_desktop": "by_pixels",
+        "section_pixel_height_desktop": 600,
+        "content_width": "col-sm-max-8",
+        "content_align_desktop": "sm-vertical-center sm-horizontal-center",
+        "desktop_alignment": "sm-text-align-center",
+        "md_padding_top": 0,
+        "md_padding_bottom": 0,
+        "section_height": "by_pixels",
+        "section_pixel_height": 400,
+        "content_align_mobile": "vertical-center horizontal-center",
+        "mobile_alignment": "text-align-center",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "hero_PdyVg6": {
+      "type": "hero",
+      "blocks": {
+        "image_yfxDcF": {
+          "type": "image",
+          "settings": {
+            "media_toggle": "show_image",
+            "image": "shopify://shop_images/Web_Large-wheatcroft_w_0832_BP.jpg",
+            "video_url": "",
+            "video_url_mobile": ""
+          }
+        },
+        "title_nQWnkg": {
+          "type": "title",
+          "settings": {
+            "title": "Patagonia Black Hole",
+            "heading_tag": "h3",
+            "sm_size_multiplier": "sm-size--outrageous",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "text_UtqC6B": {
+          "type": "text",
+          "settings": {
+            "text": "Backpacks & Duffelbags",
+            "sm_size_multiplier": "sm-size--gigantic",
+            "sm_margin_top": 1,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "buttons_VAzJ9h": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop the Black Hole collection",
+            "button_link_1": "shopify://collections/patagonia-black-hole-bags",
+            "button_style_1": "",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "",
+            "button_label_3": "",
+            "button_link_3": "",
+            "button_style_3": "",
+            "sm_full_width_buttons": false,
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 24,
+            "full_width_buttons": false,
+            "size_multiplier": "size--default",
+            "margin_top": 24
+          }
+        }
+      },
+      "block_order": [
+        "image_yfxDcF",
+        "title_nQWnkg",
+        "text_UtqC6B",
+        "buttons_VAzJ9h"
+      ],
+      "name": "t:sections.hero.name",
+      "settings": {
+        "color_scheme": "scheme-e92155d1-8666-4666-bf59-08e392145cf3",
+        "overlay_opacity": 30,
+        "media_link": "",
+        "enable_full_width": true,
+        "section_height_desktop": "by_pixels",
+        "section_pixel_height_desktop": 600,
+        "content_width": "col-sm-max-8",
+        "content_align_desktop": "sm-vertical-center sm-horizontal-center",
+        "desktop_alignment": "sm-text-align-center",
+        "md_padding_top": 0,
+        "md_padding_bottom": 0,
+        "section_height": "by_pixels",
+        "section_pixel_height": 400,
+        "content_align_mobile": "vertical-center horizontal-center",
+        "mobile_alignment": "text-align-center",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "hero_Hhn4Ar": {
+      "type": "hero",
+      "blocks": {
+        "image_Kc487H": {
+          "type": "image",
+          "settings": {
+            "media_toggle": "show_image",
+            "image": "shopify://shop_images/home-banner.jpg",
+            "video_url": "",
+            "video_url_mobile": ""
+          }
+        },
+        "title_HcHW4N": {
+          "type": "title",
+          "settings": {
+            "title": "Clearance Sale in the Final Stretch!",
+            "heading_tag": "h3",
+            "sm_size_multiplier": "sm-size--outrageous",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "text_LGHPfq": {
+          "type": "text",
+          "settings": {
+            "text": "<p style=\"margin-top: 30px; background: #fcd0c7; color: #000; border-radius: 100px; display: inline-block; padding: 5px 30px;\">All products at least 20% off!</p>\n<p style='=\"\"'>Extra discount also on already discounted items with the code <span style=\"background: #dd481e; border-radius: 100px; padding: 0px 15px; font-weight: 700;\">ALE20</span></p>",
+            "sm_size_multiplier": "sm-size--gigantic",
+            "sm_margin_top": 1,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        }
+      },
+      "block_order": [
+        "image_Kc487H",
+        "title_HcHW4N",
+        "text_LGHPfq"
+      ],
+      "disabled": true,
+      "name": "t:sections.hero.name",
+      "settings": {
+        "color_scheme": "scheme-e92155d1-8666-4666-bf59-08e392145cf3",
+        "overlay_opacity": 30,
+        "media_link": "",
+        "enable_full_width": true,
+        "section_height_desktop": "by_pixels",
+        "section_pixel_height_desktop": 600,
+        "content_width": "col-sm-max-8",
+        "content_align_desktop": "sm-vertical-center sm-horizontal-center",
+        "desktop_alignment": "sm-text-align-center",
+        "md_padding_top": 0,
+        "md_padding_bottom": 0,
+        "section_height": "by_pixels",
+        "section_pixel_height": 400,
+        "content_align_mobile": "vertical-center horizontal-center",
+        "mobile_alignment": "text-align-center",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "hero_countdown_PKifAy": {
+      "type": "hero-countdown",
+      "blocks": {
+        "title_kK7TCQ": {
+          "type": "title",
+          "disabled": true,
+          "settings": {
+            "title": "Countdown heading",
+            "heading_tag": "h2",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "timer_8RfdDn": {
+          "type": "timer",
+          "settings": {
+            "the_date": "2025-07-24 23:59",
+            "time_units": "units-below",
+            "units_spacing": "units-spacing-medium",
+            "text_gradient_color": "",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": -10,
+            "size_multiplier": "size--default",
+            "margin_top": 12
+          }
+        },
+        "post_timer_message_D7CKQm": {
+          "type": "post_timer_message",
+          "disabled": true,
+          "settings": {
+            "text": "<h1>The time is up!</h1><p>Tell your customer what happens now, since the timer has run out.</p>",
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "",
+            "text_sm_size_multiplier": "sm-size--default",
+            "button_sm_size_multiplier": "sm-size--default",
+            "text_size_multiplier": "size--default",
+            "button_size_multiplier": "size--default"
+          }
+        }
+      },
+      "block_order": [
+        "title_kK7TCQ",
+        "timer_8RfdDn",
+        "post_timer_message_D7CKQm"
+      ],
+      "disabled": true,
+      "name": "t:sections.hero-countdown.name",
+      "settings": {
+        "color_scheme": "scheme-63928303-6d1e-4756-9c89-e03d6ff76b37",
+        "overlay_opacity": 10,
+        "enable_full_width": true,
+        "section_height_desktop": "by_pixels",
+        "section_pixel_height_desktop": 100,
+        "desktop_alignment": "sm-text-align-center",
+        "content_align_desktop": "sm-vertical-center sm-horizontal-center",
+        "md_padding_top": 0,
+        "md_padding_bottom": 0,
+        "section_height": "by_pixels",
+        "section_pixel_height": 100,
+        "mobile_alignment": "text-align-center",
+        "content_align_mobile": "vertical-center horizontal-center",
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "17467261738f9de3e6": {
+      "type": "apps",
+      "blocks": {
+        "smart_product_filter_search_new_products_4cYeLw": {
+          "type": "shopify://apps/smart-product-filter-search/blocks/new_products/5cc1944c-3014-4a2a-af40-7d65abc0ef73",
+          "settings": {
+            "heading": "New arrivals",
+            "layout": "carousel",
+            "limit": 10,
+            "columns_desktop": 5,
+            "columns_tablet": 5,
+            "columns_mobile": 2,
+            "autoplay": false,
+            "loop": true,
+            "pagination": false,
+            "navigation": true
+          }
+        },
+        "smart_product_filter_search_best_sellers_NWHGRB": {
+          "type": "shopify://apps/smart-product-filter-search/blocks/best_sellers/5cc1944c-3014-4a2a-af40-7d65abc0ef73",
+          "settings": {
+            "heading": "Best sellers",
+            "layout": "carousel",
+            "limit": 10,
+            "columns_desktop": 5,
+            "columns_tablet": 5,
+            "columns_mobile": 2,
+            "autoplay": false,
+            "loop": true,
+            "pagination": false,
+            "navigation": true
+          }
+        }
+      },
+      "block_order": [
+        "smart_product_filter_search_new_products_4cYeLw",
+        "smart_product_filter_search_best_sellers_NWHGRB"
+      ],
+      "settings": {}
+    },
+    "divider_M7UCay": {
+      "type": "divider",
+      "blocks": {
+        "standard_tzUxyj": {
+          "type": "standard",
+          "settings": {
+            "divider_graphics": "curve",
+            "top_part_color": "rgba(0,0,0,0)",
+            "middle_part_color": "",
+            "bottom_part_color": "#ffffff",
+            "position": "top-previous",
+            "flip_horizontal": false,
+            "flip_vertical": false,
+            "sm_graphics_height": 0,
+            "sm_graphics_width": 100,
+            "graphics_height": 0,
+            "graphics_width": 100
+          }
+        }
+      },
+      "block_order": [
+        "standard_tzUxyj"
+      ],
+      "settings": {
+        "md_padding_top": 0,
+        "md_padding_bottom": 32,
+        "padding_top": 0,
+        "padding_bottom": 32
+      }
+    },
+    "collection_list_c9BYcm": {
+      "type": "collection-list",
+      "blocks": {
+        "section_header_hcz7BE": {
+          "type": "section_header",
+          "settings": {
+            "subtitle": "Our Fall Favorites",
+            "subtitle_tag": "h3",
+            "title": "",
+            "title_tag": "h2",
+            "text": "",
+            "text_alignment": "text-align-center",
+            "sm_size_multiplier": "sm-size--default",
+            "size_multiplier": "size--default"
+          }
+        },
+        "collection_WGVxDD": {
+          "type": "collection",
+          "settings": {
+            "collection": "fleeceshirts-and-jackets",
+            "card_bg": "bg-solid",
+            "custom_img": "shopify://shop_images/9cbefe682e026d260cffb36eda9e1fdf722c82e96beae14693fe9cdfb9018251_1800x1800_224dbfb8-e395-467a-96a5-7063ad78dede.webp"
+          }
+        },
+        "collection_aTpJLq": {
+          "type": "collection",
+          "settings": {
+            "collection": "shell-jackets",
+            "card_bg": "bg-solid",
+            "custom_img": "shopify://shop_images/004_TNF_F24_ALL_MOUNTAIN_PURPOSE.jpg"
+          }
+        },
+        "collection_QaBc9r": {
+          "type": "collection",
+          "settings": {
+            "collection": "sustainable-bags",
+            "card_bg": "bg-solid"
+          }
+        },
+        "collection_mdUExY": {
+          "type": "collection",
+          "settings": {
+            "collection": "training-clothes",
+            "card_bg": "bg-solid",
+            "custom_img": "shopify://shop_images/Kopia_av_44_x.png"
+          }
+        }
+      },
+      "block_order": [
+        "section_header_hcz7BE",
+        "collection_WGVxDD",
+        "collection_aTpJLq",
+        "collection_QaBc9r",
+        "collection_mdUExY"
+      ],
+      "name": "t:sections.collection-list.name",
+      "settings": {
+        "color_scheme": "",
+        "enable_full_width": false,
+        "layout_desktop": "grid",
+        "collections_per_row_desktop": 4,
+        "sm_custom_gap": -1,
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "collections_per_row_tablet": 4,
+        "layout_mobile": "slide peek",
+        "collections_per_row_mobile": 1,
+        "custom_gap": -1,
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "sliding_behavior": "all"
+      }
+    },
+    "featured_look_9npk4p": {
+      "type": "featured-look",
+      "blocks": {
+        "section_header_fq3TDV": {
+          "type": "section_header",
+          "settings": {
+            "subtitle": "",
+            "subtitle_tag": "h3",
+            "title": "Sport Casual Look",
+            "title_tag": "h2",
+            "text": "<p>Effortless. Comfortable. Ready for anything. From morning workouts to evening hangouts – the sport-casual look has you covered. </p>",
+            "text_alignment": "text-align-left",
+            "sm_size_multiplier": "sm-size--default",
+            "size_multiplier": "size--default"
+          }
+        },
+        "product_bjpdnT": {
+          "type": "product",
+          "settings": {
+            "product": "casall-sherpa-short-zip-jacket-ecru",
+            "vertical_position": 24,
+            "horizontal_position": 54
+          }
+        },
+        "product_GBpWYe": {
+          "type": "product",
+          "settings": {
+            "product": "team-logo-tee",
+            "vertical_position": 38,
+            "horizontal_position": 16
+          }
+        },
+        "product_4FgQWF": {
+          "type": "product",
+          "settings": {
+            "product": "casall-jersey-straight-pant-black",
+            "vertical_position": 66,
+            "horizontal_position": 84
+          }
+        },
+        "product_4FDX7m": {
+          "type": "product",
+          "settings": {
+            "product": "ws-bondi",
+            "vertical_position": 81,
+            "horizontal_position": 25
+          }
+        },
+        "product_ppkwAD": {
+          "type": "product",
+          "settings": {
+            "product": "ground-crossbody-bag",
+            "vertical_position": 59,
+            "horizontal_position": 51
+          }
+        }
+      },
+      "block_order": [
+        "section_header_fq3TDV",
+        "product_bjpdnT",
+        "product_GBpWYe",
+        "product_4FgQWF",
+        "product_4FDX7m",
+        "product_ppkwAD"
+      ],
+      "name": "t:sections.featured-look.name",
+      "settings": {
+        "image": "shopify://shop_images/Untitled_design_3.png",
+        "color_scheme": "",
+        "enable_full_width": false,
+        "media_position": "media_first",
+        "md_padding_top": 80,
+        "md_padding_bottom": 80,
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "collection_list_EjNRk8": {
+      "type": "collection-list",
+      "blocks": {
+        "section_header_V6WWUp": {
+          "type": "section_header",
+          "settings": {
+            "subtitle": "",
+            "subtitle_tag": "h3",
+            "title": "Gear Up for Summer",
+            "title_tag": "h2",
+            "text": "",
+            "text_alignment": "text-align-center",
+            "sm_size_multiplier": "sm-size--default",
+            "size_multiplier": "size--default"
+          }
+        },
+        "collection_9rwjRG": {
+          "type": "collection",
+          "settings": {
+            "collection": "sustainable-bags",
+            "card_bg": "bg-solid"
+          }
+        },
+        "collection_k38WjR": {
+          "type": "collection",
+          "settings": {
+            "collection": "sunglasses",
+            "card_bg": "bg-solid"
+          }
+        },
+        "collection_DdH6Ag": {
+          "type": "collection",
+          "settings": {
+            "collection": "water-bottles",
+            "card_bg": "bg-solid"
+          }
+        },
+        "collection_V4fHtC": {
+          "type": "collection",
+          "settings": {
+            "collection": "sneakers",
+            "card_bg": "bg-solid"
+          }
+        }
+      },
+      "block_order": [
+        "section_header_V6WWUp",
+        "collection_9rwjRG",
+        "collection_k38WjR",
+        "collection_DdH6Ag",
+        "collection_V4fHtC"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "",
+        "enable_full_width": false,
+        "layout_desktop": "grid",
+        "collections_per_row_desktop": 4,
+        "sm_custom_gap": -1,
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "collections_per_row_tablet": 4,
+        "layout_mobile": "slide peek",
+        "collections_per_row_mobile": 1,
+        "custom_gap": -1,
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "sliding_behavior": "single"
+      }
+    },
+    "05491331-d79d-4cc5-9a3e-d3cc5253e7b3": {
+      "type": "banner-grid",
+      "blocks": {
+        "template--20073004892507__05491331-d79d-4cc5-9a3e-d3cc5253e7b3-image-1": {
+          "type": "image",
+          "settings": {
+            "color_scheme": "",
+            "overlay_opacity": 0,
+            "image": "shopify://shop_images/Etusivun_collection_nostot_800_x_1000_px_d658ba08-d54d-4d8d-88c0-7ce960651446.png",
+            "media_link": "shopify://pages/weekendbee-store-in-helsinki-lauttasaari",
+            "title": "WEEKENDBEE POP UP STORE",
+            "title_style": "btn btn--primary",
+            "content_alignment": "vertical-bottom horizontal-center",
+            "padding": 16
+          }
+        },
+        "image_QVYKqX": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "color_scheme": "",
+            "overlay_opacity": 0,
+            "image": "shopify://shop_images/weekendbee-kuvaukset-JS1_2063-113.jpg",
+            "media_link": "shopify://pages/campaigns",
+            "title": "Campaign - Get 20% discount on all products with code: POPUP20",
+            "title_style": "btn btn--primary",
+            "content_alignment": "vertical-bottom horizontal-center",
+            "padding": 16
+          }
+        },
+        "template--20073004892507__05491331-d79d-4cc5-9a3e-d3cc5253e7b3-image-2": {
+          "type": "image",
+          "settings": {
+            "color_scheme": "",
+            "overlay_opacity": 0,
+            "image": "shopify://shop_images/xDSC07955.jpg",
+            "media_link": "shopify://collections/patagonia-fleece",
+            "title": "PATAGONIA FLEECES",
+            "title_style": "btn btn--primary",
+            "content_alignment": "vertical-bottom horizontal-center",
+            "padding": 16
+          }
+        },
+        "62fdca14-f311-425c-ae83-14ed77c47f49": {
+          "type": "image",
+          "settings": {
+            "color_scheme": "",
+            "overlay_opacity": 0,
+            "image": "shopify://shop_images/kay-sports-bra-recycled-polyester-underwear-rohnisch-333553.jpg",
+            "media_link": "shopify://collections/sustainable-training-and-gym-clothes-for-women",
+            "title": "ACTIVEWEAR",
+            "title_style": "btn btn--primary",
+            "content_alignment": "vertical-bottom horizontal-center",
+            "padding": 16
+          }
+        },
+        "image_mJirh6": {
+          "type": "image",
+          "settings": {
+            "color_scheme": "default",
+            "overlay_opacity": 0,
+            "image": "shopify://shop_images/Etusivu_b84abfae-9d32-4a99-b397-6cad9c2a8fbf.jpg",
+            "media_link": "shopify://products/weekendbee-gift-card",
+            "title": "",
+            "title_style": "h3",
+            "content_alignment": "vertical-bottom horizontal-left",
+            "padding": 40
+          }
+        },
+        "7b4dfee8-e0d8-4734-992d-5bc2f08b8a23": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "color_scheme": "",
+            "overlay_opacity": 0,
+            "image": "shopify://shop_images/ms-campo-chromefree-sneakers-chromefree-leather-shoes-veja-384524.jpg",
+            "media_link": "shopify://collections/ecological-shoes",
+            "title": "SHOES",
+            "title_style": "btn btn--primary",
+            "content_alignment": "vertical-bottom horizontal-center",
+            "padding": 16
+          }
+        },
+        "21a2279a-151b-4fb1-a885-9348b462d871": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "color_scheme": "",
+            "overlay_opacity": 0,
+            "image": "shopify://shop_images/base-camp-duffel-s-50l-recycled-polyester-bags-the-north-face-850020.webp",
+            "media_link": "shopify://collections/bags-and-accessories",
+            "title": "BACKPACKS AND BAGS",
+            "title_style": "btn btn--primary",
+            "content_alignment": "vertical-bottom horizontal-center",
+            "padding": 16
+          }
+        }
+      },
+      "block_order": [
+        "template--20073004892507__05491331-d79d-4cc5-9a3e-d3cc5253e7b3-image-1",
+        "image_QVYKqX",
+        "template--20073004892507__05491331-d79d-4cc5-9a3e-d3cc5253e7b3-image-2",
+        "62fdca14-f311-425c-ae83-14ed77c47f49",
+        "image_mJirh6",
+        "7b4dfee8-e0d8-4734-992d-5bc2f08b8a23",
+        "21a2279a-151b-4fb1-a885-9348b462d871"
+      ],
+      "disabled": true,
+      "settings": {
+        "block_aspect_ratio": "portrait",
+        "color_scheme": "color-main",
+        "section_columns_desktop": 4,
+        "enable_full_width": true,
+        "sm_rounded_corners": false,
+        "layout_desktop": "grid",
+        "sm_grid_gap": 12,
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "section_columns_tablet": 3,
+        "section_columns_mobile": 2,
+        "layout_mobile": "grid",
+        "sm_down_edge_to_edge": true,
+        "rounded_corners": false,
+        "grid_gap": 3,
+        "padding_top": 24,
+        "padding_bottom": 24,
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "sliding_behavior": "single"
+      }
+    },
+    "image_with_text_hRFpGy": {
+      "type": "image-with-text",
+      "blocks": {
+        "image_cRnxV8": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/GTMS24_23435_STLE_cc_WEB.jpg",
+            "video_url": "",
+            "media_aspect_ratio": "natural",
+            "media_toggle": "show_image",
+            "media_link": ""
+          }
+        },
+        "subtitle_neyDk8": {
+          "type": "subtitle",
+          "settings": {
+            "subtitle": "Stay Warm in Style",
+            "heading_tag": "h3",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "title_6dMYtC": {
+          "type": "title",
+          "settings": {
+            "title": "Discover the Best-Selling Patagonia Jackets",
+            "heading_tag": "h2",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "text_freeC8": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Elevate your outdoor adventures with Patagonia's top-rated jackets. Crafted for durability and performance, our collection features a range of styles designed to keep you warm and comfortable in any climate. From the iconic Down Sweater to the versatile Torrentshell, each jacket is engineered with eco-friendly materials and innovative technology.</p>",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "button_JrRzQt": {
+          "type": "button",
+          "settings": {
+            "button_label": "Patagonia jackets",
+            "button_link": "shopify://collections/patagonia-jackets",
+            "button_style": "",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 24,
+            "size_multiplier": "size--default",
+            "margin_top": 24
+          }
+        }
+      },
+      "block_order": [
+        "image_cRnxV8",
+        "subtitle_neyDk8",
+        "title_6dMYtC",
+        "text_freeC8",
+        "button_JrRzQt"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "enable_full_width": false,
+        "media_position": "media_first",
+        "content_width": "col-sm-max-4",
+        "desktop_alignment": "sm-text-align-left",
+        "sm_full_width_buttons": false,
+        "md_padding_top": 0,
+        "md_padding_bottom": 0,
+        "mobile_alignment": "text-align-left",
+        "full_width_buttons": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "featured_collection_or_products_qTheYh": {
+      "type": "featured-collection-or-products",
+      "blocks": {
+        "section_header_VGBcDT": {
+          "type": "section_header",
+          "settings": {
+            "subtitle": "Best-Selling",
+            "subtitle_tag": "h3",
+            "title": "Patagonia Jackets",
+            "title_tag": "h2",
+            "text": "",
+            "text_alignment": "text-align-center",
+            "sm_size_multiplier": "sm-size--default",
+            "size_multiplier": "size--default"
+          }
+        }
+      },
+      "block_order": [
+        "section_header_VGBcDT"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "collection": "patagonia-jackets",
+        "product_list": [],
+        "product_limit": 12,
+        "view_all": true,
+        "enable_full_width": false,
+        "sm_enable_card_thumbnail": false,
+        "layout_desktop": "slide",
+        "products_per_row_desktop": 5,
+        "sm_custom_gap": -1,
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "products_per_row_tablet": 4,
+        "sm_down_enable_card_thumbnail": false,
+        "layout_mobile": "slide",
+        "products_per_row_mobile": 2,
+        "custom_gap": -1,
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "sliding_behavior": "single"
+      }
+    },
+    "1746726036ca798bcd": {
+      "type": "apps",
+      "blocks": {
+        "smart_product_filter_search_trending_products_AmJiLN": {
+          "type": "shopify://apps/smart-product-filter-search/blocks/trending_products/5cc1944c-3014-4a2a-af40-7d65abc0ef73",
+          "settings": {
+            "heading": "Trending products",
+            "layout": "carousel",
+            "limit": 10,
+            "columns_desktop": 5,
+            "columns_tablet": 5,
+            "columns_mobile": 2,
+            "autoplay": false,
+            "loop": true,
+            "pagination": false,
+            "navigation": true
+          }
+        },
+        "smart_product_filter_search_most_viewed_products_4wBziG": {
+          "type": "shopify://apps/smart-product-filter-search/blocks/most_viewed_products/5cc1944c-3014-4a2a-af40-7d65abc0ef73",
+          "settings": {
+            "heading": "Top viewed products",
+            "layout": "carousel",
+            "limit": 10,
+            "columns_desktop": 5,
+            "columns_tablet": 5,
+            "columns_mobile": 2,
+            "autoplay": false,
+            "loop": true,
+            "pagination": false,
+            "navigation": true
+          }
+        }
+      },
+      "block_order": [
+        "smart_product_filter_search_trending_products_AmJiLN",
+        "smart_product_filter_search_most_viewed_products_4wBziG"
+      ],
+      "settings": {}
+    },
+    "featured_collection_or_products_wDNVzQ": {
+      "type": "featured-collection-or-products",
+      "blocks": {
+        "section_header_zhKTLy": {
+          "type": "section_header",
+          "settings": {
+            "subtitle": "",
+            "subtitle_tag": "h3",
+            "title": "All Time Best-Sellers",
+            "title_tag": "h2",
+            "text": "",
+            "text_alignment": "text-align-center",
+            "sm_size_multiplier": "sm-size--default",
+            "size_multiplier": "size--default"
+          }
+        }
+      },
+      "block_order": [
+        "section_header_zhKTLy"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "color-main",
+        "collection": "best-selling-products",
+        "product_list": [],
+        "product_limit": 12,
+        "view_all": true,
+        "enable_full_width": false,
+        "sm_enable_card_thumbnail": false,
+        "layout_desktop": "slide",
+        "products_per_row_desktop": 5,
+        "sm_custom_gap": -1,
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "products_per_row_tablet": 4,
+        "sm_down_enable_card_thumbnail": false,
+        "layout_mobile": "slide",
+        "products_per_row_mobile": 1,
+        "custom_gap": -1,
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "sliding_behavior": "single"
+      }
+    },
+    "custom_liquid_CaXkhw": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.name",
+      "settings": {
+        "color_scheme": "",
+        "custom_liquid": "<div class=\"samitaPL-trustBadge\" data-id=\"2391\"></div>",
+        "enable_full_width": false,
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "1710934785650e65ec": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_featured_carousel_w7JqW6": {
+          "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "maxwidth": 1920
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_featured_carousel_w7JqW6"
+      ],
+      "settings": {}
+    },
+    "cdaa84a7-c27a-4b78-8ec6-f15bf7700fd8": {
+      "type": "video",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "color-main",
+        "video_url": "https://youtu.be/nkP3pHUNPhc?si=bxCQej4Mc_GtY1gg",
+        "title": "Our story",
+        "text": "",
+        "align_content": "text-align-left",
+        "position_content": "above",
+        "md_padding_top": 0,
+        "md_padding_bottom": 40,
+        "padding_top": 0,
+        "padding_bottom": 24
+      }
+    },
+    "16631612026d733ecc": {
+      "type": "featured-collection-or-products",
+      "blocks": {
+        "section_header_HaVPHj": {
+          "type": "section_header",
+          "settings": {
+            "subtitle": "",
+            "subtitle_tag": "h3",
+            "title": "Outlet",
+            "title_tag": "h2",
+            "text": "",
+            "text_alignment": "text-align-center",
+            "sm_size_multiplier": "sm-size--default",
+            "size_multiplier": "size--default"
+          }
+        }
+      },
+      "block_order": [
+        "section_header_HaVPHj"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "color-main",
+        "collection": "final-winter-sale",
+        "product_list": [],
+        "product_limit": 15,
+        "view_all": true,
+        "enable_full_width": true,
+        "sm_enable_card_thumbnail": false,
+        "layout_desktop": "slide",
+        "products_per_row_desktop": 5,
+        "sm_custom_gap": -1,
+        "md_padding_top": 0,
+        "md_padding_bottom": 0,
+        "products_per_row_tablet": 4,
+        "sm_down_enable_card_thumbnail": false,
+        "layout_mobile": "slide",
+        "products_per_row_mobile": 2,
+        "custom_gap": -1,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "sliding_behavior": "single"
+      }
+    },
+    "16631618829cb2eeae": {
+      "type": "featured-blog",
+      "settings": {
+        "color_scheme": "color-main",
+        "blog": "sustainability",
+        "article_limit": 3,
+        "view_all": true,
+        "enable_full_width": false,
+        "layout_desktop": "slide",
+        "articles_per_row_desktop": 3,
+        "md_padding_top": 0,
+        "md_padding_bottom": 0,
+        "articles_per_row_tablet": 4,
+        "layout_mobile": "slide",
+        "articles_per_row_mobile": 2,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "sliding_behavior": "single"
+      }
+    }
+  },
+  "order": [
+    "hero_QUe3Na",
+    "hero_PdyVg6",
+    "hero_Hhn4Ar",
+    "hero_countdown_PKifAy",
+    "17467261738f9de3e6",
+    "divider_M7UCay",
+    "collection_list_c9BYcm",
+    "featured_look_9npk4p",
+    "collection_list_EjNRk8",
+    "05491331-d79d-4cc5-9a3e-d3cc5253e7b3",
+    "image_with_text_hRFpGy",
+    "featured_collection_or_products_qTheYh",
+    "1746726036ca798bcd",
+    "featured_collection_or_products_wDNVzQ",
+    "custom_liquid_CaXkhw",
+    "1710934785650e65ec",
+    "cdaa84a7-c27a-4b78-8ec6-f15bf7700fd8",
+    "16631612026d733ecc",
+    "16631618829cb2eeae"
+  ]
+}

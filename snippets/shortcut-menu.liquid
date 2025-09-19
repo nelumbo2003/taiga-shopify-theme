@@ -1,0 +1,20 @@
+{%- assign menu_items_looped = 0 -%}
+
+<nav class="header-shortlinks">
+  {%- for menu_item in shortcut_menu.links -%}
+    {%- unless menu_item.title contains '---' -%}
+      {%- if menu_items_looped == section.settings.shortcut_limit -%}
+        {%- break -%}
+      {%- endif -%}
+      {%- assign menu_items_looped = menu_items_looped | plus: 1 -%}
+      {%- if menu_item.links.size > 0 or content_menu_titles contains menu_item.title -%}
+        <button class="header-shortlink js flex center-center {{ menu_item.title | handleize }}" style="gap:4px" data-drawer-submenu-open="{{ menu_item.url }}">{{ menu_item.title }} {% render 'icon-chevron-down--small' %} </button>
+        <noscript>
+          <a role="button" class="header-shortlink flex center-center no-js" href="{{ menu_item.url }}">{{ menu_item.title }}</a>
+        </noscript>
+      {%- else -%}
+        <a class="header-shortlink flex center-center" href="{{ menu_item.url }}">{{ menu_item.title }}</a>
+      {%- endif -%}
+    {%- endunless -%}
+  {%- endfor -%}
+</nav>

@@ -1,0 +1,122 @@
+{%- assign pick_up_availabilities = product_variant.store_availabilities | where: 'pick_up_enabled', true -%}
+
+{%- if pick_up_availabilities.size > 0 -%}
+  <pickup-availability-preview class="pickup-availability-preview">
+    {%- liquid
+      assign closest_location = pick_up_availabilities.first
+      if closest_location.available
+        render 'icon-tick'
+      endif
+    -%}
+
+    <div class="pickup-availability-info">
+      {%- if closest_location.available -%}
+{%- liquid
+  assign closest_location = pick_up_availabilities.first
+  assign now_hour = 'now' | date: "%H" | plus: 0
+  assign today = 'now' | date: "%w" | plus: 0
+  assign pickup_message = 'products.product.pickup_availability.available_today_at_html' | t: location_name: closest_location.location.name
+
+  if today >= 1 and today <= 5 and now_hour >= 18
+    assign pickup_message = 'products.product.pickup_availability.available_tomorrow_at_html' | t: location_name: closest_location.location.name
+  elsif today == 6 and now_hour >= 16
+    assign pickup_message = 'products.product.pickup_availability.available_monday_at_html' | t: location_name: closest_location.location.name
+  elsif today == 0
+    assign pickup_message = 'products.product.pickup_availability.available_tomorrow_at_html' | t: location_name: closest_location.location.name
+  endif
+-%}
+<p>{{ pickup_message }}</p>
+        <p class="caption">{{ 'products.product.pickup_availability.opening_hours' | t }}</p>
+        <a href="#drawer-pickup-availability" id="ShowPickupAvailabilityDrawer" class="pickup-availability-button link" aria-haspopup="dialog">
+          {%- if pick_up_availabilities.size == 1 -%}
+            {{ 'products.product.pickup_availability.view_store_info' | t }}
+          {%- else -%}
+            {{ 'products.product.pickup_availability.check_other_stores' | t }}
+          {%- endif -%}
+        </a>
+      {%- else -%}
+        {%- if closest_location and closest_location.location and closest_location.location.name -%}
+          <p>{{ 'products.product.pickup_availability.pick_up_unavailable_at_html' | t: location_name: closest_location.location.name }}</p>
+        {%- else -%}
+          <p>{{ 'products.product.pickup_availability.unavailable' | t }}</p>
+        {%- endif -%}
+        {%- if pick_up_availabilities.size > 1 -%}
+          <a href="#drawer-pickup-availability" id="ShowPickupAvailabilityDrawer" class="pickup-availability-button link" aria-haspopup="dialog">{{ 'products.product.pickup_availability.check_other_stores' | t }}</a>
+        {%- endif -%}
+      {%- endif -%}
+    </div>
+  </pickup-availability-preview>
+
+  <pickup-availability-drawer id="drawer-pickup-availability" class="drawer" data-drawer data-parent style="opacity: 0;">
+    <div class="drawer-panel slide-from-right" data-contents>
+      <header class="drawer-header user-select-none">
+        <h3 class="size--small">{{ 'products.product.pickup_availability.store_info' | t }}</h3>
+        <a role="button" href="#" class="close" data-close aria-label="{{ 'accessibility.close_navigation' | t }}">{%- render 'icon-close' -%}</a>
+      </header>
+
+      <div class="drawer-content drawer-cart__content">
+        <ul class="pickup-availability-list grid grid-cols-1" role="list" data-store-availability-drawer-content>
+          {%- for availability in pick_up_availabilities -%}
+         <li class="pickup-availability-list__item">
+  {%- if availability.available -%}
+    <span class="ping green"></span>
+    <p>
+      {%- assign now_hour = 'now' | date: "%H" | plus: 0 -%}
+{%- assign today = 'now' | date: "%w" | plus: 0 -%}
+{%- assign pickup_message = '' -%}
+{%- if today >= 1 and today <= 5 and now_hour < 18 -%}
+  {%- assign pickup_message = 'products.product.pickup_availability.available_today_at_html' | t: location_name: closest_location.location.name -%}
+{%- elsif today == 6 and now_hour < 16 -%}
+  {%- assign pickup_message = 'products.product.pickup_availability.available_today_at_html' | t: location_name: closest_location.location.name -%}
+{%- elsif today == 5 and now_hour >= 18 -%}
+  {%- assign pickup_message = 'products.product.pickup_availability.available_tomorrow_at_html' | t: location_name: closest_location.location.name -%}
+{%- elsif today == 6 and now_hour >= 16 -%}
+  {%- assign pickup_message = 'products.product.pickup_availability.available_tomorrow_at_html' | t: location_name: closest_location.location.name -%}
+{%- elsif today == 0 -%}
+  {%- assign pickup_message = 'products.product.pickup_availability.available_tomorrow_at_html' | t: location_name: closest_location.location.name -%}
+{%- else -%}
+  {%- assign pickup_message = 'products.product.pickup_availability.available_tomorrow_at_html' | t: location_name: closest_location.location.name -%}
+{%- endif -%}
+
+      {{ pickup_message }}
+    </p>
+    <p class="caption">{{ 'products.product.pickup_availability.opening_hours' | t }}</p>
+  {%- else -%}
+    <span class="ping red"></span>
+    <p>
+      {%- if availability and availability.location and availability.location.name -%}
+        {{ 'products.product.pickup_availability.pick_up_unavailable_at_html' | t: location_name: availability.location.name }}
+      {%- else -%}
+        {{ 'products.product.pickup_availability.unavailable' | t }}
+      {%- endif -%}
+    </p>
+  {%- endif -%}
+
+  {%- assign address = availability.location.address -%}
+  <address class="pickup-availability-address">
+    {{ address | format_address }}
+    {%- if address.phone.size > 0 -%}
+      <p>{{ address.phone }}</p>
+    {%- endif -%}
+  </address>
+</li>
+
+<div class="map-wrapper">
+  <div style="position: relative; width: 100%; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1985.7638718555015!2d24.884506576911665!3d60.15153234493838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x468dfb3fa22f0feb%3A0x660b95436974e00!2sWeekendbee!5e0!3m2!1s{{ request.locale.iso_code }}!2s{{ request.locale.iso_code }}"
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</div>
+          {%- endfor -%}
+        </ul>
+      </div>
+    </div>
+    {% comment %} Background, click to close {% endcomment %}
+    <a href="#" class="page-overlay" data-overlay aria-hidden="true"></a>
+  </pickup-availability-drawer>
+{%- endif -%}

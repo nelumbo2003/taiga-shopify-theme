@@ -1,0 +1,36 @@
+{%- liquid
+
+  assign card_availibitility_trigger = 'products.product.card_availability_option_trigger' | t
+  assign option_values = product.options_by_name[card_availibitility_trigger].values
+
+  if option_values
+
+    assign trigger_option_index = nil
+    for option in product.options
+      if option == card_availibitility_trigger
+        assign trigger_option_index = 'option' | append: forloop.index
+      endif
+    endfor
+
+    assign option_array = product.variants | map: trigger_option_index
+    assign availability_array = product.variants | map: 'available'
+    assign available_trigger_options = ''
+
+    for available_option in availability_array
+      if available_option
+        assign available_trigger_options = available_trigger_options | append: option_array[forloop.index0] | append: ';'
+      endif
+    endfor
+
+    assign available_trigger_options = available_trigger_options | remove_last: ';' | split: ';' | uniq
+  endif
+
+-%}
+
+{%- if option_values -%}
+  <div class="options-availability flex align-center mt-24 size--tiny">
+  {% for option in option_values %}
+    <span class="variant-option-title {% unless available_trigger_options contains option %} unavailable{% endunless %}">{{ option }}</span>
+  {% endfor %}
+  </div>
+{%- endif -%}

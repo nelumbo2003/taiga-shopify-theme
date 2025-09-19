@@ -1,0 +1,91 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:section_groups.header",
+  "type": "header",
+  "sections": {
+    "announcements-bar": {
+      "type": "announcements-bar",
+      "blocks": {
+        "714a679c-0d28-4ea7-8b4c-f4c38983207b": {
+          "type": "announcement",
+          "name": "FREE Delivery",
+          "settings": {
+            "title": "<a href=\"/pages/returns-and-deliveries\" title=\"14 day returns and deliveries\">Free fast delivery and easy returns for orders over 129 €</a>"
+          }
+        },
+        "announcement_cLxPtD": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "title": "<a href=\"/pages/weekendbee-pop-up-in-lauttasaari\" title=\"Weekendbee Pop Up Store in Helsinki, Lauttasaari\">Weekendbee Popup store open in Helsinki</a>"
+          }
+        },
+        "announcement_3qnbbD": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "title": "<strong>CLEARANCE SALE</strong> Hurry, popular products are selling out fast! | <a href=\"/collections/womens-sale?gf_722940=1%3A75&sort_by=sale-descending&tab=products\" title=\"/collections/womens-sale?gf_722940=1%3A75&sort_by=sale-descending&tab=products\">Shop Women's</a> | <a href=\"/collections/mens-sale?gf_722940=1%3A75&sort_by=sale-descending&tab=products\" title=\"/collections/mens-sale?gf_722940=1%3A75&sort_by=sale-descending&tab=products\">Shop Men's</a> | <a href=\"/collections/kids-outlet?gf_722940=1%3A75&sort_by=sale-descending&tab=products\" title=\"/collections/kids-outlet?gf_722940=1%3A75&sort_by=sale-descending&tab=products\">Shop Kids'</a>"
+          }
+        },
+        "announcement_bhyJaT": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "title": "Clearance sale ends today! All Products at Least 20% Off! With Code <strong>ALE20</strong>"
+          }
+        }
+      },
+      "block_order": [
+        "714a679c-0d28-4ea7-8b4c-f4c38983207b",
+        "announcement_cLxPtD",
+        "announcement_3qnbbD",
+        "announcement_bhyJaT"
+      ],
+      "settings": {
+        "color_scheme": "scheme-63928303-6d1e-4756-9c89-e03d6ff76b37",
+        "announcement_font": "base",
+        "announcement_font_scaling_property": 14,
+        "announcement_letter_spacing": 0,
+        "announcement_uppercase": false,
+        "autoplay_speed": 4,
+        "sliding_behavior": "single"
+      }
+    },
+    "header": {
+      "type": "header",
+      "settings": {
+        "color_scheme": "",
+        "drawer_menu": "main-menu",
+        "drawer_secondary_menu": "customer-service",
+        "enable_full_width": true,
+        "header_layout": "logo-left__menu-center",
+        "header_sticky_behavior": "scroll",
+        "shortcut_limit": 7,
+        "header_uses_icons": true,
+        "region_menu": "country_flag",
+        "header_shadow": true,
+        "logo_default": "shopify://shop_images/weekendbee-logo_4ce10734-bb67-40cd-b922-609aac4f82bd.svg",
+        "logo_max_width_desktop": 200,
+        "logo_padding_desktop": 15,
+        "logo_max_width": 130,
+        "logo_padding": 5,
+        "overlay_index": false,
+        "overlay_collection": false,
+        "overlay_handles": "",
+        "overlay_text_color": "is-light-background"
+      }
+    }
+  },
+  "order": [
+    "announcements-bar",
+    "header"
+  ]
+}

@@ -1,0 +1,829 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "general": {
+    "share": {
+      "close": "Κλείστε μερίδιο",
+      "copy_to_clipboard": "Αντιγραφή συνδέσμου",
+      "share_url": "Σύνδεσμος",
+      "success_message": "Αντιγραφή συνδέσμου στο πρόχειρο"
+    },
+    "cart": {
+      "discount_name": "Όνομα έκπτωσης",
+      "item_added": "Προϊόν που προστέθηκε στο καλάθι σας",
+      "view": "Δείτε το καλάθι μου ({{ count }})",
+      "view_cart_link": "Προβολή καλαθιού",
+      "items_added": "Είδη που προστέθηκαν στο καλάθι σας"
+    },
+    "continue_shopping": "Συνεχίστε τις αγορές",
+    "go_back": "Επιστροφή",
+    "pagination": {
+      "label": "Σελιδοποίηση",
+      "next": "Επόμενη σελίδα",
+      "page": "Σελίδα {{ number }}",
+      "previous": "Προηγούμενη σελίδα",
+      "load_more": "Φορτώστε περισσότερα",
+      "all_loaded": "Όλα φορτωμένα"
+    },
+    "password_page": {
+      "admin_link_html": "Είστε ο ιδιοκτήτης του καταστήματος; <a href=\"/admin\" class=\"link underlined-link\">Συνδεθείτε εδώ</a>",
+      "login_cancel_button": "Ακύρωση",
+      "login_form_error": "Λάθος κωδικός πρόσβασης!",
+      "login_form_heading": "Εισέλθετε στο κατάστημα χρησιμοποιώντας τον κωδικό πρόσβασης",
+      "login_form_password_label": "Κωδικός πρόσβασης",
+      "login_form_password_placeholder": "Ο κωδικός σας",
+      "login_form_submit": "Πληκτρολογήστε",
+      "login_password_button": "Εισάγετε χρησιμοποιώντας τον κωδικό πρόσβασης",
+      "powered_by_shopify_html": "Αυτό το κατάστημα θα τροφοδοτείται από {{ shopify }}"
+    },
+    "search": {
+      "search": "Αναζήτηση"
+    },
+    "slider": {
+      "next_slide": "Επόμενο",
+      "of": "του",
+      "previous_slide": "Προηγούμενο"
+    },
+    "social": {
+      "alt_text": {
+        "share_on_facebook": "Μοιραστείτε το στο Facebook",
+        "share_on_pinterest": "Pin στο Pinterest",
+        "share_on_twitter": "Tweet στο Twitter"
+      },
+      "links": {
+        "facebook": "Facebook",
+        "instagram": "Instagram",
+        "linkedin": "LinkedIn",
+        "pinterest": "Pinterest",
+        "snapchat": "Snapchat",
+        "tiktok": "TikTok",
+        "tumblr": "Tumblr",
+        "twitter": "Twitter",
+        "vimeo": "Vimeo",
+        "youtube": "YouTube",
+        "untappd": "Untappd"
+      }
+    }
+  },
+  "shopify": {
+    "notices": {
+      "cart": {
+        "bundle_requires_components": "Το προϊόν πακέτου \"%{name}\" δεν μπορεί να προστεθεί στο καλάθι."
+      }
+    },
+    "checkout": {
+      "shipping": {
+        "merchandise_quantity_label_inline_primary": "Ποσότητα: %{quantity}",
+        "merchandise_quantity_label_inline": "%{merchandise_title} ×%{quantity}",
+        "address_form": {
+          "one_time_address_subtitle": "Εφαρμογή διεύθυνσης μιας χρήσης για αυτήν την παραγγελία",
+          "cancel": "Ματαίωση"
+        },
+        "delete": "Διαγράφω",
+        "free_rate_label": "Ελεύθερος",
+        "split_cart_shipping_label": "Μέθοδος"
+      },
+      "notice_banner": {
+        "return_to_cart_link_text": "Επιστροφή στο καλάθι"
+      },
+      "contact": {
+        "contact_method_title": "Επικοινωνία",
+        "title": "Στοιχεία επικοινωνίας",
+        "different_shipping_address_text": "Χρήση διεύθυνσης μιας χρήσης για αυτήν την παραγγελία",
+        "email_label": "Ηλεκτρονικό ταχυδρομείο",
+        "email_placeholder": "ΗΛΕΚΤΡΟΝΙΚΗ ΔΙΕΥΘΥΝΣΗ",
+        "company_label": "Εταιρία",
+        "province_label": "Επαρχία",
+        "province_placeholder": "Επαρχία"
+      },
+      "review": {
+        "blocks": {
+          "contact_method_title": "Στοιχεία επικοινωνίας"
+        }
+      },
+      "payment_gateway": {
+        "login_prompt": {
+          "no_access": {
+            "link": "Σύνδεση"
+          }
+        }
+      },
+      "deliverability": {
+        "not_deliverable": {
+          "message": {
+            "other": "Αυτό το προϊόν θα αφαιρεθεί από το καλάθι σας επειδή δεν υπάρχουν διαθέσιμες μέθοδοι παράδοσης για τη διεύθυνσή σας.",
+            "one": "Αυτά τα προϊόντα θα αφαιρεθούν από το καλάθι σας επειδή δεν υπάρχουν διαθέσιμες μέθοδοι παράδοσης για τη διεύθυνσή σας."
+          }
+        }
+      },
+      "stock": {
+        "unshippable_product": {
+          "message": {
+            "one": "Αυτά τα προϊόντα θα αφαιρεθούν από το καλάθι σας επειδή δεν υπάρχουν διαθέσιμες μέθοδοι παράδοσης για τη διεύθυνσή σας.",
+            "other": "Αυτό το προϊόν θα αφαιρεθεί από το καλάθι σας επειδή δεν υπάρχουν διαθέσιμες μέθοδοι παράδοσης για τη διεύθυνσή σας."
+          }
+        },
+        "item_label": {
+          "one": "{{count}} στοιχείο",
+          "other": "{{count}} στοιχεία"
+        },
+        "remove": "Αφαιρώ",
+        "continue_shopping_button_label": "Να συνεχίσει"
+      },
+      "payment_errors": {
+        "transient_error": "Παρουσιάστηκε πρόβλημα κατά την επεξεργασία της πληρωμής. Δοκιμάστε να ανανεώσετε αυτήν τη σελίδα ή ελέγξτε τη σύνδεση internet.",
+        "deferred_amount_changed": "Δεν ήταν δυνατή η επεξεργασία της πληρωμής σας επειδή άλλαξε η ημερομηνία της αναβαλλόμενης πληρωμής. Ελέγξτε την παραγγελία και δοκιμάστε ξανά."
+      },
+      "mor_policies": {
+        "terms_and_conditions": "Όροι και προϋποθέσεις καταχωρημένου εμπόρου"
+      },
+      "payment": {
+        "card_fields_processing_error": "Παρουσιάστηκε πρόβλημα κατά την επεξεργασία της πληρωμής σας. Δοκιμάστε να ανανεώσετε αυτήν τη σελίδα ή ελέγξτε τη σύνδεση internet.",
+        "credit_card_vaulting_sign_in_banner_button_label": "Συνδεθείτε",
+        "markets_pro_disclaimer_terms_and_conditions_title": "Όροι και Προϋποθέσεις καταχωρημένου εμπόρου",
+        "clear": "Σαφή",
+        "apply_gift_card_button_label": "Ισχύουν",
+        "order_edit_banner_items_added": {
+          "one": "Προστιθέμενος"
+        },
+        "delete_customer_mandate_modal_cancel": "Ματαίωση",
+        "saved_credit_cards_modal": {
+          "cancel": "Ματαίωση"
+        },
+        "add_credit_card_modal": {
+          "cancel": "Ματαίωση"
+        },
+        "delete_credit_card_modal": {
+          "cancel": "Ματαίωση",
+          "delete": "Διαγράφω"
+        },
+        "edit_credit_card_modal": {
+          "cancel": "Ματαίωση"
+        },
+        "saved_credit_card_actions": {
+          "delete": "Διαγράφω"
+        },
+        "saved_credit_card_cvv_verification": "Για λόγους επαλήθευσης, παρακαλούμε εισάγετε τον κωδικό ασφαλείας της κάρτας σας."
+      },
+      "customer_account": {
+        "sign_in_link_label": "Συνδεθείτε"
+      },
+      "thank_you": {
+        "login": "Συνδεθείτε",
+        "order_updates_submit_subscription": "υποβάλλουν"
+      },
+      "failed_payment": {
+        "return_to_cart_button_label": "Επιστρέψτε στο καλάθι"
+      },
+      "order_summary": {
+        "shipping_label": "Αποστολή",
+        "apply_discount_button_label": "Ισχύουν",
+        "discount_title": "Εκπτωση",
+        "discount_title_stacking": {
+          "one": "Εκπτωση"
+        },
+        "subtotal_label": "ΜΕΡΙΚΟ ΣΥΝΟΛΟ",
+        "free_total_label": "Ελεύθερος"
+      },
+      "throttle": {
+        "merchandise": {
+          "sold_out": "Εξαντλημένα"
+        }
+      },
+      "order_payment_collection": {
+        "changes_summary": {
+          "added": {
+            "one": "Προστιθέμενος"
+          }
+        }
+      },
+      "billing": {
+        "address_form": {
+          "cancel": "Ματαίωση"
+        },
+        "delete": "Διαγράφω"
+      },
+      "local_pickup": {
+        "cancel": "Ματαίωση"
+      },
+      "general": {
+        "continue_button_label": "Να συνεχίσει",
+        "submit": "υποβάλλουν",
+        "page_title": "Ολοκλήρωση αγοράς",
+        "cart": "Καροτσάκι",
+        "close_modal_label": "Κλείσε",
+        "close_notice_label": "Κλείσε"
+      },
+      "post_purchase": {
+        "components": {
+          "submit": "υποβάλλουν",
+          "close": "Κλείσε"
+        }
+      },
+      "delivery_options": {
+        "free_total_label": "Ελεύθερος"
+      },
+      "payment_summary": {
+        "free_label": "Ελεύθερος"
+      },
+      "shop_pay_external": {
+        "errors": {
+          "problem_loading": "Υπάρχει πρόβλημα φόρτωσης του Shop Pay",
+          "try_again_later": "Ελέγξτε τη σύνδεσή σας ή κλείστε αυτό το παράθυρο και προσπαθήστε ξανά σε λίγα λεπτά."
+        },
+        "return_to_store": "Επιστροφή σε {{shopName}}"
+      }
+    },
+    "filters": {
+      "availability": {
+        "value": {
+          "out_of_stock": "Εκτός αποθέματος"
+        }
+      }
+    },
+    "addresses": {
+      "province": "Επαρχία"
+    },
+    "challenge": {
+      "submit_button_text": "υποβάλλουν"
+    },
+    "checkpoint": {
+      "submit_button_text": "υποβάλλουν"
+    },
+    "page_titles": {
+      "create_account": "Δημιουργήστε λογαριασμό"
+    }
+  },
+  "sections": {
+    "cart": {
+      "title": "Καροτσάκι",
+      "update": "Ενημέρωση",
+      "subtotal": "ΜΕΡΙΚΟ ΣΥΝΟΛΟ",
+      "caption": "Στοιχεία καλαθιού",
+      "cart_error": "Υπήρξε ένα σφάλμα κατά την ενημέρωση του καλαθιού σας. Παρακαλώ προσπαθήστε ξανά.",
+      "cart_quantity_error_html": "Μπορείτε να προσθέσετε μόνο {{ quantity }} αυτού του προϊόντος στο καλάθι σας.",
+      "checkout": "Ολοκλήρωση αγοράς",
+      "empty": "Το καλάθι σας είναι κενό",
+      "headings": {
+        "price": "Τιμή",
+        "product": "Προϊόν",
+        "quantity": "Ποσότητα",
+        "total": "Σύνολο"
+      },
+      "login": {
+        "title": "Έχετε λογαριασμό?",
+        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Συνδεθείτε</a> για να ελέγξετε γρηγορότερα."
+      },
+      "new_subtotal": "Νέο υποσύνολο",
+      "note": "Ειδικές οδηγίες παραγγελίας",
+      "remove": "Αφαιρώ",
+      "remove_title": "Αφαιρέστε το {{ title }}",
+      "shipping_free": "Είστε επιλέξιμοι για δωρεάν αποστολή!",
+      "shipping_not_free": "Αγοράστε με {{ amount }} περισσότερα για να έχετε δωρεάν αποστολή!",
+      "taxes_and_shipping_at_checkout": "Τα έξοδα αποστολής και οι φόροι υπολογίζονται στο ταμείο",
+      "taxes_and_shipping_policy_at_checkout_html": "<a href=\"{{ link }}\">Ναυτιλία</a> και φόροι που υπολογίζονται στο ταμείο",
+      "taxes_included_and_shipping_policy_html": "Περιλαμβάνεται φόρος. <a href=\"{{ link }}\">Αποστολή</a> υπολογίζεται στο ταμείο.",
+      "taxes_included_but_shipping_at_checkout": "Περιλαμβάνεται φόρος. Τα έξοδα αποστολής υπολογίζονται στο checkout",
+      "you_might_like": "Μπορεί επίσης να σας αρέσει",
+      "empty_cart_haiku_html": "<em>Κενό μέσα,<br>Σιωπηλό κενό, καμία σκέψη δεν μένει,<br>Ειρήνη στο διάστημα, κρυβόμαστε.</em>"
+    },
+    "collection_list": {
+      "view_all": "Προβολή όλων"
+    },
+    "collection_template": {
+      "title": "Συλλογή",
+      "empty": "Δεν βρέθηκαν προϊόντα",
+      "use_fewer_filters_html": "Χρησιμοποιήστε λιγότερα φίλτρα ή <a class=\"{{ class }}\" href=\"{{ link }}\">καθαρίστε τα όλα</a>"
+    },
+    "featured_blog": {
+      "view_all": "Προβολή όλων",
+      "onboarding_content": "Δώστε στους πελάτες σας μια περίληψη της ανάρτησης του ιστολογίου σας",
+      "onboarding_title": "Δημοσίευση στο blog"
+    },
+    "featured_collection": {
+      "view_all": "Προβολή όλων",
+      "view_all_label": "Προβολή όλων των προϊόντων στην κατηγορία {{ collection_name }} συλλογή"
+    },
+    "footer": {
+      "payment": "Μέθοδοι πληρωμής",
+      "back_to_top": "Επιστροφή στην κορυφή"
+    },
+    "header": {
+      "announcement": "Ανακοίνωση",
+      "cart_count": {
+        "one": "{{ count }} στοιχείο",
+        "other": "{{ count }} αντικείμενα"
+      },
+      "menu": "Μενού"
+    },
+    "slideshow": {
+      "carousel": "Carousel",
+      "load_slide": "Φόρτωση διαφάνειας",
+      "next_slideshow": "Επόμενη διαφάνεια",
+      "pause_slideshow": "Παύση παρουσίασης διαφανειών",
+      "play_slideshow": "Αναπαραγωγή προβολής διαφανειών",
+      "previous_slideshow": "Προηγούμενη διαφάνεια",
+      "slide": "Διαφάνεια",
+      "x_of_y": "{{ x }} του {{ y }}"
+    },
+    "video": {
+      "load_video": "Φόρτωση βίντεο: {{ description }}"
+    }
+  },
+  "accessibility": {
+    "close": "Κλείσε",
+    "close_navigation": "Κλείσιμο πλοήγησης",
+    "close_search": "Κλείσιμο αναζήτησης",
+    "close_something": "Close {{ something }}",
+    "collapsible_content_title": "Αναδιπλούμενο περιεχόμενο",
+    "error": "Σφάλμα",
+    "hide_something_menu": "Απόκρυψη {{ something }} μενού",
+    "link_messages": {
+      "external": "Ανοίγει εξωτερικό ιστότοπο.",
+      "new_window": "Ανοίγει σε νέο παράθυρο."
+    },
+    "loading": "Φόρτωση...",
+    "navigate_to_something": "Πλοηγηθείτε σε {{ something }}",
+    "no_video_support": "Λυπούμαστε, το πρόγραμμα περιήγησής σας δεν υποστηρίζει ενσωματωμένα βίντεο. Εξετάστε το ενδεχόμενο να ενημερώσετε το πρόγραμμα περιήγησής σας στην τελευταία έκδοση ή να χρησιμοποιήσετε ένα άλλο πρόγραμμα περιήγησης.",
+    "read_more": "Διαβάστε περισσότερα",
+    "refresh_page": "Η επιλογή μιας επιλογής έχει ως αποτέλεσμα την ανανέωση ολόκληρης της σελίδας.",
+    "skip_to_product_info": "Μετάβαση στις πληροφορίες προϊόντος",
+    "skip_to_text": "Απευθείας μετάβαση στο περιεχόμενο",
+    "star_reviews_info": "{{ rating_value }} από {{ rating_max }} αστέρια",
+    "total_reviews": "συνολικές κριτικές",
+    "unit_price_separator": "ανά",
+    "view_something": "Προβολή {{ something }}",
+    "view_something_menu": "Προβολή στοιχείων κάτω από {{ something }}",
+    "complementary_products": "Συμπληρωματικά προϊόντα"
+  },
+  "blogs": {
+    "article": {
+      "back_to_blog": "Πίσω στο blog",
+      "blog": "Blog",
+      "comment_form_title": "Αφήστε ένα σχόλιο",
+      "comments": {
+        "one": "{{ count }} σχόλιο",
+        "other": "{{ count }} σχόλια"
+      },
+      "email": "ΗΛΕΚΤΡΟΝΙΚΗ ΔΙΕΥΘΥΝΣΗ",
+      "message": "Σχόλιο",
+      "moderated": "Παρακαλούμε σημειώστε ότι τα σχόλια πρέπει να εγκριθούν πριν δημοσιευτούν.",
+      "name": "Ονομα",
+      "post": "Αναρτήστε Σχόλιο",
+      "read_more_title": "Διαβάστε περισσότερα: {{ title }}",
+      "share": "Μοιραστείτε αυτό το άρθρο",
+      "show_all": "Όλα",
+      "success": "Το σχόλιό σας δημοσιεύτηκε με επιτυχία! Σας ευχαριστούμε!",
+      "success_moderated": "Το σχόλιό σας αναρτήθηκε με επιτυχία. Θα το δημοσιεύσουμε σε λίγη ώρα, καθώς το ιστολόγιό μας τελεί υπό επιτήρηση.",
+      "reading_time": "διαβάστε",
+      "minutes": {
+        "one": "{{ count }} min",
+        "other": "{{ count }} min"
+      }
+    }
+  },
+  "customer": {
+    "account": {
+      "details": "Στοιχεία λογαριασμού",
+      "return": "Επιστροφή στα στοιχεία λογαριασμού",
+      "title": "Λογαριασμός",
+      "view_addresses": "Προβολή διευθύνσεων"
+    },
+    "account_fallback": "Λογαριασμός",
+    "activate_account": {
+      "title": "Ενεργοποίηση λογαριασμού",
+      "cancel": "Απόρριψη πρόσκλησης",
+      "password": "Κωδικός πρόσβασης",
+      "password_confirm": "Επιβεβαίωση κωδικού πρόσβασης",
+      "submit": "Ενεργοποίηση λογαριασμού",
+      "subtext": "Δημιουργήστε τον κωδικό πρόσβασής σας για να ενεργοποιήσετε το λογαριασμό σας."
+    },
+    "addresses": {
+      "title": "Διευθύνσεις",
+      "cancel": "Ματαίωση",
+      "add": "Προσθήκη διεύθυνσης",
+      "add_new": "Προσθήκη νέας διεύθυνσης",
+      "address1": "Διεύθυνση 1",
+      "address2": "Διεύθυνση 2",
+      "city": "Πόλη",
+      "company": "Εταιρία",
+      "country": "Χώρα/περιοχή",
+      "default": "Προκαθορισμένο",
+      "delete": "Διαγραφή",
+      "delete_confirm": "Είστε σίγουροι ότι θέλετε να διαγράψετε αυτήν τη διεύθυνση;",
+      "edit": "Επεξεργασία",
+      "edit_address": "Επεξεργασία διεύθυνσης",
+      "first_name": "Όνομα",
+      "last_name": "Επίθετο",
+      "phone": "Τηλέφωνο",
+      "province": "Νομός",
+      "set_default": "Ορισμός ως προεπιλεγμένη διεύθυνση",
+      "update": "Ενημέρωση διεύθυνσης",
+      "zip": "Ταχυδρομικός/Ταχυδρομικός κώδικας"
+    },
+    "log_in": "Σύνδεση",
+    "log_out": "Αποσύνδεση",
+    "login_page": {
+      "email": "ΗΛΕΚΤΡΟΝΙΚΗ ΔΙΕΥΘΥΝΣΗ",
+      "title": "Συνδεθείτε",
+      "cancel": "Ματαίωση",
+      "password": "Κωδικός πρόσβασης",
+      "submit": "υποβάλλουν",
+      "subtext": "Συνδεθείτε για να δείτε το ιστορικό των παραγγελιών και να ενημερώσετε τα στοιχεία αποστολής σας.",
+      "create_account": "Δημιουργία λογαριασμού",
+      "forgot_password": "Ξεχάσατε τον κωδικό σας;",
+      "guest_continue": "Συνεχίστε ως επισκέπτης",
+      "guest_title": "Συνεχίστε ως επισκέπτης",
+      "sign_in": "Συνδεθείτε"
+    },
+    "order": {
+      "title": "Σειρά {{ name }}",
+      "billing_address": "διεύθυνση χρέωσης",
+      "cancelled_html": "Ακύρωση παραγγελίας στις {{ date }}",
+      "cancelled_reason": "Λόγος: {{ reason }}",
+      "date_html": "Τοποθετημένος {{ date }}",
+      "discount": "Εκπτωση",
+      "fulfilled_at_html": "Εκπληρωμένος {{ date }}",
+      "fulfillment_status": "Κατάσταση εκπλήρωσης",
+      "payment_status": "Κατάσταση πληρωμής",
+      "price": "Τιμή",
+      "product": "Προϊόν",
+      "quantity": "Ποσότητα",
+      "shipping": "Έξοδα αποστολής",
+      "shipping_address": "Διεύθυνση αποστολής",
+      "sku": "SKU",
+      "subtotal": "ΜΕΡΙΚΟ ΣΥΝΟΛΟ",
+      "tax": "Φόρος",
+      "total": "Σύνολο",
+      "total_duties": "Δασμοί",
+      "track_shipment": "Παρακολούθηση αποστολής",
+      "tracking_company": "Μεταφορέας",
+      "tracking_number": "Αριθμός παρακολούθησης",
+      "tracking_url": "Σύνδεσμος παρακολούθησης"
+    },
+    "orders": {
+      "title": "Ιστορικό παραγγελίας",
+      "fulfillment_status": "Κατάσταση εκπλήρωσης",
+      "payment_status": "Κατάσταση πληρωμής",
+      "total": "Σύνολο",
+      "date": "Ημερομηνία",
+      "none": "Δεν έχετε κάνει ακόμα παραγγελίες.",
+      "order_number": "Σειρά",
+      "order_number_link": "Αριθμός παραγγελίας {{ number }}"
+    },
+    "recover_password": {
+      "success": "Σας έχουμε στείλει ένα email με έναν σύνδεσμο για να ενημερώσετε τον κωδικό πρόσβασής σας.",
+      "title": "Επαναφέρετε τον κωδικό πρόσβασής σας",
+      "subtext": "Θα σας στείλουμε ένα email για να επαναφέρετε τον κωδικό πρόσβασής σας"
+    },
+    "register": {
+      "email": "ΗΛΕΚΤΡΟΝΙΚΗ ΔΙΕΥΘΥΝΣΗ",
+      "title": "Δημιουργία λογαριασμού",
+      "password": "Κωδικός πρόσβασης",
+      "submit": "Δημιουργία",
+      "subtext": "Συμπληρώστε τα στοιχεία του λογαριασμού σας για να εγγραφείτε ως νέος πελάτης.",
+      "first_name": "Όνομα",
+      "last_name": "Επίθετο",
+      "already_have_account": "Έχετε ήδη λογαριασμό? Συνδεθείτε εδώ"
+    },
+    "reset_password": {
+      "title": "Επαναφορά κωδικού πρόσβασης λογαριασμού",
+      "password": "Κωδικός πρόσβασης",
+      "password_confirm": "Επιβεβαίωση κωδικού πρόσβασης",
+      "submit": "Επαναφορά κωδικού πρόσβασης",
+      "subtext": "Εισαγάγετε έναν νέο κωδικό πρόσβασης για {{ email }}"
+    }
+  },
+  "gift_cards": {
+    "go_to_store": "Πηγαίνετε στο κατάστημα",
+    "issued": {
+      "title": "Ορίστε το {{ value }} Κάρτα δώρου για {{ shop }}!",
+      "subtext": "Η δωροκάρτα σας",
+      "add_to_apple_wallet": "Προσθήκη στο Apple Wallet",
+      "copy_code": "Αντιγράψτε τον κωδικό",
+      "copy_code_success": "Ο κώδικας αντιγράφηκε με επιτυχία",
+      "expired": "Έληξε",
+      "gift_card_code": "Κωδικός δωροκάρτας",
+      "print_gift_card": "Τυπώνω",
+      "qr_image_alt": "Κωδικός QR - σαρώστε για να εξαργυρώσετε την κάρτα δώρου",
+      "remaining_html": "Υπόλοιπο {{ balance }}",
+      "shop_link": "Συνέχιση αγορών"
+    }
+  },
+  "localization": {
+    "country_label": "Χώρα/περιοχή",
+    "language_label": "Γλώσσα",
+    "update_country": "Ενημέρωση χώρας/περιοχής",
+    "update_language": "Ενημέρωση γλώσσας"
+  },
+  "newsletter": {
+    "success": "Ευχαριστώ για την εγγραφή",
+    "label": "ΗΛΕΚΤΡΟΝΙΚΗ ΔΙΕΥΘΥΝΣΗ",
+    "button_label": "Εγγραφή"
+  },
+  "onboarding": {
+    "collection_title": "Το όνομα της συλλογής σας",
+    "product_title": "Παράδειγμα τίτλου προϊόντος"
+  },
+  "products": {
+    "product": {
+      "vendor": "Προμηθευτής",
+      "share": "Μοιραστείτε αυτό το προϊόν",
+      "price": {
+        "from_price_html": "Από το {{ price }}",
+        "regular_price": "Κανονική τιμή",
+        "sale_price": "Τιμή πώλησης",
+        "unit_price": "Τιμή μονάδας"
+      },
+      "quantity": {
+        "label": "Ποσότητα",
+        "decrease": "Μείωση της ποσότητας για {{ product }}",
+        "increase": "Αύξηση της ποσότητας για {{ product }}",
+        "input_label": "Ποσότητα για {{ product }}"
+      },
+      "add_to_cart": "Προσθήκη στο καλάθι",
+      "available_in": "Διαθέσιμο σε",
+      "badges": {
+        "preorder": "Προπαραγγελία",
+        "new": "Νέος",
+        "on_sale": "Πώληση",
+        "soldout": "Εξαντλημένα"
+      },
+      "color_swatch_identifiers": "Χρώμα,Χρώμα,Color,Colour",
+      "description": "Περιγραφή",
+      "include_taxes": "Περιλαμβάνεται φόρος.",
+      "inventory": {
+        "few_left": "Λίγα έμειναν σε απόθεμα!",
+        "few_left_with_quantity": "Μόνο {{ quantity }} έμειναν σε απόθεμα!",
+        "in_stock": "Σε απόθεμα",
+        "in_stock_with_quantity": "{{ quantity }} σε απόθεμα",
+        "out_of_stock": "Χωρίς απόθεμα",
+        "waiting_for_stock": "Απογραφή καθ' οδόν",
+        "will_be_in_stock_after": "Επιστροφή στο απόθεμα {{ date }}",
+        "out_of_stock_continue_selling": "Σε απόθεμα"
+      },
+      "media": {
+        "gallery_viewer": "Gallery Viewer",
+        "image_available": "Εικόνα {{ index }} είναι τώρα διαθέσιμη σε προβολή γκαλερί",
+        "load_image": "Φόρτωση εικόνας {{ index }} σε προβολή γκαλερί",
+        "load_model": "Φόρτωση 3D μοντέλου {{ index }} σε προβολή γκαλερί",
+        "load_video": "Αναπαραγωγή βίντεο {{ index }} σε προβολή γκαλερί",
+        "open_media": "Ανοίξτε τα μέσα ενημέρωσης {{ index }} σε modal",
+        "play_model": "Αναπαραγωγή 3D Viewer",
+        "play_video": "Αναπαραγωγή βίντεο",
+        "enlarge": "Μεγέθυνση"
+      },
+      "pickup_availability": {
+        "unavailable": "Δεν μπορούσε να φορτώσει διαθεσιμότητα παραλαβής",
+        "check_other_stores": "Ελέγξτε τη διαθεσιμότητα σε άλλα καταστήματα",
+        "pick_up_available": "Παραλαβή διαθέσιμη",
+        "pick_up_available_at_html": "Παραλαβή διαθέσιμη σε <span class=\"primary-foreground\">{{ location_name }}</span>",
+        "pick_up_unavailable_at_html": "Παραλαβή προς το παρόν δεν είναι διαθέσιμη στο <span class=\"primary-foreground\">{{ location_name }}</span>",
+        "refresh": "Ανανέωση",
+        "store_info": "Πληροφορίες καταστήματος",
+        "view_store_info": "Προβολή πληροφοριών αποθήκευσης",
+        "same_day": "Διαθέσιμο για σημερινή παραλαβή",
+        "next_day": "Διαθέσιμο για αυριανή παραλαβή",
+        "opening_hours": "Ώρες παραλαβής: Δευτέρα-Παρασκευή 11:00-18:00, Σάββατο 11:00-16:00, Κυριακή κλειστά",
+        "pickup_monday": "Διαθέσιμο για παραλαβή τη Δευτέρα",
+        "pickup_saturday": "Διατίθεται για παραλαβή το Σάββατο",
+        "available_today_at_html": "Διαθέσιμο για παραλαβή σήμερα στο <span class=\"primary-foreground\">{{ location_name }}</span>",
+        "available_tomorrow_at_html": "Διαθέσιμο για αυριανή παραλαβή στο <span class=\"primary-foreground\">{{ location_name }}</span>",
+        "available_monday_at_html": "Διαθέσιμο για παραλαβή τη Δευτέρα στο <span class=\"primary-foreground\">{{ location_name }}</span>"
+      },
+      "preorder": {
+        "preorder": "Προπαραγγελία",
+        "info_html": "Αυτό το προϊόν δεν έχει κυκλοφορήσει ακόμα, αλλά μπορείτε ήδη να το αγοράσετε. <br> Περισσότερες πληροφορίες σχετικά με το χρονοδιάγραμμα αποστολής σύντομα."
+      },
+      "product_variants": "Παραλλαγές προϊόντος",
+      "shipping_policy_html": "<a href=\"{{ link }}\">Αποστολή</a> υπολογίζεται στο ταμείο.",
+      "size_swatch_identifiers": "Μέγεθος",
+      "sold_out": "Εξαντλημένα",
+      "unavailable": "Μη διαθέσιμο",
+      "value_unavailable": "{{ option_value }} - Μη διαθέσιμο",
+      "video_exit_message": "{{ title }} ανοίγει βίντεο σε πλήρη οθόνη στο ίδιο παράθυρο.",
+      "view_full_details": "Δείτε πλήρεις λεπτομέρειες",
+      "xr_button": "Δείτε στο χώρο σας",
+      "xr_button_label": "Προβολή στο χώρο σας, φορτώνει αντικείμενο σε παράθυρο επαυξημένης πραγματικότητας",
+      "sku": "SKU",
+      "card_availability_option_trigger": "Μέγεθος"
+    },
+    "facets": {
+      "apply": "Ισχύουν",
+      "clear": "Σαφή",
+      "clear_all": "Τα καθαρίζω όλα",
+      "clear_filter": "Εκκαθάριση φίλτρου",
+      "filter_and_sort": "Φίλτρο και ταξινόμηση",
+      "filter_button": "Φίλτρο",
+      "filter_by_label": "Φίλτρο:",
+      "filters_selected": {
+        "one": "{{ count }} Φίλτρο: επιλεγμένο",
+        "other": "{{ count }} Φίλτρο: επιλεγμένο"
+      },
+      "from": "Από",
+      "max_price": "Η υψηλότερη τιμή είναι {{ price }}",
+      "product_count": {
+        "one": "{{ product_count }} του {{ count }} προϊόν",
+        "other": "{{ product_count }} του {{ count }} προϊόντα"
+      },
+      "product_count_simple": {
+        "one": "{{ count }} προϊόν",
+        "other": "{{ count }} προϊόντα"
+      },
+      "reset": "Επαναφορά",
+      "sort_button": "Ταξινόμηση",
+      "sort_by_label": "Ταξινόμηση κατά:",
+      "to": "Προς την",
+      "filters_as_buttons_identifiers": "Μέγεθος"
+    },
+    "modal": {
+      "label": "Γκαλερί πολυμέσων"
+    },
+    "quick_buy_label": "Γρήγορη προβολή"
+  },
+  "templates": {
+    "404": {
+      "title": "Η σελίδα δεν βρέθηκε",
+      "subtext": "404",
+      "body": "Η σελίδα που αναζητάτε δεν υπάρχει ή έχει μετακινηθεί."
+    },
+    "cart": {
+      "cart": "Καροτσάκι",
+      "shopping_cart": "Καλάθι αγορών"
+    },
+    "search": {
+      "products": "Προϊόντα",
+      "loading": "Φόρτωση αποτελεσμάτων",
+      "title": "Αποτελέσματα αναζήτησης",
+      "page": "Σελίδα",
+      "no_results": "Δεν βρέθηκαν αποτελέσματα για \"{{ terms }}\". Ελέγξτε την ορθογραφία ή χρησιμοποιήστε μια άλλη λέξη ή φράση.",
+      "placeholder": "Αναζήτηση για οτιδήποτε",
+      "results_with_count": {
+        "one": "{{ count }} αποτέλεσμα",
+        "other": "{{ count }} Αποτελέσματα"
+      },
+      "results_with_count_and_term": {
+        "one": "{{ count }} αποτέλεσμα βρέθηκε για \"{{ terms }}”",
+        "other": "{{ count }} αποτελέσματα βρέθηκαν για \"{{ terms }}”"
+      },
+      "results_pages_with_count": {
+        "one": "{{ count }} σελίδα",
+        "other": "{{ count }} pages"
+      },
+      "results_suggestions_with_count": {
+        "one": "{{ count }} πρόταση",
+        "other": "{{ count }} προτάσεις"
+      },
+      "results_products_with_count": {
+        "one": "{{ count }} προϊόν",
+        "other": "{{ count }} προϊόντα"
+      },
+      "search_for": "Αναζήτηση για \"{{ terms }}”",
+      "show_results_for": "Εμφάνιση όλων των αποτελεσμάτων για \"{{ terms }}”",
+      "suggestions": "Προτάσεις",
+      "pages": "Σελίδες",
+      "commonly_searched": "Κοινή αναζήτηση",
+      "reset": "Επαναφορά"
+    },
+    "contact": {
+      "form": {
+        "email": "ΗΛΕΚΤΡΟΝΙΚΗ ΔΙΕΥΘΥΝΣΗ",
+        "name": "Ονομα",
+        "phone": "Αριθμός τηλεφώνου",
+        "comment": "Σχόλιο",
+        "error_heading": "Παρακαλείστε να προσαρμόσετε τα ακόλουθα:",
+        "post_success": "Ευχαριστούμε που επικοινωνήσατε μαζί μας. Θα επικοινωνήσουμε μαζί σας το συντομότερο δυνατό.",
+        "send": "Στείλετε"
+      }
+    }
+  },
+  "recipient": {
+    "form": {
+      "checkbox": "Θέλω να το στείλω ως δώρο",
+      "expanded": "Η φόρμα παραλήπτη δωροκάρτας επεκτάθηκε",
+      "collapsed": "Φόρμα παραλήπτη δωροκάρτας κλειστή",
+      "email_label": "Ηλεκτρονικό ταχυδρομείο παραλήπτη",
+      "email_label_optional_for_no_js_behavior": "Ηλεκτρονικό ταχυδρομείο παραλήπτη (προαιρετικό)",
+      "email": "ΗΛΕΚΤΡΟΝΙΚΗ ΔΙΕΥΘΥΝΣΗ",
+      "name_label": "Όνομα παραλήπτη (προαιρετικό)",
+      "name": "Ονομα",
+      "message_label": "Μήνυμα (προαιρετικό)",
+      "message": "Μήνυμα",
+      "max_characters": "{{ max_chars }} χαρακτήρες max",
+      "send_on": "YYYY-MM-DD",
+      "send_on_label": "Αποστολή την (προαιρετική)"
+    }
+  },
+  "customer_accounts": {
+    "payment_methods": {
+      "payment_details": {
+        "checkout_card_banner": "Αυτή η μέθοδος πληρωμής μπορεί να χρησιμοποιηθεί μόνο για προ-εξουσιοδοτημένες πληρωμές. Δεν θα εμφανιστεί στην ολοκλήρωση της αγοράς αν έχετ επραγματοποιήσει σύνδεση σε αυτό το κατάστημα.",
+        "close_payment_modal": "Κλείσε"
+      },
+      "delete_payment_method_button": "Διαγράφω"
+    },
+    "order_details": {
+      "contact": "Στοιχεία επικοινωνίας",
+      "shipping": {
+        "summary": "Έξοδα αποστολής",
+        "free": "Ελεύθερος"
+      },
+      "log_in": "Συνδεθείτε",
+      "group_title_label": "Μέρος του ομίλου: {{groupTitle}}",
+      "edit_summary": {
+        "added": "Προστιθέμενος"
+      },
+      "company": "Εταιρία",
+      "discount": "Εκπτωση",
+      "subtotal": "ΜΕΡΙΚΟ ΣΥΝΟΛΟ"
+    },
+    "B2B": {
+      "orders": {
+        "order_list_column_headers_contact": "Στοιχεία επικοινωνίας"
+      },
+      "locations": {
+        "contact_email": "Ηλεκτρονικό ταχυδρομείο",
+        "contact_name": "Ονομα"
+      },
+      "account_information": {
+        "company_card_section_accessibility_label": "Εταιρία"
+      },
+      "location_selection": {
+        "selection_cancel_button": "Ματαίωση"
+      },
+      "purchase_order_number": {
+        "cancel": "Ματαίωση"
+      }
+    },
+    "orders": {
+      "order_list": {
+        "items": {
+          "one": "{{count}} προϊόν",
+          "other": "{{count}} προϊόντα"
+        },
+        "order_status_message": {
+          "list_view": {
+            "estimated_delivery": "Εκτιμώμενη ημερομηνία παράδοσης {{date}}"
+          }
+        },
+        "carousel": {
+          "six_products_accessibility_label": "Η παραγγελία περιλαμβάνει το προϊόν {{lineItemName1}}, ποσότητα {{lineItemQuantity1}}, το προϊόν {{lineItemName2}}, ποσότητα {{lineItemQuantity2}}, το προϊόν {{lineItemName3}}, ποσότητα {{lineItemQuantity3}}, το προϊόν {{lineItemName4}}, ποσότητα {{lineItemQuantity4}}, το προϊόν {{lineItemName5}}, ποσότητα {{lineItemQuantity5}}, το προϊόν {{lineItemName6}}, ποσότητα {{lineItemQuantity6}} και άλλα προϊόντα",
+          "previous": "Προηγούμενος"
+        },
+        "estimated_delivery": "Εκτιμώμενη παράδοση στις {{date}}",
+        "filter": {
+          "apply": "Ισχύουν",
+          "clear_all": "Τα καθαρίζω όλα"
+        },
+        "column_headers": {
+          "order": "Σειρά"
+        }
+      },
+      "order_status": {
+        "estimated_delivery": "Εκτιμώμενη παράδοση στις {{date}}"
+      },
+      "group_title_label": "Μέρος του: {{groupTitle}}"
+    },
+    "errors": {
+      "failed_address_creation": {
+        "description": "Παρουσιάστηκε πρόβλημα κατά την ενημέρωση της διεύθυνσής σας. Δοκιμάστε να ανανεώσετε αυτήν τη σελίδα ή ελέγξτε τη σύνδεση internet."
+      },
+      "profile_update_error": {
+        "description": "Παρουσιάστηκε πρόβλημα κατά την ενημέρωση της διεύθυνσής σας. Δοκιμάστε να ανανεώσετε αυτήν τη σελίδα ή ελέγξτε τη σύνδεση internet."
+      },
+      "failed_address_update": {
+        "description": "Παρουσιάστηκε πρόβλημα κατά την ενημέρωση του προφίλ σας. Δοκιμάστε να ανανεώσετε αυτήν τη σελίδα ή ελέγξτε τη σύνδεση internet."
+      }
+    },
+    "navigation_and_structure": {
+      "delete_confirmation": {
+        "cancel": "Ματαίωση",
+        "delete": "Διαγράφω"
+      }
+    },
+    "account_information": {
+      "profile_card": {
+        "cancel": "Ματαίωση"
+      }
+    },
+    "addresses": {
+      "cancel_deletion_button": "Ματαίωση",
+      "delete_button": "Διαγράφω"
+    },
+    "address_form": {
+      "cancel": "Ματαίωση"
+    },
+    "ui_components": {
+      "submit": "υποβάλλουν",
+      "closeNotification": "Κλείσε",
+      "closeModal": "Κλείσε"
+    }
+  }
+}

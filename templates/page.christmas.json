@@ -1,0 +1,437 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "heading_text_align": "text-align-left",
+        "sm_size_multiplier": "sm-size--default",
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "size_multiplier": "size--default",
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
+    },
+    "fc82326f-5adb-4f0a-8095-e99934645ca8": {
+      "type": "hero",
+      "blocks": {
+        "template--20144548053339__fc82326f-5adb-4f0a-8095-e99934645ca8-image-1": {
+          "type": "image",
+          "settings": {
+            "media_toggle": "show_image",
+            "image": "shopify://shop_images/DSC07595.jpg",
+            "video_url": "",
+            "video_url_mobile": ""
+          }
+        },
+        "template--20144548053339__fc82326f-5adb-4f0a-8095-e99934645ca8-title-1": {
+          "type": "title",
+          "settings": {
+            "title": "SUSTAINABLE HOLIDAY GIFT IDEAS",
+            "heading_tag": "h2",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        }
+      },
+      "block_order": [
+        "template--20144548053339__fc82326f-5adb-4f0a-8095-e99934645ca8-image-1",
+        "template--20144548053339__fc82326f-5adb-4f0a-8095-e99934645ca8-title-1"
+      ],
+      "settings": {
+        "color_scheme": "color-main",
+        "overlay_opacity": 30,
+        "enable_full_width": true,
+        "section_height_desktop": "by_pixels",
+        "section_pixel_height_desktop": 600,
+        "content_width": "col-sm-max-8",
+        "content_align_desktop": "sm-vertical-center sm-horizontal-center",
+        "desktop_alignment": "sm-text-align-center",
+        "md_padding_top": 0,
+        "md_padding_bottom": 0,
+        "section_height": "by_pixels",
+        "section_pixel_height": 400,
+        "content_align_mobile": "vertical-center horizontal-center",
+        "mobile_alignment": "text-align-center",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "dfc04d97-ecd2-4249-9aa2-04920f5d72ae": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--20144548053339__dfc04d97-ecd2-4249-9aa2-04920f5d72ae-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/15_ALENNUS_KAIKISTA_TUOTTEISTA_12.-16.10.2022_8e391171-ab09-4fae-a2e0-493565d6878b.jpg",
+            "video_url": "",
+            "media_aspect_ratio": "natural",
+            "media_toggle": "show_image",
+            "media_link": ""
+          }
+        },
+        "template--20144548053339__dfc04d97-ecd2-4249-9aa2-04920f5d72ae-subtitle-1": {
+          "type": "subtitle",
+          "settings": {
+            "subtitle": "Weekendbee gift card",
+            "heading_tag": "h2",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "template--20144548053339__dfc04d97-ecd2-4249-9aa2-04920f5d72ae-title-1": {
+          "type": "title",
+          "settings": {
+            "title": "",
+            "heading_tag": "h2",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "template--20144548053339__dfc04d97-ecd2-4249-9aa2-04920f5d72ae-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Shopping for someone else but not sure what to give them?</strong> Give them the gift of choice with a Weekendbee - sustainable sportswear gift card.</p><p>Gift cards are delivered to your own email contain instructions to redeem them at checkout. Our gift cards have no additional processing fees. The gift card is valid for one year.</p><p>This gift card is possible to use on any product at the Weekendbee webshop.</p>",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "template--20144548053339__dfc04d97-ecd2-4249-9aa2-04920f5d72ae-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Buy gift card",
+            "button_link": "shopify://products/weekendbee-gift-card",
+            "button_style": "",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 24,
+            "size_multiplier": "size--default",
+            "margin_top": 24
+          }
+        }
+      },
+      "block_order": [
+        "template--20144548053339__dfc04d97-ecd2-4249-9aa2-04920f5d72ae-image-1",
+        "template--20144548053339__dfc04d97-ecd2-4249-9aa2-04920f5d72ae-subtitle-1",
+        "template--20144548053339__dfc04d97-ecd2-4249-9aa2-04920f5d72ae-title-1",
+        "template--20144548053339__dfc04d97-ecd2-4249-9aa2-04920f5d72ae-text-1",
+        "template--20144548053339__dfc04d97-ecd2-4249-9aa2-04920f5d72ae-button-1"
+      ],
+      "settings": {
+        "color_scheme": "color-main",
+        "enable_full_width": false,
+        "media_position": "media_first",
+        "content_width": "col-sm-max-4",
+        "desktop_alignment": "sm-text-align-left",
+        "sm_full_width_buttons": false,
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "mobile_alignment": "text-align-left",
+        "full_width_buttons": false,
+        "padding_top": 0,
+        "padding_bottom": 24
+      }
+    },
+    "999489c4-2417-4423-9b56-89e2e30c6b87": {
+      "type": "collection-list",
+      "blocks": {
+        "template--20144548053339__999489c4-2417-4423-9b56-89e2e30c6b87-section_header-1": {
+          "type": "section_header",
+          "settings": {
+            "subtitle": "",
+            "subtitle_tag": "h3",
+            "title": "CHECK OUT THE GIFT IDEAS WE' VE PUT TOGETHER FOR YOU!",
+            "title_tag": "h2",
+            "text": "",
+            "text_alignment": "text-align-center",
+            "sm_size_multiplier": "sm-size--default",
+            "size_multiplier": "size--default"
+          }
+        },
+        "template--20144548053339__999489c4-2417-4423-9b56-89e2e30c6b87-collection-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "christmas-gift-ideas-under-50-euros",
+            "card_bg": "bg-solid",
+            "custom_img": "shopify://shop_images/2_c2f4b304-799e-4238-836d-67619b34a31e.jpg"
+          }
+        },
+        "template--20144548053339__999489c4-2417-4423-9b56-89e2e30c6b87-collection-2": {
+          "type": "collection",
+          "settings": {
+            "collection": "christmas-gifts-from-50-to-100-euros",
+            "card_bg": "bg-solid",
+            "custom_img": "shopify://shop_images/3_e541a5ea-b32a-46cc-8f8c-12be26dffc16.jpg"
+          }
+        },
+        "template--20144548053339__999489c4-2417-4423-9b56-89e2e30c6b87-collection-3": {
+          "type": "collection",
+          "settings": {
+            "collection": "christmas-gifts-over-100-euros",
+            "card_bg": "bg-solid",
+            "custom_img": "shopify://shop_images/4_57f7d142-1a48-4d01-8962-be8519ff4519.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "template--20144548053339__999489c4-2417-4423-9b56-89e2e30c6b87-section_header-1",
+        "template--20144548053339__999489c4-2417-4423-9b56-89e2e30c6b87-collection-1",
+        "template--20144548053339__999489c4-2417-4423-9b56-89e2e30c6b87-collection-2",
+        "template--20144548053339__999489c4-2417-4423-9b56-89e2e30c6b87-collection-3"
+      ],
+      "settings": {
+        "color_scheme": "color-main",
+        "enable_full_width": false,
+        "layout_desktop": "grid",
+        "collections_per_row_desktop": 3,
+        "sm_custom_gap": -1,
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "collections_per_row_tablet": 4,
+        "layout_mobile": "slide peek",
+        "collections_per_row_mobile": 1,
+        "custom_gap": -1,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "c629c67c-138b-4aaf-a7e8-6992536ae397": {
+      "type": "featured-collection-or-products",
+      "blocks": {
+        "template--20144548053339__c629c67c-138b-4aaf-a7e8-6992536ae397-section_header-1": {
+          "type": "section_header",
+          "settings": {
+            "subtitle": "Warm merino wool socks",
+            "subtitle_tag": "h2",
+            "title": "",
+            "title_tag": "h2",
+            "text": "",
+            "text_alignment": "text-align-center",
+            "sm_size_multiplier": "sm-size--default",
+            "size_multiplier": "size--default"
+          }
+        }
+      },
+      "block_order": [
+        "template--20144548053339__c629c67c-138b-4aaf-a7e8-6992536ae397-section_header-1"
+      ],
+      "settings": {
+        "color_scheme": "color-main",
+        "collection": "sustainable-merino-wool-socks",
+        "product_list": [],
+        "product_limit": 6,
+        "view_all": true,
+        "enable_full_width": false,
+        "sm_enable_card_thumbnail": false,
+        "layout_desktop": "slide",
+        "products_per_row_desktop": 5,
+        "sm_custom_gap": -1,
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "products_per_row_tablet": 4,
+        "sm_down_enable_card_thumbnail": false,
+        "layout_mobile": "slide",
+        "products_per_row_mobile": 2,
+        "custom_gap": -1,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "779ef2c7-60cc-4fe8-9afc-b293368e75c3": {
+      "type": "featured-collection-or-products",
+      "blocks": {
+        "template--20144548053339__779ef2c7-60cc-4fe8-9afc-b293368e75c3-section_header-1": {
+          "type": "section_header",
+          "settings": {
+            "subtitle": "Warm baselayers",
+            "subtitle_tag": "h2",
+            "title": "",
+            "title_tag": "h2",
+            "text": "",
+            "text_alignment": "text-align-center",
+            "sm_size_multiplier": "sm-size--default",
+            "size_multiplier": "size--default"
+          }
+        }
+      },
+      "block_order": [
+        "template--20144548053339__779ef2c7-60cc-4fe8-9afc-b293368e75c3-section_header-1"
+      ],
+      "settings": {
+        "color_scheme": "color-main",
+        "collection": "baselayers",
+        "product_list": [],
+        "product_limit": 6,
+        "view_all": true,
+        "enable_full_width": false,
+        "sm_enable_card_thumbnail": false,
+        "layout_desktop": "slide",
+        "products_per_row_desktop": 5,
+        "sm_custom_gap": -1,
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "products_per_row_tablet": 4,
+        "sm_down_enable_card_thumbnail": false,
+        "layout_mobile": "slide",
+        "products_per_row_mobile": 2,
+        "custom_gap": -1,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "22264f48-ddf1-4ae3-834e-e0333b48c610": {
+      "type": "featured-collection-or-products",
+      "blocks": {
+        "template--20144548053339__22264f48-ddf1-4ae3-834e-e0333b48c610-section_header-1": {
+          "type": "section_header",
+          "settings": {
+            "subtitle": "Fleece shirts",
+            "subtitle_tag": "h2",
+            "title": "",
+            "title_tag": "h2",
+            "text": "",
+            "text_alignment": "text-align-center",
+            "sm_size_multiplier": "sm-size--default",
+            "size_multiplier": "size--default"
+          }
+        }
+      },
+      "block_order": [
+        "template--20144548053339__22264f48-ddf1-4ae3-834e-e0333b48c610-section_header-1"
+      ],
+      "settings": {
+        "color_scheme": "color-main",
+        "collection": "sustainable-fleece-shirts",
+        "product_list": [],
+        "product_limit": 8,
+        "view_all": true,
+        "enable_full_width": false,
+        "sm_enable_card_thumbnail": false,
+        "layout_desktop": "slide",
+        "products_per_row_desktop": 5,
+        "sm_custom_gap": -1,
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "products_per_row_tablet": 4,
+        "sm_down_enable_card_thumbnail": false,
+        "layout_mobile": "slide",
+        "products_per_row_mobile": 2,
+        "custom_gap": -1,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "a5d3bc2b-810e-4ddc-ae1a-b2bea4c3094a": {
+      "type": "featured-collection-or-products",
+      "blocks": {
+        "template--20144548053339__a5d3bc2b-810e-4ddc-ae1a-b2bea4c3094a-section_header-1": {
+          "type": "section_header",
+          "settings": {
+            "subtitle": "Warm sweaters and cardigans",
+            "subtitle_tag": "h2",
+            "title": "",
+            "title_tag": "h2",
+            "text": "",
+            "text_alignment": "text-align-center",
+            "sm_size_multiplier": "sm-size--default",
+            "size_multiplier": "size--default"
+          }
+        }
+      },
+      "block_order": [
+        "template--20144548053339__a5d3bc2b-810e-4ddc-ae1a-b2bea4c3094a-section_header-1"
+      ],
+      "settings": {
+        "color_scheme": "color-main",
+        "collection": "all-sweaters",
+        "product_list": [],
+        "product_limit": 7,
+        "view_all": true,
+        "enable_full_width": false,
+        "sm_enable_card_thumbnail": false,
+        "layout_desktop": "slide",
+        "products_per_row_desktop": 5,
+        "sm_custom_gap": -1,
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "products_per_row_tablet": 4,
+        "sm_down_enable_card_thumbnail": false,
+        "layout_mobile": "slide",
+        "products_per_row_mobile": 2,
+        "custom_gap": -1,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "5e1044b7-d82c-4b42-b0e8-8491aa1b08a6": {
+      "type": "featured-collection-or-products",
+      "blocks": {
+        "template--20144548053339__5e1044b7-d82c-4b42-b0e8-8491aa1b08a6-section_header-1": {
+          "type": "section_header",
+          "settings": {
+            "subtitle": "Sustainable bags",
+            "subtitle_tag": "h2",
+            "title": "",
+            "title_tag": "h2",
+            "text": "",
+            "text_alignment": "text-align-center",
+            "sm_size_multiplier": "sm-size--default",
+            "size_multiplier": "size--default"
+          }
+        }
+      },
+      "block_order": [
+        "template--20144548053339__5e1044b7-d82c-4b42-b0e8-8491aa1b08a6-section_header-1"
+      ],
+      "settings": {
+        "color_scheme": "color-main",
+        "collection": "sustainable-bags",
+        "product_list": [],
+        "product_limit": 9,
+        "view_all": true,
+        "enable_full_width": false,
+        "sm_enable_card_thumbnail": false,
+        "layout_desktop": "slide",
+        "products_per_row_desktop": 5,
+        "sm_custom_gap": -1,
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "products_per_row_tablet": 4,
+        "sm_down_enable_card_thumbnail": false,
+        "layout_mobile": "slide",
+        "products_per_row_mobile": 2,
+        "custom_gap": -1,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    }
+  },
+  "order": [
+    "main",
+    "fc82326f-5adb-4f0a-8095-e99934645ca8",
+    "dfc04d97-ecd2-4249-9aa2-04920f5d72ae",
+    "999489c4-2417-4423-9b56-89e2e30c6b87",
+    "c629c67c-138b-4aaf-a7e8-6992536ae397",
+    "779ef2c7-60cc-4fe8-9afc-b293368e75c3",
+    "22264f48-ddf1-4ae3-834e-e0333b48c610",
+    "a5d3bc2b-810e-4ddc-ae1a-b2bea4c3094a",
+    "5e1044b7-d82c-4b42-b0e8-8491aa1b08a6"
+  ]
+}

@@ -1,0 +1,168 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "heading_text_align": "text-align-left",
+        "sm_size_multiplier": "sm-size--default",
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "size_multiplier": "size--default",
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
+    },
+    "d685eb90-e017-46ba-8556-62ce0989729d": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20144405152091__d685eb90-e017-46ba-8556-62ce0989729d-subtitle-1": {
+          "type": "subtitle",
+          "disabled": true,
+          "settings": {
+            "subtitle": "Subheading",
+            "heading_tag": "h3",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "template--20144405152091__d685eb90-e017-46ba-8556-62ce0989729d-title-1": {
+          "type": "title",
+          "settings": {
+            "title": "B2B SALES",
+            "heading_tag": "h2",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "template--20144405152091__d685eb90-e017-46ba-8556-62ce0989729d-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Weekendbee is a Finnish online store specialising in sustainable active- and sportswear, founded in 2018.</p><p>Our fundament is that we work with brands that have sustainability as their core value<strong>.</strong> This means that the brand lives and breathes the mission to make its products, manufacturing, and operations as sustainable as possible. </p><p>Read more about <a href=\"https://www.weekendbee.com/pages/sustainability-criteria\" target=\"_blank\" title=\"weekendbee sustainability criteria\">our sustainability criteria</a>. We at Weekendbee want to ensure that all our products are sustainable choices, so it's an easy choice since it's all good!</p><h3>REWARD YOUR EMPLOYEES </h3><p>We offer companies the opportunity to reward and encourage their employees to make more responsible choices with Weekendbee gift cards. We encourage you to give gift vouchers instead of goods, so that staff can choose the product they prefer.<br/><br/>You can reward your employees tax-free with a gift voucher available on our selected product collection. Your employees can choose the products from the collection themselves and place their order with the gift voucher directly to their preferred pick-up point. We offer gift vouchers for pre-selected collections or we can also customise a collection to suit your company. <br/><br/>You can reward your employees tax-free up to €100 when the gift card collection is limited.</p><h3>PRODUCT GIFTS</h3><p>If you would like to reward or remember your employees with a specific product from our range, please contact us at info@weekendbee.com and we will check availability and possible delivery times. </p><h3>HOW TO ORDER GIFT CARDS?</h3><p>Ordering gift cards is easy when you contact our customer service team at<strong>info@weekendbee.com</strong>. Your order will be billed when you make the order and the gift cards will be delivered after the invoice has been paid. The gift cards and the link to the limited collection are delivered directly to your email, from where the gift card codes are easy to deliver to the employers.The employee can then use the code immediately in our online shop. Gift cards can also be ordered directly from our online shop using the payment methods of our online shop. Gift vouchers ordered directly from our online shop will be delivered immediately by e-mail.</p><h3><br/>GIFT CARD OFFERS</h3><ul><li>When you buy gift cards for your company worth €1000, you will receive a 10% discount code, which your employees can use when placing an order.</li><li>When you buy gift cards for your company worth €2000, you will receive a 15% discount code, which your employees can use when placing an order. </li></ul><p>Let's customise a gift voucher package that's just right for your business. Contact us at <strong>info@weekendbee.com</strong> and we will help you further.</p>",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "template--20144405152091__d685eb90-e017-46ba-8556-62ce0989729d-buttons-1": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_1": "",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "",
+            "button_label_3": "",
+            "button_link_3": "",
+            "button_style_3": "",
+            "sm_full_width_buttons": false,
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 24,
+            "full_width_buttons": false,
+            "size_multiplier": "size--default",
+            "margin_top": 24
+          }
+        }
+      },
+      "block_order": [
+        "template--20144405152091__d685eb90-e017-46ba-8556-62ce0989729d-subtitle-1",
+        "template--20144405152091__d685eb90-e017-46ba-8556-62ce0989729d-title-1",
+        "template--20144405152091__d685eb90-e017-46ba-8556-62ce0989729d-text-1",
+        "template--20144405152091__d685eb90-e017-46ba-8556-62ce0989729d-buttons-1"
+      ],
+      "settings": {
+        "color_scheme": "color-main",
+        "text_gradient_color": "",
+        "content_width": 100,
+        "desktop_content_alignment": "center",
+        "desktop_alignment": "sm-text-align-left",
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "mobile_alignment": "text-align-left",
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "5bf1b87a-9f7b-4a02-9a77-348464ab3402": {
+      "type": "collection-list",
+      "blocks": {
+        "template--20144405152091__5bf1b87a-9f7b-4a02-9a77-348464ab3402-section_header-1": {
+          "type": "section_header",
+          "settings": {
+            "subtitle": "",
+            "subtitle_tag": "h3",
+            "title": "READY-MADE PRODUCT COLLECTIONS",
+            "title_tag": "h2",
+            "text": "",
+            "text_alignment": "text-align-center",
+            "sm_size_multiplier": "sm-size--default",
+            "size_multiplier": "size--default"
+          }
+        },
+        "template--20144405152091__5bf1b87a-9f7b-4a02-9a77-348464ab3402-collection-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "sustainable-eco-friendly-backpacks",
+            "card_bg": "bg-solid"
+          }
+        },
+        "template--20144405152091__5bf1b87a-9f7b-4a02-9a77-348464ab3402-collection-2": {
+          "type": "collection",
+          "settings": {
+            "collection": "jackets",
+            "card_bg": "bg-solid"
+          }
+        },
+        "template--20144405152091__5bf1b87a-9f7b-4a02-9a77-348464ab3402-collection-3": {
+          "type": "collection",
+          "settings": {
+            "collection": "patagonia-fleece",
+            "card_bg": "bg-solid"
+          }
+        }
+      },
+      "block_order": [
+        "template--20144405152091__5bf1b87a-9f7b-4a02-9a77-348464ab3402-section_header-1",
+        "template--20144405152091__5bf1b87a-9f7b-4a02-9a77-348464ab3402-collection-1",
+        "template--20144405152091__5bf1b87a-9f7b-4a02-9a77-348464ab3402-collection-2",
+        "template--20144405152091__5bf1b87a-9f7b-4a02-9a77-348464ab3402-collection-3"
+      ],
+      "settings": {
+        "color_scheme": "color-main",
+        "enable_full_width": false,
+        "layout_desktop": "grid",
+        "collections_per_row_desktop": 3,
+        "sm_custom_gap": -1,
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "collections_per_row_tablet": 4,
+        "layout_mobile": "slide peek",
+        "collections_per_row_mobile": 1,
+        "custom_gap": -1,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    }
+  },
+  "order": [
+    "main",
+    "d685eb90-e017-46ba-8556-62ce0989729d",
+    "5bf1b87a-9f7b-4a02-9a77-348464ab3402"
+  ]
+}

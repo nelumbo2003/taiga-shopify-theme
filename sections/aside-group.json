@@ -1,0 +1,66 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:section_groups.aside",
+  "type": "aside",
+  "sections": {
+    "modal-newsletter": {
+      "type": "modal-newsletter",
+      "blocks": {
+        "f6da5bc2-50d6-446e-825e-302383e71801": {
+          "type": "title",
+          "settings": {
+            "title": "Get 20% discount on everything with code: HAPPYBEE7 - Valid until 14.9.2025"
+          }
+        },
+        "7b7011f9-ed1d-4093-8678-f1186893e8ea": {
+          "type": "newsletter",
+          "settings": {
+            "margin_top": 8
+          }
+        },
+        "image_c7phbk": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Etusivun_paakuva_1800_x_600_mm_2.png",
+            "media_link": "",
+            "aspect_ratio": "natural",
+            "margin_top": 8
+          }
+        },
+        "text_yh4EAK": {
+          "type": "text",
+          "settings": {
+            "text": "<p>*The discount is available for all orders  </p><p><br/>By completing this form you are signing up to receive our emails and can unsubscribe at any time.</p><p>View our <a href=\"https://www.weekendbee.com/pages/privacy-policy\" target=\"_blank\">Privacy Policy</a></p>",
+            "sm_size_multiplier": "sm-size--small",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--small",
+            "margin_top": 0
+          }
+        }
+      },
+      "block_order": [
+        "f6da5bc2-50d6-446e-825e-302383e71801",
+        "7b7011f9-ed1d-4093-8678-f1186893e8ea",
+        "image_c7phbk",
+        "text_yh4EAK"
+      ],
+      "disabled": true,
+      "settings": {
+        "test_mode": false,
+        "delay": 10,
+        "frequency": "30_days"
+      }
+    }
+  },
+  "order": [
+    "modal-newsletter"
+  ]
+}

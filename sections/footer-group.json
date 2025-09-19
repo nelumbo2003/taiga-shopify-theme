@@ -1,0 +1,170 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:section_groups.footer",
+  "type": "footer",
+  "sections": {
+    "d544a4b0-d9f5-4f81-9457-fe1779e3fd7c": {
+      "type": "newsletter",
+      "blocks": {
+        "sections--18551063773531__d544a4b0-d9f5-4f81-9457-fe1779e3fd7c-1681456764302d8ccf-0": {
+          "type": "title",
+          "settings": {
+            "title": "Subscribe to our emails",
+            "heading_tag": "h2",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "sections--18551063773531__d544a4b0-d9f5-4f81-9457-fe1779e3fd7c-1681456764302d8ccf-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Be the first to know about new collections and exclusive offers.</p>",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "sections--18551063773531__d544a4b0-d9f5-4f81-9457-fe1779e3fd7c-1681456764302d8ccf-2": {
+          "type": "email_form",
+          "settings": {
+            "sm_margin_top": 10,
+            "margin_top": 10
+          }
+        }
+      },
+      "block_order": [
+        "sections--18551063773531__d544a4b0-d9f5-4f81-9457-fe1779e3fd7c-1681456764302d8ccf-0",
+        "sections--18551063773531__d544a4b0-d9f5-4f81-9457-fe1779e3fd7c-1681456764302d8ccf-1",
+        "sections--18551063773531__d544a4b0-d9f5-4f81-9457-fe1779e3fd7c-1681456764302d8ccf-2"
+      ],
+      "settings": {
+        "color_scheme": "color-accent",
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "custom_liquid_KAccUA": {
+      "type": "custom-liquid",
+      "settings": {
+        "color_scheme": "",
+        "custom_liquid": "<!-- TrustBox widget - Micro Review Count -->\n<div\n  data-theme=\"light\"\n  data-style-width=\"100%\"\n  data-style-height=\"24px\"\n  data-businessunit-id=\"5ef08a297261100001f7508f\"\n  data-template-id=\"5419b6a8b0d04a076446a9ad\"\n  data-locale=\"{{ shop.locale }}\"\n  class=\"trustpilot-widget\"\n>\n  <a href=\"https://{{ shop.locale | split: '-' | first }}.trustpilot.com/review/www.weekendbee.com\" target=\"_blank\">Trustpilot</a>\n</div>\n<!-- End TrustBox widget -->",
+        "enable_full_width": true,
+        "md_padding_top": 24,
+        "md_padding_bottom": 24,
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "divider_aWn9X9": {
+      "type": "divider",
+      "blocks": {
+        "standard_agHg6J": {
+          "type": "standard",
+          "settings": {
+            "divider_graphics": "curve",
+            "top_part_color": "rgba(0,0,0,0)",
+            "middle_part_color": "",
+            "bottom_part_color": "#ffffff",
+            "position": "top-previous",
+            "flip_horizontal": false,
+            "flip_vertical": false,
+            "sm_graphics_height": 0,
+            "sm_graphics_width": 100,
+            "graphics_height": 0,
+            "graphics_width": 100
+          }
+        }
+      },
+      "block_order": [
+        "standard_agHg6J"
+      ],
+      "settings": {
+        "md_padding_top": 16,
+        "md_padding_bottom": 0,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "footer-1": {
+          "type": "text",
+          "settings": {
+            "title": "About Weekendbee",
+            "text": "<p><a href=\"/pages/weekendbee-store-in-helsinki-lauttasaari\" title=\"Weekendbee Store in Helsinki, Lauttasaari\">Weekendbee Store</a></p><p><a href=\"https://maps.app.goo.gl/tS9kd7M2bf1cR1Ba7\" target=\"_blank\" title=\"https://maps.app.goo.gl/tS9kd7M2bf1cR1Ba7\">Lauttasaarentie 50, 00200 Helsinki, Finland</a></p><p>+358 40 7268100</p><p>Opening hours: </p><ul><li>Monday-Friday 11-18</li><li>Saturday 11-16</li><li>Sunday closed</li></ul><p>Weekendbee was founded in Finland 2018 for a need to buy less & better. We sell carefully curated products for an active lifestyle in urban outdoors.</p>",
+            "column_width": "col-md-3"
+          }
+        },
+        "footer-0": {
+          "type": "link_list",
+          "settings": {
+            "title": "Weekendbee",
+            "menu": "footer",
+            "column_width": "col-md-3"
+          }
+        },
+        "f7345a71-578a-4262-a81a-eabe38b4f94a": {
+          "type": "link_list",
+          "settings": {
+            "title": "",
+            "menu": "useful-information",
+            "column_width": "col-md-3"
+          }
+        },
+        "fb0a79ee-6004-4169-840c-f2290c743817": {
+          "type": "link_list",
+          "settings": {
+            "title": "",
+            "menu": "collections",
+            "column_width": "col-md-3"
+          }
+        }
+      },
+      "block_order": [
+        "footer-1",
+        "footer-0",
+        "f7345a71-578a-4262-a81a-eabe38b4f94a",
+        "fb0a79ee-6004-4169-840c-f2290c743817"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "show_top_border": false,
+        "show_bottom_border": true,
+        "show_back_to_top": true,
+        "payment_enable": true,
+        "show_copyright": true,
+        "copyright_text": "Weekendbee - premium sportswear",
+        "show_social": true,
+        "enable_language_selector": true,
+        "enable_country_selector": true,
+        "enable_follow_on_shop": true,
+        "sm_size_multiplier": "sm-size--default",
+        "md_padding_top": 0,
+        "md_padding_bottom": 40,
+        "size_multiplier": "size--default",
+        "padding_top": 0,
+        "padding_bottom": 24
+      }
+    }
+  },
+  "order": [
+    "d544a4b0-d9f5-4f81-9457-fe1779e3fd7c",
+    "custom_liquid_KAccUA",
+    "divider_aWn9X9",
+    "footer"
+  ]
+}

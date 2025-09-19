@@ -1,0 +1,18 @@
+{{ 'component-upsell-products.css' | asset_url | stylesheet_tag }}
+
+<aside class="upsell-products">
+{%- if block.settings.title -%}
+  <h4 class="product-block-title mb-16">
+    <span><span class="jdgm-star jdgm--on"></span> </span>
+  {{ block.settings.title }}</h4>
+{%- endif -%}
+  {%- for upsell_product in block.settings.upsell_products -%}
+    {%- render 'card-product-upsell',
+      product: upsell_product,
+      product_form_id: product_form_id,
+      is_preorder: is_preorder,
+      block: block,
+      section: section
+    -%}
+  {%- endfor -%}
+</aside>

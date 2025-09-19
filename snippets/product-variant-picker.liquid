@@ -1,0 +1,159 @@
+{%- liquid
+
+  # ** PURPOSE **
+  # Renders product variant-picker
+
+  # ** PARAMETERS **
+  # product                 =>  REQUIRED | image object
+  # section_id              =>  (REQUIRED) | string | not required for picker_type == 'modal'
+  # product_form_id         =>  REQUIRED | string | unique ID that is used to mach options and inputs to a certain form
+  # cross_out_unavailable   =>  OPTIONAL | boolean
+  # picker_type             =>  OPTIONAL | string: 'modal', 'button', 'dropdown' | default: 'dropdown'
+  # shopify_attributes      =>  OPTIONAL | block.shopify_attributes
+
+  # ** SNIPPETS **
+  # - product-variant-options
+  # - icon-caret
+
+  assign picker_type = picker_type | default: 'dropdown'
+-%}
+
+{%- unless product.has_only_default_variant -%}
+  {%- if picker_type == 'modal' -%}
+    {%- comment -%}
+      - For modals we use a custom structure
+      - <modal-radios> defined in component-quick-buy.js instead of the template-product.js
+    {%- endcomment -%}
+      <modal-radios
+        class='js'
+        data-cross-unavailable='{{ cross_out_unavailable | default: false }}'
+        data-url='{{ product.url }}'
+        data-is-preorder='{{ is_preorder | default: false }}'>
+        {%- for option in product.options_with_values -%}
+          <fieldset class='js product-form__input'>
+            <legend class="form__label js">
+              {{ option.name | append: ':' }}
+              <strong data-variant-legend>
+                {% for value in option.values %}
+                  {% if value == option.selected_value %}
+                    {{ value }}
+                  {% endif %}
+                {% endfor %}
+              </strong>
+            </legend>
+            <noscript>
+              <legend class='form__label'>{{ option.name }}</legend>
+            </noscript>
+            {%- render 'product-variant-options',
+              product: product,
+              product_form_id: product_form_id,
+              option: option,
+              picker_type: 'button' -%}
+          </fieldset>
+        {%- endfor -%}
+        <script type='application/json'>
+          {{ product.variants | json }}
+        </script>
+    </modal-radios>
+
+  {%- elsif picker_type == 'button' -%}
+    <variant-radios
+      class='js'
+      data-cross-unavailable='{{ cross_out_unavailable | default: false }}'
+      data-section='{{ section_id }}'
+      data-product-id='{{ product.id }}'
+      data-url='{{ product.url }}'
+      data-is-preorder='{{ is_preorder | default: false }}'
+      {% if shopify_attributes != blank -%}
+        {{ shopify_attributes }}
+      {%- endif -%}>
+      {%- for option in product.options_with_values -%}
+        <fieldset class='js product-form__input'>
+          <legend class="form__label js">
+            {{ option.name | append: ':' }}
+            <strong data-variant-legend>
+              {% for value in option.values %}
+                {% if value == option.selected_value %}
+                  {{ value }}
+                {% endif %}
+              {% endfor %}
+            </strong>
+          </legend>
+          <noscript>
+            <legend class='form__label'>{{ option.name }}</legend>
+          </noscript>
+          {%- render 'product-variant-options',
+            product: product,
+            product_form_id: product_form_id,
+            option: option,
+            picker_type: picker_type -%}
+        </fieldset>
+      {%- endfor -%}
+      <script type='application/json'>
+        {{ product.variants | json }}
+      </script>
+    </variant-radios>
+
+  {%- else -%}
+    <variant-selects
+      class='js'
+      data-section='{{ section_id }}'
+      data-product-id='{{ product.id }}'
+      data-url='{{ product.url }}'
+      data-is-preorder='{{ is_preorder | default: false }}'
+      {% if shopify_attributes != blank -%}
+        {{ shopify_attributes }}
+      {%- endif -%}>
+      {%- for option in product.options_with_values -%}
+        <div class='product-form__input product-form__input--dropdown'>
+          <div class='field select' style='max-width: 250px; --font-size: inherit;'>
+            <label class='field__label' for='Option-{{ product_form_id }}-{{ forloop.index0 }}'>
+              {{ option.name }}
+            </label>
+            <select style='max-width: 250px;' id='Option-{{ product_form_id }}-{{ forloop.index0 }}' class='field__input' name='options[{{ option.name | escape }}]' form='{{ product_form_id }}'>
+              {%- render 'product-variant-options',
+                product: product,
+                product_form_id: product_form_id,
+                option: option,
+                picker_type: picker_type -%}
+            </select>
+            {%- render 'icon-caret', direction: 'down' -%}
+          </div>
+        </div>
+      {%- endfor -%}
+
+      <script type='application/json'>
+        {{ product.variants | json }}
+      </script>
+    </variant-selects>
+  {%- endif -%}
+
+  <noscript class='product-form__noscript-wrapper-{{ product_form_id }}'>
+    <div class='product-form__input{% if product.has_only_default_variant %} hidden{% endif %}'>
+      <label class='form__label' for='Variants-{{ product_form_id }}'>{{ 'products.product.product_variants' | t }} </label>
+      <div class='select'>
+        <select name='id' id='Variants-{{ product_form_id }}' class='select__select' form='{{ product_form_id }}'>
+          {%- for variant in product.variants -%}
+            <option
+              {% if variant == product.selected_or_first_available_variant %}
+                selected='selected'
+              {% endif %}
+              {% if variant.available == false %}
+                disabled
+              {% endif %}
+              value='{{ variant.id }}'>
+              {{ variant.title }}
+              {%- if variant.available == false %}
+                -
+                {{ 'products.product.sold_out' | t }}
+              {% endif %}
+              -
+              {{ variant.price | money | strip_html }}
+            </option>
+          {%- endfor -%}
+        </select>
+        {% render 'icon-caret' %}
+      </div>
+    </div>
+  </noscript>
+{%- endunless -%}

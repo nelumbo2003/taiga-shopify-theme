@@ -1,0 +1,596 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "badges_LEQFRt": {
+          "type": "badges",
+          "settings": {
+            "badges_position": "text-column",
+            "margin_top": 8
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "margin_top": 8
+          }
+        },
+        "custom_liquid_Y7eCYD": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "&nbsp;",
+            "margin_top": 0
+          }
+        },
+        "daf71f1d-b216-4922-9744-4983430bae22": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "cross_out_unavailable": true,
+            "margin_top": 0
+          }
+        },
+        "text_9hFxTH": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p><strong>Get 20% discount on everything with code: HAPPYBEE7 - Valid until 14.9.2025</strong></p>",
+            "margin_top": 12
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "margin_top": 12,
+            "font_weight": "normal",
+            "sm_size_multiplier": "sm-size--large",
+            "size_multiplier": "size--large"
+          }
+        },
+        "2af9c584-7c63-4bc0-bd94-ecdd7ffad099": {
+          "type": "inventory_status",
+          "settings": {
+            "inventory_threshold": 2,
+            "show_available_quantity": false,
+            "inventory_transfers_enable": false,
+            "additional__in_stock": "",
+            "additional__few_on_stock": "",
+            "additional__out_of_stock": "",
+            "additional__out_of_stock_continue_selling": "",
+            "margin_top": 16
+          }
+        },
+        "custom_liquid_ciJU3Y": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "/* FREE DELIVERY */",
+            "margin_top": 0
+          }
+        },
+        "custom_liquid_RFLAUE": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "/* QTY BOX */",
+            "margin_top": 0
+          }
+        },
+        "quantity_selector_rmGUKz": {
+          "type": "quantity_selector",
+          "settings": {
+            "next_to_add_to_cart": false,
+            "margin_top": 8
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": true,
+            "add_multipliers": "",
+            "add_multipliers_layout": "single-line",
+            "margin_top": 20
+          }
+        },
+        "ecomsend_restock_product_restore_email_3pLkwF": {
+          "type": "shopify://apps/es-back-in-stock/blocks/product-restore-email/b190bced-3b7b-47da-a05f-6ea4821c3a77",
+          "settings": {}
+        },
+        "custom_liquid_h39iYw": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "/* CAMPAIGN BADGE */",
+            "margin_top": 16
+          }
+        },
+        "pickup_availability_7zdEiy": {
+          "type": "pickup_availability",
+          "settings": {
+            "margin_top": 8
+          }
+        },
+        "upsell_products_wrEdyQ": {
+          "type": "upsell_products",
+          "settings": {
+            "title": "Complete the look",
+            "upsell_products": "{{ product.metafields[\"shopify--discovery--product_recommendation\"].complementary_products.value }}",
+            "upsell_behavior": "separate",
+            "margin_top": 0
+          }
+        },
+        "77197c91-c530-41da-9b03-25bb71e56aba": {
+          "type": "collapsible_tab",
+          "settings": {
+            "title": "Size chart",
+            "content": "",
+            "page": "{{ product.metafields.my_fields.size_chart_page.value }}",
+            "open_as_drawer": true,
+            "icon": "icon-caret__right",
+            "margin_top": 16
+          }
+        },
+        "collapsible-row-0": {
+          "type": "collapsible_tab",
+          "settings": {
+            "title": "Free delivery in EU for all orders over 129€",
+            "content": "",
+            "page": "returns-and-deliveries",
+            "open_as_drawer": true,
+            "icon": "icon-truck",
+            "margin_top": 0
+          }
+        },
+        "collapsible_tab_9mtCLh": {
+          "type": "collapsible_tab",
+          "settings": {
+            "title": "Free returns",
+            "content": "",
+            "page": "returns-and-deliveries",
+            "open_as_drawer": true,
+            "icon": "icon-return",
+            "margin_top": 0
+          }
+        },
+        "vendor": {
+          "type": "text",
+          "settings": {
+            "text": "<p>{{ product.metafields.descriptors.subtitle.value }}</p>",
+            "margin_top": 0
+          }
+        },
+        "sticky_buy_bar_MzD8yY": {
+          "type": "sticky_buy_bar",
+          "settings": {
+            "color_scheme": "default",
+            "overlay_str": 15,
+            "border_radius": 0
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "enable_collapsible": false,
+            "margin_top": 20
+          }
+        },
+        "7d9f3fa5-b1cd-4158-9750-d9e6492401cb": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Weekendbee guarantee</h2><p>When you purchase a product from Weekendbee, you can be sure the choice is better for our planet. We support sustainably produced high quality products so that you can buy less and better. </p>",
+            "margin_top": 8
+          }
+        },
+        "90ace0b4-3b85-4218-8d33-d702dbeebed5": {
+          "type": "collapsible_tab",
+          "settings": {
+            "title": "{{ product.vendor }} sustainability",
+            "content": "",
+            "page": "{{ product.metafields.my_fields.sustainability_product_page.value }}",
+            "open_as_drawer": true,
+            "icon": "icon-feather",
+            "margin_top": 32
+          }
+        },
+        "c60b5ed5-2628-4028-918c-2b051d84d32c": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "title": "Returns and deliveries",
+            "content": "",
+            "page": "returns-and-deliveries",
+            "open_as_drawer": true,
+            "icon": "icon-package",
+            "margin_top": 0
+          }
+        },
+        "collapsible_tab_TXLccz": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "title": "Shipping policy & prices",
+            "content": "",
+            "page": "shipping-methods-prices",
+            "open_as_drawer": true,
+            "icon": "icon-map-pin",
+            "margin_top": 0
+          }
+        },
+        "d3e581c9-791c-4611-8e4d-93678a7581d7": {
+          "type": "text",
+          "settings": {
+            "text": "<p>{{ product.metafields.my_fields.sustainability_ksp1.value }}</p><p>{{ product.metafields.my_fields.sustainability_ksp2.value }}</p><p>{{ product.metafields.my_fields.sustainability_ksp3.value }}</p><p></p>",
+            "margin_top": 20
+          }
+        },
+        "e8b620fb-28a6-41f0-9b4b-eb4f14e48c37": {
+          "type": "shopify://apps/sniffie-omnibus-pricing/blocks/omnibus-price/befd495a-705f-454e-9a70-d1d491f84538",
+          "settings": {
+            "hide_if_not_on_sale": true,
+            "label": "Lowest prior price:",
+            "show_percentage": false,
+            "date_format": "%B %d, %Y",
+            "hide_date": false,
+            "field": "price",
+            "update_variant_details_dynamically": true,
+            "font_size": 0,
+            "text_color": "#000000",
+            "price_adjustment": 0,
+            "round_up_to": "0",
+            "add_after_rounding": 0
+          }
+        },
+        "6e3c1ffa-e4bd-48ea-a5f1-940e28142f1f": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p><strong>Holiday delivery time estimates:</strong></p><p>The holiday season brings some changes to delivery times. When you place the order according to the schedules below, the order should arrive before 24 December.</p><ul><li><strong>European Union - GLS and DHL FREIGHT :</strong> Place your order at December 10th the latest.</li><li><strong>European Union - DHL EXPRESS (not remote) :</strong> Place your order at December 17th the latest.</li><li><strong>Finland - Posti:</strong> Place your order at December 17th the latest.</li><li><strong>Finland - Matkahuolto:</strong> Place your order at December 13th the latest.</li><li><strong>Outside EU - DHL Express:</strong> Place your order at December 13th the latest</li></ul>",
+            "margin_top": 8
+          }
+        },
+        "similar_collections_b7dgrF": {
+          "type": "similar_collections",
+          "disabled": true,
+          "settings": {
+            "title": "Similar collection",
+            "to_exclude": "",
+            "margin_top": 32
+          }
+        },
+        "text_tfg3xK": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Text block</p>",
+            "margin_top": 8
+          }
+        }
+      },
+      "block_order": [
+        "badges_LEQFRt",
+        "title",
+        "custom_liquid_Y7eCYD",
+        "daf71f1d-b216-4922-9744-4983430bae22",
+        "variant_picker",
+        "text_9hFxTH",
+        "price",
+        "2af9c584-7c63-4bc0-bd94-ecdd7ffad099",
+        "custom_liquid_ciJU3Y",
+        "custom_liquid_RFLAUE",
+        "quantity_selector_rmGUKz",
+        "buy_buttons",
+        "ecomsend_restock_product_restore_email_3pLkwF",
+        "custom_liquid_h39iYw",
+        "pickup_availability_7zdEiy",
+        "upsell_products_wrEdyQ",
+        "77197c91-c530-41da-9b03-25bb71e56aba",
+        "collapsible-row-0",
+        "collapsible_tab_9mtCLh",
+        "vendor",
+        "sticky_buy_bar_MzD8yY",
+        "description",
+        "7d9f3fa5-b1cd-4158-9750-d9e6492401cb",
+        "90ace0b4-3b85-4218-8d33-d702dbeebed5",
+        "c60b5ed5-2628-4028-918c-2b051d84d32c",
+        "collapsible_tab_TXLccz",
+        "d3e581c9-791c-4611-8e4d-93678a7581d7",
+        "e8b620fb-28a6-41f0-9b4b-eb4f14e48c37",
+        "6e3c1ffa-e4bd-48ea-a5f1-940e28142f1f",
+        "similar_collections_b7dgrF",
+        "text_tfg3xK"
+      ],
+      "settings": {
+        "product_image_aspect_ratio": "natural",
+        "media_fill_rule": "cover",
+        "color_scheme": "color-main",
+        "show_breadcrumb": true,
+        "section_bg": "",
+        "media_col_bg": "",
+        "content_col_bg": "",
+        "border_radius": 0,
+        "product_media_bg": "rgba(0,0,0,0)",
+        "media_border_radius": 0,
+        "enable_full_width": true,
+        "sm-p": 40,
+        "media_layout": "traditional-below",
+        "media_col_width": "medium",
+        "sm_media_zoom": "disabled",
+        "sm_media_gap": 5,
+        "md_padding_top": 0,
+        "md_padding_bottom": 0,
+        "enable_slider_peek": false,
+        "show_thumbnails_sm_down": false,
+        "media_zoom": "disabled",
+        "media_gap": 0,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "7091acd7-2828-417f-9729-851ac42b5cc1": {
+      "type": "video",
+      "settings": {
+        "color_scheme": "color-main",
+        "video_url": "{{ product.metafields.custom.product_video.value }}",
+        "title": "",
+        "text": "",
+        "align_content": "text-align-left",
+        "position_content": "above",
+        "md_padding_top": 48,
+        "md_padding_bottom": 40,
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "174211854522dcb3e2": {
+      "type": "apps",
+      "blocks": {
+        "smart_product_filter_search_bought_together_products_J3CVWb": {
+          "type": "shopify://apps/smart-product-filter-search/blocks/bought_together_products/5cc1944c-3014-4a2a-af40-7d65abc0ef73",
+          "settings": {
+            "heading": "Bought together",
+            "layout": "carousel",
+            "limit": 8,
+            "columns_desktop": 4,
+            "columns_tablet": 3,
+            "columns_mobile": 2,
+            "autoplay": false,
+            "loop": false,
+            "pagination": false,
+            "navigation": true
+          }
+        }
+      },
+      "block_order": [
+        "smart_product_filter_search_bought_together_products_J3CVWb"
+      ],
+      "settings": {}
+    },
+    "1746724446263d74ed": {
+      "type": "apps",
+      "blocks": {
+        "smart_product_filter_search_trending_products_wMcN7d": {
+          "type": "shopify://apps/smart-product-filter-search/blocks/trending_products/5cc1944c-3014-4a2a-af40-7d65abc0ef73",
+          "settings": {
+            "heading": "Trending products",
+            "layout": "carousel",
+            "limit": 8,
+            "columns_desktop": 4,
+            "columns_tablet": 3,
+            "columns_mobile": 2,
+            "autoplay": false,
+            "loop": false,
+            "pagination": false,
+            "navigation": true
+          }
+        }
+      },
+      "block_order": [
+        "smart_product_filter_search_trending_products_wMcN7d"
+      ],
+      "settings": {}
+    },
+    "ccef3484-f99a-439a-8523-291202e73dc5": {
+      "type": "custom-liquid",
+      "settings": {
+        "color_scheme": "color-main",
+        "custom_liquid": "<a href=\"/pages/weekendbee-reviews\"><span data-score='{{ shop.metafields.judgeme.all_reviews_rating }}' class='jdgm-all-reviews-rating'></span> {{ shop.metafields.judgeme.all_reviews_rating | round: 1 }}/5 {{ shop.metafields.judgeme.all_reviews_count }} verified reviews</a>",
+        "enable_full_width": false,
+        "md_padding_top": 24,
+        "md_padding_bottom": 16,
+        "padding_top": 24,
+        "padding_bottom": 16
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "product_limit": 8,
+        "color_scheme": "color-main",
+        "enable_full_width": true,
+        "sm_enable_card_thumbnail": false,
+        "layout_desktop": "grid",
+        "products_per_row_desktop": 4,
+        "sm_custom_gap": -1,
+        "md_padding_top": 0,
+        "md_padding_bottom": 24,
+        "products_per_row_tablet": 4,
+        "sm_down_enable_card_thumbnail": false,
+        "layout_mobile": "slide peek",
+        "products_per_row_mobile": 2,
+        "custom_gap": -1,
+        "padding_top": 24,
+        "padding_bottom": 0,
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "sliding_behavior": "single"
+      }
+    },
+    "1684221811d4a3f846": {
+      "type": "apps",
+      "blocks": {
+        "df8b63d8-0da4-47e7-871a-34b3db0bd8eb": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200
+          }
+        }
+      },
+      "block_order": [
+        "df8b63d8-0da4-47e7-871a-34b3db0bd8eb"
+      ],
+      "settings": {}
+    },
+    "custom_liquid_zamgW3": {
+      "type": "custom-liquid",
+      "settings": {
+        "color_scheme": "",
+        "custom_liquid": "<script type=\"text/javascript\">\n  var _learnq = _learnq || [];\n\n  // Function to track the Add to Cart event\n  function trackAddToCart() {\n    // Shopify product data via Liquid\n    var productName = \"{{ product.title }}\";\n    var productId = \"{{ product.id }}\";\n    var productPrice = \"{{ product.price | money }}\";\n    var productQuantity = document.querySelector('[name=\"quantity\"]').value || 1; // Default to 1 if no quantity is set\n    var productUrl = window.location.href;\n\n    // Define the product details\n    var item = {\n      'ProductName': productName,\n      'ProductID': productId,\n      'Price': productPrice,\n      'Quantity': productQuantity,\n      'URL': productUrl\n    };\n\n    // Push the 'Added to Cart' event to Klaviyo\n    _learnq.push(['track', 'Added to Cart', item]);\n  }\n\n  // Attach the function to Shopify's Add to Cart button click event\n  document.addEventListener(\"DOMContentLoaded\", function() {\n    // Get the Add to Cart button by class or other identifiers\n    var addToCartButton = document.querySelector('.product-form__submit');\n\n    // If button exists, add event listener\n    if (addToCartButton) {\n      addToCartButton.addEventListener('click', function(event) {\n        // Trigger the Klaviyo tracking event on button click\n        trackAddToCart();\n\n        // Optional: delay to ensure the event gets tracked before other actions\n        setTimeout(function() {\n          // Additional code for any after-click logic\n        }, 300); // Delay 300ms to let the event trigger\n      });\n    }\n  });\n\n  // Also listen for Shopify's cart updates (useful if you're using AJAX)\n  document.addEventListener(\"cart:updated\", function() {\n    // Re-trigger tracking on cart update, if necessary\n    trackAddToCart();\n  });\n</script>",
+        "enable_full_width": false,
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "17421185461c70eb6f": {
+      "type": "apps",
+      "blocks": {
+        "smart_product_filter_search_best_sellers_HXeDKG": {
+          "type": "shopify://apps/smart-product-filter-search/blocks/best_sellers/5cc1944c-3014-4a2a-af40-7d65abc0ef73",
+          "settings": {
+            "heading": "Best sellers",
+            "layout": "carousel",
+            "limit": 8,
+            "columns_desktop": 4,
+            "columns_tablet": 3,
+            "columns_mobile": 2,
+            "autoplay": false,
+            "loop": false,
+            "pagination": true,
+            "navigation": true
+          }
+        }
+      },
+      "block_order": [
+        "smart_product_filter_search_best_sellers_HXeDKG"
+      ],
+      "settings": {}
+    },
+    "1746725439588b4b20": {
+      "type": "apps",
+      "blocks": {
+        "smart_product_filter_search_new_products_m77BpF": {
+          "type": "shopify://apps/smart-product-filter-search/blocks/new_products/5cc1944c-3014-4a2a-af40-7d65abc0ef73",
+          "settings": {
+            "heading": "New arrival",
+            "layout": "carousel",
+            "limit": 8,
+            "columns_desktop": 4,
+            "columns_tablet": 3,
+            "columns_mobile": 2,
+            "autoplay": false,
+            "loop": false,
+            "pagination": true,
+            "navigation": true
+          }
+        }
+      },
+      "block_order": [
+        "smart_product_filter_search_new_products_m77BpF"
+      ],
+      "settings": {}
+    },
+    "4bd99079-ee46-49f1-8c4e-b11178e8c3c4": {
+      "type": "featured-blog",
+      "blocks": {
+        "template--19788208308571__4bd99079-ee46-49f1-8c4e-b11178e8c3c4-section_header-1": {
+          "type": "section_header",
+          "settings": {
+            "subtitle": "Weekendbee",
+            "subtitle_tag": "h3",
+            "title": "Sustainable sportswear",
+            "title_tag": "h2",
+            "text": "",
+            "text_alignment": "text-align-center",
+            "sm_size_multiplier": "sm-size--default",
+            "size_multiplier": "size--default"
+          }
+        }
+      },
+      "block_order": [
+        "template--19788208308571__4bd99079-ee46-49f1-8c4e-b11178e8c3c4-section_header-1"
+      ],
+      "settings": {
+        "color_scheme": "color-main",
+        "blog": "sustainability",
+        "article_limit": 12,
+        "view_all": true,
+        "enable_full_width": false,
+        "layout_desktop": "slide",
+        "articles_per_row_desktop": 3,
+        "md_padding_top": 0,
+        "md_padding_bottom": 0,
+        "articles_per_row_tablet": 3,
+        "layout_mobile": "slide",
+        "articles_per_row_mobile": 1,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "sliding_behavior": "single"
+      }
+    },
+    "174672468416f0521d": {
+      "type": "apps",
+      "blocks": {
+        "smart_product_filter_search_recently_viewed_products_p7tpKj": {
+          "type": "shopify://apps/smart-product-filter-search/blocks/recently_viewed_products/5cc1944c-3014-4a2a-af40-7d65abc0ef73",
+          "settings": {
+            "heading": "Recently viewed",
+            "layout": "grid",
+            "limit": 10,
+            "columns_desktop": 4,
+            "columns_tablet": 3,
+            "columns_mobile": 2,
+            "autoplay": false,
+            "loop": false,
+            "pagination": true,
+            "navigation": true
+          }
+        }
+      },
+      "block_order": [
+        "smart_product_filter_search_recently_viewed_products_p7tpKj"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "7091acd7-2828-417f-9729-851ac42b5cc1",
+    "174211854522dcb3e2",
+    "1746724446263d74ed",
+    "ccef3484-f99a-439a-8523-291202e73dc5",
+    "product-recommendations",
+    "1684221811d4a3f846",
+    "custom_liquid_zamgW3",
+    "17421185461c70eb6f",
+    "1746725439588b4b20",
+    "4bd99079-ee46-49f1-8c4e-b11178e8c3c4",
+    "174672468416f0521d"
+  ]
+}

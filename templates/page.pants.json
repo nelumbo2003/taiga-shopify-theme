@@ -1,0 +1,435 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "2b551551-66c6-49ce-ae32-fc795c1d23fb": {
+      "type": "hero",
+      "blocks": {
+        "template--20144014623067__2b551551-66c6-49ce-ae32-fc795c1d23fb-image-1": {
+          "type": "image",
+          "settings": {
+            "media_toggle": "show_image",
+            "image": "shopify://shop_images/square_mood_ss22_johan_wennerstrom_trekking_nallo_dsc6613_exp_2026-08-092_7997acf8-ac3e-4d9c-8330-65856e358292.jpg",
+            "video_url": "",
+            "video_url_mobile": ""
+          }
+        },
+        "template--20144014623067__2b551551-66c6-49ce-ae32-fc795c1d23fb-title-1": {
+          "type": "title",
+          "settings": {
+            "title": "Sustainable and durable pants",
+            "heading_tag": "h1",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 31,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "template--20144014623067__2b551551-66c6-49ce-ae32-fc795c1d23fb-buttons-1": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "See the full collection here!",
+            "button_link_1": "shopify://collections/sustainable-pants",
+            "button_style_1": "",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "",
+            "button_label_3": "",
+            "button_link_3": "",
+            "button_style_3": "",
+            "sm_full_width_buttons": false,
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 24,
+            "full_width_buttons": false,
+            "size_multiplier": "size--default",
+            "margin_top": 24
+          }
+        }
+      },
+      "block_order": [
+        "template--20144014623067__2b551551-66c6-49ce-ae32-fc795c1d23fb-image-1",
+        "template--20144014623067__2b551551-66c6-49ce-ae32-fc795c1d23fb-title-1",
+        "template--20144014623067__2b551551-66c6-49ce-ae32-fc795c1d23fb-buttons-1"
+      ],
+      "settings": {
+        "color_scheme": "color-main",
+        "overlay_opacity": 40,
+        "enable_full_width": true,
+        "section_height_desktop": "by_pixels",
+        "section_pixel_height_desktop": 600,
+        "content_width": "col-sm-max-8",
+        "content_align_desktop": "sm-vertical-center sm-horizontal-center",
+        "desktop_alignment": "sm-text-align-center",
+        "md_padding_top": 0,
+        "md_padding_bottom": 0,
+        "section_height": "by_pixels",
+        "section_pixel_height": 400,
+        "content_align_mobile": "vertical-center horizontal-center",
+        "mobile_alignment": "text-align-center",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "heading_text_align": "text-align-left",
+        "sm_size_multiplier": "sm-size--default",
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "size_multiplier": "size--default",
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
+    },
+    "5bbd472e-79c7-4c93-a738-1a671c6f3fc9": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20144014623067__5bbd472e-79c7-4c93-a738-1a671c6f3fc9-subtitle-1": {
+          "type": "subtitle",
+          "disabled": true,
+          "settings": {
+            "subtitle": "Subheading",
+            "heading_tag": "h3",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "template--20144014623067__5bbd472e-79c7-4c93-a738-1a671c6f3fc9-title-1": {
+          "type": "title",
+          "disabled": true,
+          "settings": {
+            "title": "Rich text heading",
+            "heading_tag": "h2",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "template--20144014623067__5bbd472e-79c7-4c93-a738-1a671c6f3fc9-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Are you looking for sustainable pants to suit your activities? Check out our wide range of trousers and find your perfect match. Our collection includes pants for everyday wear, long hikes, downhill skiing, winter running and much more.</p>",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "template--20144014623067__5bbd472e-79c7-4c93-a738-1a671c6f3fc9-buttons-1": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_1": "",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "",
+            "button_label_3": "",
+            "button_link_3": "",
+            "button_style_3": "",
+            "sm_full_width_buttons": false,
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 24,
+            "full_width_buttons": false,
+            "size_multiplier": "size--default",
+            "margin_top": 24
+          }
+        }
+      },
+      "block_order": [
+        "template--20144014623067__5bbd472e-79c7-4c93-a738-1a671c6f3fc9-subtitle-1",
+        "template--20144014623067__5bbd472e-79c7-4c93-a738-1a671c6f3fc9-title-1",
+        "template--20144014623067__5bbd472e-79c7-4c93-a738-1a671c6f3fc9-text-1",
+        "template--20144014623067__5bbd472e-79c7-4c93-a738-1a671c6f3fc9-buttons-1"
+      ],
+      "settings": {
+        "color_scheme": "color-main",
+        "text_gradient_color": "",
+        "content_width": 100,
+        "desktop_content_alignment": "center",
+        "desktop_alignment": "sm-text-align-left",
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "mobile_alignment": "text-align-left",
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "de5894ee-5807-407b-84e9-d37ace1631f6": {
+      "type": "featured-collection-or-products",
+      "blocks": {
+        "template--20144014623067__de5894ee-5807-407b-84e9-d37ace1631f6-section_header-1": {
+          "type": "section_header",
+          "settings": {
+            "subtitle": "SHELL PANTS",
+            "subtitle_tag": "h2",
+            "title": "",
+            "title_tag": "h2",
+            "text": "<p>Shell pants are great choice for outdoor activities in different weather conditions and are part of the outdoor enthusiast's basic equipment. They protect you from rain, wet terrain and wind. For summer use, you should choose light and breathable pants. For winter use, on the other hand, you should be able to fit a second layer under your shell pants.</p>",
+            "text_alignment": "text-align-center",
+            "sm_size_multiplier": "sm-size--default",
+            "size_multiplier": "size--default"
+          }
+        }
+      },
+      "block_order": [
+        "template--20144014623067__de5894ee-5807-407b-84e9-d37ace1631f6-section_header-1"
+      ],
+      "settings": {
+        "color_scheme": "color-main",
+        "collection": "sustainable-shell-pants",
+        "product_list": [],
+        "product_limit": 9,
+        "view_all": true,
+        "enable_full_width": false,
+        "sm_enable_card_thumbnail": false,
+        "layout_desktop": "slide",
+        "products_per_row_desktop": 5,
+        "sm_custom_gap": -1,
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "products_per_row_tablet": 5,
+        "sm_down_enable_card_thumbnail": false,
+        "layout_mobile": "slide",
+        "products_per_row_mobile": 2,
+        "custom_gap": -1,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "06eea4c5-fe49-46c0-aac1-524fd3f4c392": {
+      "type": "featured-collection-or-products",
+      "blocks": {
+        "template--20144014623067__06eea4c5-fe49-46c0-aac1-524fd3f4c392-section_header-1": {
+          "type": "section_header",
+          "settings": {
+            "subtitle": "SOFTSHELL PANTS",
+            "subtitle_tag": "h2",
+            "title": "",
+            "title_tag": "h2",
+            "text": "<p>Softshell pants are great for all kinds of outdoor activities. They are stretchy trousers that combine several materials. Softshell trousers are generally water-repellent and have a windproof fabric. The inner lining is often a soft and warm fleece. These warm trousers are a versatile choice for colder weather.</p>",
+            "text_alignment": "text-align-center",
+            "sm_size_multiplier": "sm-size--default",
+            "size_multiplier": "size--default"
+          }
+        }
+      },
+      "block_order": [
+        "template--20144014623067__06eea4c5-fe49-46c0-aac1-524fd3f4c392-section_header-1"
+      ],
+      "settings": {
+        "color_scheme": "color-main",
+        "collection": "sustainable-softshell-pants",
+        "product_list": [],
+        "product_limit": 9,
+        "view_all": true,
+        "enable_full_width": false,
+        "sm_enable_card_thumbnail": false,
+        "layout_desktop": "slide",
+        "products_per_row_desktop": 5,
+        "sm_custom_gap": -1,
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "products_per_row_tablet": 4,
+        "sm_down_enable_card_thumbnail": false,
+        "layout_mobile": "slide",
+        "products_per_row_mobile": 2,
+        "custom_gap": -1,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "8904b907-eafc-4cd3-a783-88742c6eb7b6": {
+      "type": "featured-collection-or-products",
+      "blocks": {
+        "template--20144014623067__8904b907-eafc-4cd3-a783-88742c6eb7b6-section_header-1": {
+          "type": "section_header",
+          "settings": {
+            "subtitle": "OUTDOOR AND HIKING PANTS",
+            "subtitle_tag": "h2",
+            "title": "",
+            "title_tag": "h2",
+            "text": "<p>Our collection includes a wide variety of outdoor and hiking pants, suitable for everything from everyday dog walks to longer hikes.</p>",
+            "text_alignment": "text-align-center",
+            "sm_size_multiplier": "sm-size--default",
+            "size_multiplier": "size--default"
+          }
+        }
+      },
+      "block_order": [
+        "template--20144014623067__8904b907-eafc-4cd3-a783-88742c6eb7b6-section_header-1"
+      ],
+      "settings": {
+        "color_scheme": "color-main",
+        "collection": "trekking-hiking-pants",
+        "product_list": [],
+        "product_limit": 8,
+        "view_all": true,
+        "enable_full_width": false,
+        "sm_enable_card_thumbnail": false,
+        "layout_desktop": "slide",
+        "products_per_row_desktop": 5,
+        "sm_custom_gap": -1,
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "products_per_row_tablet": 4,
+        "sm_down_enable_card_thumbnail": false,
+        "layout_mobile": "slide",
+        "products_per_row_mobile": 2,
+        "custom_gap": -1,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "19e485a6-df6b-48d2-a15d-c0f765e5047d": {
+      "type": "featured-collection-or-products",
+      "blocks": {
+        "template--20144014623067__19e485a6-df6b-48d2-a15d-c0f765e5047d-section_header-1": {
+          "type": "section_header",
+          "settings": {
+            "subtitle": "WARM WINTER PANTS",
+            "subtitle_tag": "h2",
+            "title": "",
+            "title_tag": "h2",
+            "text": "<p>Warm winter pants keep your legs warm when the weather cools down. The collection includes our warmest trousers, which are padded or warm softshell material.</p>",
+            "text_alignment": "text-align-center",
+            "sm_size_multiplier": "sm-size--default",
+            "size_multiplier": "size--default"
+          }
+        }
+      },
+      "block_order": [
+        "template--20144014623067__19e485a6-df6b-48d2-a15d-c0f765e5047d-section_header-1"
+      ],
+      "settings": {
+        "color_scheme": "color-main",
+        "collection": "sustainable-winter-pants",
+        "product_list": [],
+        "product_limit": 8,
+        "view_all": true,
+        "enable_full_width": false,
+        "sm_enable_card_thumbnail": false,
+        "layout_desktop": "slide",
+        "products_per_row_desktop": 5,
+        "sm_custom_gap": -1,
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "products_per_row_tablet": 4,
+        "sm_down_enable_card_thumbnail": false,
+        "layout_mobile": "slide",
+        "products_per_row_mobile": 2,
+        "custom_gap": -1,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "91c05da6-e69d-4951-9393-d5792b6270b0": {
+      "type": "featured-collection-or-products",
+      "blocks": {
+        "template--20144014623067__91c05da6-e69d-4951-9393-d5792b6270b0-section_header-1": {
+          "type": "section_header",
+          "settings": {
+            "subtitle": "WINTER RUNNING PANTS",
+            "subtitle_tag": "h2",
+            "title": "",
+            "title_tag": "h2",
+            "text": "<p>Do you run all year round and need something warmer for your legs for the winter? Thicker winter running tights will help you extend your running season, even in slightly cooler weather.</p>",
+            "text_alignment": "text-align-center",
+            "sm_size_multiplier": "sm-size--default",
+            "size_multiplier": "size--default"
+          }
+        }
+      },
+      "block_order": [
+        "template--20144014623067__91c05da6-e69d-4951-9393-d5792b6270b0-section_header-1"
+      ],
+      "settings": {
+        "color_scheme": "color-main",
+        "collection": "winter-running-pants",
+        "product_list": [],
+        "product_limit": 5,
+        "view_all": true,
+        "enable_full_width": false,
+        "sm_enable_card_thumbnail": false,
+        "layout_desktop": "slide",
+        "products_per_row_desktop": 5,
+        "sm_custom_gap": -1,
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "products_per_row_tablet": 4,
+        "sm_down_enable_card_thumbnail": false,
+        "layout_mobile": "slide",
+        "products_per_row_mobile": 2,
+        "custom_gap": -1,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "0022d969-fd6a-4147-a32d-60850082a1e0": {
+      "type": "featured-collection-or-products",
+      "blocks": {
+        "template--20144014623067__0022d969-fd6a-4147-a32d-60850082a1e0-section_header-1": {
+          "type": "section_header",
+          "settings": {
+            "subtitle": "DOWNHILL SKIING PANTS",
+            "subtitle_tag": "h2",
+            "title": "",
+            "title_tag": "h2",
+            "text": "<p>Heading to the slopes and looking for sustainable, warm and functional pants. Check out our collection of downhill ski pants that are durable, long-lasting and will keep you warm and dry all day long.</p>",
+            "text_alignment": "text-align-center",
+            "sm_size_multiplier": "sm-size--default",
+            "size_multiplier": "size--default"
+          }
+        }
+      },
+      "block_order": [
+        "template--20144014623067__0022d969-fd6a-4147-a32d-60850082a1e0-section_header-1"
+      ],
+      "settings": {
+        "color_scheme": "color-main",
+        "collection": "downhill-skiing-pants",
+        "product_list": [],
+        "product_limit": 7,
+        "view_all": true,
+        "enable_full_width": false,
+        "sm_enable_card_thumbnail": false,
+        "layout_desktop": "slide",
+        "products_per_row_desktop": 5,
+        "sm_custom_gap": -1,
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "products_per_row_tablet": 4,
+        "sm_down_enable_card_thumbnail": false,
+        "layout_mobile": "slide",
+        "products_per_row_mobile": 2,
+        "custom_gap": -1,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    }
+  },
+  "order": [
+    "2b551551-66c6-49ce-ae32-fc795c1d23fb",
+    "main",
+    "5bbd472e-79c7-4c93-a738-1a671c6f3fc9",
+    "de5894ee-5807-407b-84e9-d37ace1631f6",
+    "06eea4c5-fe49-46c0-aac1-524fd3f4c392",
+    "8904b907-eafc-4cd3-a783-88742c6eb7b6",
+    "19e485a6-df6b-48d2-a15d-c0f765e5047d",
+    "91c05da6-e69d-4951-9393-d5792b6270b0",
+    "0022d969-fd6a-4147-a32d-60850082a1e0"
+  ]
+}

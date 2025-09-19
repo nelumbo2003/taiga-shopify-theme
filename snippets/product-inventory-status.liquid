@@ -1,0 +1,137 @@
+{%- liquid
+  assign show_inventory_status = false
+
+  if current_variant.inventory_management == 'shopify'
+    assign show_inventory_status = true
+  endif
+
+  assign show_incoming = false
+  if current_variant.incoming and show_inventory_status == false and current_variant.inventory_quantity <= block.settings.inventory_threshold
+    assign show_incoming = true
+  endif
+
+  assign status_class = 'inventory-status--in-stock'
+  if current_variant.inventory_quantity < 1 and current_variant.inventory_policy == 'continue'
+    assign status_class = 'inventory-status--sold-out-continue-selling'
+  elsif current_variant.inventory_quantity < 1
+    assign status_class = 'inventory-status--sold-out'
+  elsif current_variant.inventory_quantity <= block.settings.inventory_threshold
+    assign status_class = 'inventory-status--low'
+  endif
+-%}
+
+<ul class="inventory-statuses">
+  <li data-threshold="{{ block.settings.inventory_threshold }}"
+      data-show-quantity-in-stock="{{ block.settings.show_available_quantity }}"
+      data-product-inventory
+      class="inventory-status {{ status_class }} {% unless show_inventory_status %} hide{% endunless %}">
+    <span class="inventory-status__text caption">
+      {%- if show_inventory_status -%}
+        {%- if current_variant.inventory_quantity > block.settings.inventory_threshold -%}
+          {%- unless block.settings.show_available_quantity %}
+            {{ 'products.product.inventory.in_stock' | t }}
+          {%- else -%}
+            {{ 'products.product.inventory.in_stock_with_quantity' | t: quantity: current_variant.inventory_quantity }}
+          {%- endunless -%}
+        {%- elsif current_variant.inventory_quantity <= block.settings.inventory_threshold and current_variant.inventory_quantity > 0 -%}
+          {%- unless block.settings.show_available_quantity -%}
+            {{ 'products.product.inventory.few_left' | t }}
+          {%- else -%}
+            {{ 'products.product.inventory.few_left_with_quantity' | t: quantity: current_variant.inventory_quantity }}
+          {%- endunless -%}
+        {%- elsif current_variant.inventory_policy == 'continue' -%}
+          {{ 'products.product.inventory.out_of_stock_continue_selling' | t }}
+        {%- else -%}
+          {{ 'products.product.inventory.out_of_stock' | t }}
+        {%- endif -%}
+      {%- endif -%}
+    </span>
+    {% if block.settings.additional__in_stock %}
+      <span class="stock-additional for-in-stock">{{ block.settings.additional__in_stock }}</span>
+    {% endif %}
+    {% if block.settings.additional__few_on_stock %}
+      <span class="stock-additional for-low">{{ block.settings.additional__few_on_stock }}</span>
+    {% endif %}
+    {% if block.settings.additional__out_of_stock %}
+      <span class="stock-additional for-sold-out">{{ block.settings.additional__out_of_stock }}</span>
+    {% endif %}
+    {% if block.settings.additional__out_of_stock_continue_selling %}
+      <span class="stock-additional for-sold-out-continue-selling">{{ block.settings.additional__out_of_stock_continue_selling }}</span>
+    {% endif %}
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const cntry = "{{ localization.country.iso_code }}";
+        {% assign the_country = localization.country.iso_code %}
+        let dlvr_time = "5-10"; // default
+    
+        {% for delivery_time_obj in shop.metaobjects['delivery_time'].values %}
+          {% for country in delivery_time_obj.countries.value %}
+            {% if country contains the_country %}
+              dlvr_time = "{{ delivery_time_obj.time }}";
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+   
+        const deliveryTimeEl = document.querySelector('.dlv-text');
+        if (deliveryTimeEl) {
+          deliveryTimeEl.textContent = dlvr_time;
+        }
+    
+        // Liquid assignment can't be dynamic based on JS variable
+      });
+    </script>
+    <span class="delivery-time rte">
+      <span>- </span><span>Delivery time</span> <span class="dlv-text">{{ delivery_time }}</span> <span>workdays</span>.
+      <a href="#drawer-Details-collapsible-row-0-template--25716340818267__main" style="display: inline-block; text-decoration: underline;">Learn more</a>
+    </span>
+      
+    <div>
+      {% assign current_hour = 'now' | date: "%H" | plus: 0 %}
+      {% assign current_day = 'now' | date: "%A" %}
+      
+      {% if current_day == 'Saturday' or current_day == 'Sunday' %}
+        <span class="size--nano style--subdued">Order to be shipped on first workday.</span>
+      {% endif %}
+      {% if current_hour < 14 %}
+        {% unless current_day == 'Saturday' or current_day == 'Sunday' %}
+        <span class="size--nano style--subdued">Orders placed before 14:00 are shipped the same day.</span>
+        {% endunless %}
+      {% endif %}
+    </div>
+
+  </li>
+
+  {%- if block.settings.inventory_transfers_enable -%}
+    <li
+      data-incoming-inventory
+      class="inventory-status {% unless show_incoming %} hide {% endunless %}">
+      <span class="caption">
+        {%- if current_variant.next_incoming_date -%}
+Orders placed before 14:00 are shipped the same day.' | t: date: date }}
+        {%- else -%}
+          {{ 'products.product.inventory.waiting_for_stock' | t }}
+        {%- endif -%}
+      </span>
+
+    </li>
+  {%- endif -%}
+</ul>
+
+{%- assign variants_with_inventory_tracking = product.variants | where: 'inventory_management', 'shopify' -%}
+{{ 'component-inventory-status.css' | asset_url | stylesheet_tag }}
+
+<script>
+  // Store inventory quantities in JS because they're no longer
+  // available directly in JS when a variant changes.
+  window.inventories = window.inventories || {};
+  window.inventories['{{ product.id }}'] = {};
+   {% for variant in variants_with_inventory_tracking %}
+    window.inventories['{{ product.id }}'][{{ variant.id }}] = {
+      'quantity': {{ variant.inventory_quantity | default: 0 }},
+      'policy': '{{ variant.inventory_policy | default: false }}',
+      'incoming': '{{ variant.incoming | default: false }}',
+      'next_incoming_date': {{ variant.next_incoming_date | date: format: 'date' | json }}
+    };
+   {% endfor %}
+</script>

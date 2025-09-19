@@ -1,0 +1,144 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-article",
+      "blocks": {
+        "title_JA9zBC": {
+          "type": "title",
+          "settings": {
+            "margin_top": 24
+          }
+        },
+        "featured_image": {
+          "type": "featured_image",
+          "settings": {
+            "enable_full_width": false,
+            "media_aspect_ratio": "natural",
+            "margin_top": 24
+          }
+        },
+        "details_aCqAkH": {
+          "type": "details",
+          "settings": {
+            "show_author": false,
+            "show_date": true,
+            "margin_top": 24
+          }
+        },
+        "hr_N8fEUR": {
+          "type": "hr",
+          "settings": {
+            "margin_top": 24
+          }
+        },
+        "content": {
+          "type": "content",
+          "settings": {
+            "margin_top": 24
+          }
+        },
+        "tags_nDhrRw": {
+          "type": "tags",
+          "settings": {
+            "margin_top": 24
+          }
+        }
+      },
+      "block_order": [
+        "title_JA9zBC",
+        "featured_image",
+        "details_aCqAkH",
+        "hr_N8fEUR",
+        "content",
+        "tags_nDhrRw"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "md_padding_top": 8,
+        "md_padding_bottom": 80,
+        "padding_top": 8,
+        "padding_bottom": 40
+      }
+    },
+    "article-navigation": {
+      "type": "article-navigation",
+      "settings": {
+        "color_scheme": "",
+        "show_back_to_blog": true,
+        "show_article_images": true,
+        "md_padding_top": 0,
+        "md_padding_bottom": 80,
+        "padding_top": 0,
+        "padding_bottom": 40
+      }
+    },
+    "collection_list_iDwd4w": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_m7QEMh": {
+          "type": "collection",
+          "settings": {
+            "collection": "patagonia",
+            "card_bg": "bg-solid"
+          }
+        },
+        "collection_QCJqcj": {
+          "type": "collection",
+          "settings": {
+            "collection": "mens-clothing",
+            "card_bg": "bg-solid"
+          }
+        },
+        "collection_dwnzr6": {
+          "type": "collection",
+          "settings": {
+            "collection": "womens-clothing",
+            "card_bg": "bg-solid"
+          }
+        },
+        "collection_CNQt86": {
+          "type": "collection",
+          "settings": {
+            "collection": "all-products",
+            "card_bg": "bg-solid"
+          }
+        }
+      },
+      "block_order": [
+        "collection_m7QEMh",
+        "collection_QCJqcj",
+        "collection_dwnzr6",
+        "collection_CNQt86"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "enable_full_width": false,
+        "layout_desktop": "grid",
+        "collections_per_row_desktop": 4,
+        "sm_custom_gap": -1,
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "collections_per_row_tablet": 4,
+        "layout_mobile": "slide peek",
+        "collections_per_row_mobile": 1,
+        "custom_gap": -1,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    }
+  },
+  "order": [
+    "main",
+    "article-navigation",
+    "collection_list_iDwd4w"
+  ]
+}

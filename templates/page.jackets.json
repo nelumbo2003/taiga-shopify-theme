@@ -1,0 +1,435 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "2b551551-66c6-49ce-ae32-fc795c1d23fb": {
+      "type": "hero",
+      "blocks": {
+        "template--20144014623067__2b551551-66c6-49ce-ae32-fc795c1d23fb-image-1": {
+          "type": "image",
+          "settings": {
+            "media_toggle": "show_image",
+            "image": "shopify://shop_images/117_54b88f27ff-aw402-w-cb-7-full_b96de3c8-6ea1-4c3a-b964-dcc4aa34d429.jpg",
+            "video_url": "",
+            "video_url_mobile": ""
+          }
+        },
+        "template--20144014623067__2b551551-66c6-49ce-ae32-fc795c1d23fb-title-1": {
+          "type": "title",
+          "settings": {
+            "title": "Sustainable, durable and warm winter jackets!",
+            "heading_tag": "h1",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 31,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "template--20144014623067__2b551551-66c6-49ce-ae32-fc795c1d23fb-buttons-1": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "See the full collection here!",
+            "button_link_1": "shopify://collections/sustainable-winter-jackets",
+            "button_style_1": "",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "",
+            "button_label_3": "",
+            "button_link_3": "",
+            "button_style_3": "",
+            "sm_full_width_buttons": false,
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 24,
+            "full_width_buttons": false,
+            "size_multiplier": "size--default",
+            "margin_top": 24
+          }
+        }
+      },
+      "block_order": [
+        "template--20144014623067__2b551551-66c6-49ce-ae32-fc795c1d23fb-image-1",
+        "template--20144014623067__2b551551-66c6-49ce-ae32-fc795c1d23fb-title-1",
+        "template--20144014623067__2b551551-66c6-49ce-ae32-fc795c1d23fb-buttons-1"
+      ],
+      "settings": {
+        "color_scheme": "color-main",
+        "overlay_opacity": 40,
+        "enable_full_width": true,
+        "section_height_desktop": "by_pixels",
+        "section_pixel_height_desktop": 600,
+        "content_width": "col-sm-max-8",
+        "content_align_desktop": "sm-vertical-center sm-horizontal-center",
+        "desktop_alignment": "sm-text-align-center",
+        "md_padding_top": 0,
+        "md_padding_bottom": 0,
+        "section_height": "by_pixels",
+        "section_pixel_height": 400,
+        "content_align_mobile": "vertical-center horizontal-center",
+        "mobile_alignment": "text-align-center",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "heading_text_align": "text-align-left",
+        "sm_size_multiplier": "sm-size--default",
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "size_multiplier": "size--default",
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
+    },
+    "5bbd472e-79c7-4c93-a738-1a671c6f3fc9": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20144014623067__5bbd472e-79c7-4c93-a738-1a671c6f3fc9-subtitle-1": {
+          "type": "subtitle",
+          "disabled": true,
+          "settings": {
+            "subtitle": "Subheading",
+            "heading_tag": "h3",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "template--20144014623067__5bbd472e-79c7-4c93-a738-1a671c6f3fc9-title-1": {
+          "type": "title",
+          "disabled": true,
+          "settings": {
+            "title": "Rich text heading",
+            "heading_tag": "h2",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "template--20144014623067__5bbd472e-79c7-4c93-a738-1a671c6f3fc9-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A warm winter coat is the most important piece of equipment for every winter, which is why it's worth investing in quality, durability and versatility. We also want to encourage you to choose a winter coat that is made responsibly, with respect for the environment and the manufacturers of the product. When you choose your winter jacket from our collection, you can be sure that your jacket will meet these criteria.</p>",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "template--20144014623067__5bbd472e-79c7-4c93-a738-1a671c6f3fc9-buttons-1": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_1": "",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "",
+            "button_label_3": "",
+            "button_link_3": "",
+            "button_style_3": "",
+            "sm_full_width_buttons": false,
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 24,
+            "full_width_buttons": false,
+            "size_multiplier": "size--default",
+            "margin_top": 24
+          }
+        }
+      },
+      "block_order": [
+        "template--20144014623067__5bbd472e-79c7-4c93-a738-1a671c6f3fc9-subtitle-1",
+        "template--20144014623067__5bbd472e-79c7-4c93-a738-1a671c6f3fc9-title-1",
+        "template--20144014623067__5bbd472e-79c7-4c93-a738-1a671c6f3fc9-text-1",
+        "template--20144014623067__5bbd472e-79c7-4c93-a738-1a671c6f3fc9-buttons-1"
+      ],
+      "settings": {
+        "color_scheme": "color-main",
+        "text_gradient_color": "",
+        "content_width": 100,
+        "desktop_content_alignment": "center",
+        "desktop_alignment": "sm-text-align-left",
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "mobile_alignment": "text-align-left",
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "de5894ee-5807-407b-84e9-d37ace1631f6": {
+      "type": "featured-collection-or-products",
+      "blocks": {
+        "template--20144014623067__de5894ee-5807-407b-84e9-d37ace1631f6-section_header-1": {
+          "type": "section_header",
+          "settings": {
+            "subtitle": "LONG PUFFER JACKETS",
+            "subtitle_tag": "h2",
+            "title": "",
+            "title_tag": "h2",
+            "text": "<p>Long puffer down jackets are very popular, and we're not surprised. Who wouldn't want to wrap up in a wonderfully soft and warm puffer jacket. A longer winter coat is also great for protecting your legs from the cold and breeze. A long jacket is a great winter coat for everyday wear, but also warm for those day trips out in cold weather.</p>",
+            "text_alignment": "text-align-center",
+            "sm_size_multiplier": "sm-size--default",
+            "size_multiplier": "size--default"
+          }
+        }
+      },
+      "block_order": [
+        "template--20144014623067__de5894ee-5807-407b-84e9-d37ace1631f6-section_header-1"
+      ],
+      "settings": {
+        "color_scheme": "color-main",
+        "collection": "long-puffer-jackets",
+        "product_list": [],
+        "product_limit": 9,
+        "view_all": true,
+        "enable_full_width": false,
+        "sm_enable_card_thumbnail": false,
+        "layout_desktop": "slide",
+        "products_per_row_desktop": 5,
+        "sm_custom_gap": -1,
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "products_per_row_tablet": 5,
+        "sm_down_enable_card_thumbnail": false,
+        "layout_mobile": "slide",
+        "products_per_row_mobile": 2,
+        "custom_gap": -1,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "06eea4c5-fe49-46c0-aac1-524fd3f4c392": {
+      "type": "featured-collection-or-products",
+      "blocks": {
+        "template--20144014623067__06eea4c5-fe49-46c0-aac1-524fd3f4c392-section_header-1": {
+          "type": "section_header",
+          "settings": {
+            "subtitle": "PARKA JACKETS",
+            "subtitle_tag": "h2",
+            "title": "",
+            "title_tag": "h2",
+            "text": "<p>The parka is a winter jacket classic. The parka is a slightly longer jacket that can have a down or synthetic filling. It's perfect for everyday wear or for your adventures in the great outdoors.</p>",
+            "text_alignment": "text-align-center",
+            "sm_size_multiplier": "sm-size--default",
+            "size_multiplier": "size--default"
+          }
+        }
+      },
+      "block_order": [
+        "template--20144014623067__06eea4c5-fe49-46c0-aac1-524fd3f4c392-section_header-1"
+      ],
+      "settings": {
+        "color_scheme": "color-main",
+        "collection": "parka-jackets",
+        "product_list": [],
+        "product_limit": 9,
+        "view_all": true,
+        "enable_full_width": false,
+        "sm_enable_card_thumbnail": false,
+        "layout_desktop": "slide",
+        "products_per_row_desktop": 5,
+        "sm_custom_gap": -1,
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "products_per_row_tablet": 4,
+        "sm_down_enable_card_thumbnail": false,
+        "layout_mobile": "slide",
+        "products_per_row_mobile": 2,
+        "custom_gap": -1,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "8904b907-eafc-4cd3-a783-88742c6eb7b6": {
+      "type": "featured-collection-or-products",
+      "blocks": {
+        "template--20144014623067__8904b907-eafc-4cd3-a783-88742c6eb7b6-section_header-1": {
+          "type": "section_header",
+          "settings": {
+            "subtitle": "SYNTHETIC WINTER JACKETS",
+            "subtitle_tag": "h2",
+            "title": "",
+            "title_tag": "h2",
+            "text": "<p>Do you want a warm winter coat without down. Jackets filled with synthetic materials are nowadays very warm and often from recycled materials. Synthetic filling also has better properties than down when the weather is cold and rainy.</p>",
+            "text_alignment": "text-align-center",
+            "sm_size_multiplier": "sm-size--default",
+            "size_multiplier": "size--default"
+          }
+        }
+      },
+      "block_order": [
+        "template--20144014623067__8904b907-eafc-4cd3-a783-88742c6eb7b6-section_header-1"
+      ],
+      "settings": {
+        "color_scheme": "color-main",
+        "collection": "synthetic-winter-jackets",
+        "product_list": [],
+        "product_limit": 8,
+        "view_all": true,
+        "enable_full_width": false,
+        "sm_enable_card_thumbnail": false,
+        "layout_desktop": "slide",
+        "products_per_row_desktop": 5,
+        "sm_custom_gap": -1,
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "products_per_row_tablet": 4,
+        "sm_down_enable_card_thumbnail": false,
+        "layout_mobile": "slide",
+        "products_per_row_mobile": 2,
+        "custom_gap": -1,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "19e485a6-df6b-48d2-a15d-c0f765e5047d": {
+      "type": "featured-collection-or-products",
+      "blocks": {
+        "template--20144014623067__19e485a6-df6b-48d2-a15d-c0f765e5047d-section_header-1": {
+          "type": "section_header",
+          "settings": {
+            "subtitle": "SHELL JACKETS",
+            "subtitle_tag": "h2",
+            "title": "",
+            "title_tag": "h2",
+            "text": "<p>A shell jacket is every outdoorsy person's most important piece of clothing all year round. The shell jacket is an excellent protection against wet snow and rain, as well as against cold wind. If you layer enough underneath the shell jacket, it is a great year-round jacket.</p>",
+            "text_alignment": "text-align-center",
+            "sm_size_multiplier": "sm-size--default",
+            "size_multiplier": "size--default"
+          }
+        }
+      },
+      "block_order": [
+        "template--20144014623067__19e485a6-df6b-48d2-a15d-c0f765e5047d-section_header-1"
+      ],
+      "settings": {
+        "color_scheme": "color-main",
+        "collection": "shell-jackets",
+        "product_list": [],
+        "product_limit": 8,
+        "view_all": true,
+        "enable_full_width": false,
+        "sm_enable_card_thumbnail": false,
+        "layout_desktop": "slide",
+        "products_per_row_desktop": 5,
+        "sm_custom_gap": -1,
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "products_per_row_tablet": 4,
+        "sm_down_enable_card_thumbnail": false,
+        "layout_mobile": "slide",
+        "products_per_row_mobile": 2,
+        "custom_gap": -1,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "91c05da6-e69d-4951-9393-d5792b6270b0": {
+      "type": "featured-collection-or-products",
+      "blocks": {
+        "template--20144014623067__91c05da6-e69d-4951-9393-d5792b6270b0-section_header-1": {
+          "type": "section_header",
+          "settings": {
+            "subtitle": "JACKETS FOR CYCLING",
+            "subtitle_tag": "h2",
+            "title": "",
+            "title_tag": "h2",
+            "text": "<p>These jackets are great for riding on the back of a bike for commuting, for example. The jackets are cool as they are for the city, but they're also performance-ready so you can get through your commute warm and dry.</p>",
+            "text_alignment": "text-align-center",
+            "sm_size_multiplier": "sm-size--default",
+            "size_multiplier": "size--default"
+          }
+        }
+      },
+      "block_order": [
+        "template--20144014623067__91c05da6-e69d-4951-9393-d5792b6270b0-section_header-1"
+      ],
+      "settings": {
+        "color_scheme": "color-main",
+        "collection": "cycling-jackets",
+        "product_list": [],
+        "product_limit": 5,
+        "view_all": true,
+        "enable_full_width": false,
+        "sm_enable_card_thumbnail": false,
+        "layout_desktop": "slide",
+        "products_per_row_desktop": 5,
+        "sm_custom_gap": -1,
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "products_per_row_tablet": 4,
+        "sm_down_enable_card_thumbnail": false,
+        "layout_mobile": "slide",
+        "products_per_row_mobile": 2,
+        "custom_gap": -1,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "0022d969-fd6a-4147-a32d-60850082a1e0": {
+      "type": "featured-collection-or-products",
+      "blocks": {
+        "template--20144014623067__0022d969-fd6a-4147-a32d-60850082a1e0-section_header-1": {
+          "type": "section_header",
+          "settings": {
+            "subtitle": "DOWNHILL SKIING JACKETS",
+            "subtitle_tag": "h2",
+            "title": "",
+            "title_tag": "h2",
+            "text": "<p>On the slopes, it's important that your jacket is durable and moves with you as you go. You also need more features, especially waterproofing and breathability, to make your days on the slopes as comfortable as possible.<br/>The sustainable downhill jackets in our collection are great for long days on the slopes, but also stylish enough for a day on the town after a long day on the mountains.</p>",
+            "text_alignment": "text-align-center",
+            "sm_size_multiplier": "sm-size--default",
+            "size_multiplier": "size--default"
+          }
+        }
+      },
+      "block_order": [
+        "template--20144014623067__0022d969-fd6a-4147-a32d-60850082a1e0-section_header-1"
+      ],
+      "settings": {
+        "color_scheme": "color-main",
+        "collection": "sustainable-downhill-ski-jackets",
+        "product_list": [],
+        "product_limit": 7,
+        "view_all": true,
+        "enable_full_width": false,
+        "sm_enable_card_thumbnail": false,
+        "layout_desktop": "slide",
+        "products_per_row_desktop": 5,
+        "sm_custom_gap": -1,
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "products_per_row_tablet": 4,
+        "sm_down_enable_card_thumbnail": false,
+        "layout_mobile": "slide",
+        "products_per_row_mobile": 2,
+        "custom_gap": -1,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    }
+  },
+  "order": [
+    "2b551551-66c6-49ce-ae32-fc795c1d23fb",
+    "main",
+    "5bbd472e-79c7-4c93-a738-1a671c6f3fc9",
+    "de5894ee-5807-407b-84e9-d37ace1631f6",
+    "06eea4c5-fe49-46c0-aac1-524fd3f4c392",
+    "8904b907-eafc-4cd3-a783-88742c6eb7b6",
+    "19e485a6-df6b-48d2-a15d-c0f765e5047d",
+    "91c05da6-e69d-4951-9393-d5792b6270b0",
+    "0022d969-fd6a-4147-a32d-60850082a1e0"
+  ]
+}
