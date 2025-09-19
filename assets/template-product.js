@@ -416,93 +416,131 @@ class VariantRadios extends VariantSelects {
 
 customElements.define('variant-radios', VariantRadios);
 
-class ProductBuyBar extends HTMLElement {
+class FloatingAddToCart {
   constructor() {
-    "use strict";
-    super();
+    this.floatingButton = document.querySelector('.floating-add-to-cart');
+    this.addToCartBtn = document.querySelector('.floating-add-to-cart-btn');
+    this.cartBadge = document.querySelector('.cart-count-badge');
+    this.productForm = document.querySelector('.product-form');
 
-    let classes = { show: "show", hidden: "hidden" };
-    let mainProductForm = document.querySelector(".product-form");
-    let isManuallyHidden = false;
+    if (this.addToCartBtn && this.productForm) {
+      this.init();
+    }
+  }
 
-    // Get the minimized buy bar (outside this component)
-    const minimizedBar = document.querySelector('.product-buy-bar-minimized');
-    const closeButton = this.querySelector('.buy-bar-close');
-    const restoreButton = document.querySelector('.buy-bar-restore');
+  init() {
+    // Add click event listener to floating button
+    this.addToCartBtn.addEventListener('click', this.handleAddToCart.bind(this));
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            // In view -> Hide bar (unless manually hidden)
-            if (!isManuallyHidden) {
-              this.classList.remove(classes.show);
-              this.hideMinimizedBar();
-            }
-          } else if (window.scrollY > 200 && !isManuallyHidden) {
-            // Out of view AND scrolled a little from top -> Show bar
-            this.classList.add(classes.show);
-          }
-        });
-      },
-      { threshold: 0.25 }
-    );
+    // Listen for cart updates from other sources
+    document.addEventListener('cart:updated', this.updateCartCount.bind(this));
+  }
 
-    // Close button functionality
-    if (closeButton) {
-      closeButton.addEventListener('click', () => {
-        this.hideBuyBar();
-        this.showMinimizedBar();
-        isManuallyHidden = true;
+  async handleAddToCart(evt) {
+    evt.preventDefault();
+
+    if (this.addToCartBtn.disabled) return;
+
+    // Get current variant from main product form
+    const variantInput = this.productForm.querySelector('[name="id"]');
+    const quantityInput = this.productForm.querySelector('[name="quantity"]') || { value: 1 };
+
+    if (!variantInput || !variantInput.value) {
+      console.error('No variant selected');
+      return;
+    }
+
+    // Disable button and show loading state
+    this.addToCartBtn.disabled = true;
+    this.addToCartBtn.style.opacity = '0.7';
+
+    try {
+      const formData = new FormData();
+      formData.append('id', variantInput.value);
+      formData.append('quantity', quantityInput.value || 1);
+
+      const response = await fetch(window.routes.cart_add_url + '.js', {
+        method: 'POST',
+        headers: {
+          'X-Requested-With': 'XMLHttpRequest',
+        },
+        body: formData
       });
-    }
 
-    // Restore button functionality
-    if (restoreButton) {
-      restoreButton.addEventListener('click', () => {
-        this.showBuyBar();
-        this.hideMinimizedBar();
-        isManuallyHidden = false;
-      });
-    }
-
-    if (mainProductForm) {
-      observer.observe(mainProductForm);
-    }
-
-    // This script is loaded in product-template.liquid --> Footer observer after DOM ready
-    document.addEventListener("DOMContentLoaded", function () {
-      let siteFooter = document.querySelector("footer.footer");
-      if (!siteFooter) return;
-      observer.observe(siteFooter);
-    });
-  }
-
-  hideBuyBar() {
-    this.classList.remove('show');
-    this.classList.add('hidden');
-  }
-
-  showBuyBar() {
-    this.classList.remove('hidden');
-    this.classList.add('show');
-  }
-
-  hideMinimizedBar() {
-    const minimizedBar = document.querySelector('.product-buy-bar-minimized');
-    if (minimizedBar) {
-      minimizedBar.classList.add('hidden');
+      if (response.ok) {
+        const result = await response.json();
+        this.onAddToCartSuccess(result);
+      } else {
+        const error = await response.json();
+        this.onAddToCartError(error);
+      }
+    } catch (error) {
+      console.error('Add to cart error:', error);
+      this.onAddToCartError(error);
+    } finally {
+      // Re-enable button
+      this.addToCartBtn.disabled = false;
+      this.addToCartBtn.style.opacity = '1';
     }
   }
 
-  showMinimizedBar() {
-    const minimizedBar = document.querySelector('.product-buy-bar-minimized');
-    if (minimizedBar) {
-      minimizedBar.classList.remove('hidden');
+  onAddToCartSuccess(item) {
+    // Update cart count
+    this.updateCartCountFromAPI();
+
+    // Trigger custom event for other components
+    document.dispatchEvent(new CustomEvent('cart:updated', { detail: item }));
+
+    // Show brief success feedback
+    this.showSuccessFeedback();
+  }
+
+  onAddToCartError(error) {
+    console.error('Failed to add to cart:', error);
+    // Could show error feedback here
+  }
+
+  async updateCartCountFromAPI() {
+    try {
+      const response = await fetch(window.routes.cart_url + '.js');
+      if (response.ok) {
+        const cart = await response.json();
+        this.updateCartBadge(cart.item_count);
+      }
+    } catch (error) {
+      console.error('Failed to update cart count:', error);
     }
+  }
+
+  updateCartBadge(count) {
+    if (this.cartBadge) {
+      this.cartBadge.textContent = count;
+      if (count > 0) {
+        this.cartBadge.removeAttribute('hidden');
+      } else {
+        this.cartBadge.setAttribute('hidden', '');
+      }
+    }
+  }
+
+  updateCartCount(event) {
+    // Handle cart updates from other sources
+    this.updateCartCountFromAPI();
+  }
+
+  showSuccessFeedback() {
+    // Brief scale animation to show success
+    this.addToCartBtn.style.transform = 'scale(1.2)';
+    setTimeout(() => {
+      this.addToCartBtn.style.transform = '';
+    }, 200);
   }
 }
-customElements.define("product-buy-bar", ProductBuyBar);
+
+// Initialize floating add to cart when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+  new FloatingAddToCart();
+});
 
 class UpsellCard extends HTMLElement {
   constructor() {
