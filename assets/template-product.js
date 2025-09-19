@@ -432,7 +432,8 @@ class FloatingAddToCart {
     // Add click event listener to floating button
     this.addToCartBtn.addEventListener('click', this.handleAddToCart.bind(this));
 
-    // Listen for cart updates from existing system
+    // Listen for cart updates using same events as header cart blip
+    document.addEventListener('ajaxProduct:added', this.updateCartBadge.bind(this));
     document.addEventListener('cart:update', this.updateCartBadge.bind(this));
   }
 
@@ -500,15 +501,20 @@ class FloatingAddToCart {
     // Could show error feedback here
   }
 
-  updateCartBadge(event) {
-    // Extract cart data from the existing system's event
-    const cart = event.detail;
-    if (this.cartBadge && cart && typeof cart.item_count !== 'undefined') {
-      this.cartBadge.textContent = cart.item_count;
-      if (cart.item_count > 0) {
-        this.cartBadge.removeAttribute('hidden');
+  async updateCartBadge(e) {
+    // Use exact same logic as header cart blip in global.js
+    const cart = e.detail && e.detail.cart && e.detail.cart.item_count || await (async function () {
+      const res = await fetch('/cart.json');
+      const cart = await res.json();
+      return cart;
+    })();
+
+    if (this.cartBadge) {
+      this.cartBadge.textContent = cart.item_count || 0;
+      if (cart && cart.item_count == 0) {
+        this.cartBadge.setAttribute('hidden', true);
       } else {
-        this.cartBadge.setAttribute('hidden', '');
+        this.cartBadge.removeAttribute('hidden');
       }
     }
   }
