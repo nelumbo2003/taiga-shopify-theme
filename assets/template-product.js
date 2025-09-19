@@ -425,10 +425,10 @@ class ProductBuyBar extends HTMLElement {
     let mainProductForm = document.querySelector(".product-form");
     let isManuallyHidden = false;
 
-    // Get the minimized buy bar
+    // Get the minimized buy bar (outside this component)
     const minimizedBar = document.querySelector('.product-buy-bar-minimized');
     const closeButton = this.querySelector('.buy-bar-close');
-    const restoreButton = minimizedBar?.querySelector('.buy-bar-restore');
+    const restoreButton = document.querySelector('.buy-bar-restore');
 
     const observer = new IntersectionObserver(
       (entries) => {

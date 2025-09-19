@@ -31,13 +31,14 @@
   justify-content: space-between;
   background-color: transparent;
   color: var(--color-foreground);
+  position: relative;
 }
 
 /* Close button */
 .buy-bar-close {
   position: absolute;
-  top: 8px;
-  right: 8px;
+  top: -8px;
+  right: -8px;
   background: none;
   border: none;
   color: var(--color-foreground);
@@ -85,8 +86,8 @@
 
   /* Adjust close button position for desktop */
   .buy-bar-close {
-    top: 12px;
-    right: 12px;
+    top: -8px;
+    right: -8px;
     width: 32px;
     height: 32px;
     padding: 6px;
