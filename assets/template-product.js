@@ -435,6 +435,9 @@ class FloatingAddToCart {
     // Listen for cart updates using same events as header cart blip
     document.addEventListener('ajaxProduct:added', this.updateCartBadge.bind(this));
     document.addEventListener('cart:update', this.updateCartBadge.bind(this));
+
+    // Trigger entrance animation after a short delay
+    this.showEntranceAnimation();
   }
 
   async handleAddToCart(evt) {
@@ -534,6 +537,15 @@ class FloatingAddToCart {
         document.body.classList.add('overflow-hidden');
       }
     }
+  }
+
+  showEntranceAnimation() {
+    // Smooth entrance animation with delay for better page load experience
+    setTimeout(() => {
+      if (this.floatingButton) {
+        this.floatingButton.classList.add('show');
+      }
+    }, 300); // 300ms delay after DOM ready
   }
 
   showSuccessFeedback() {

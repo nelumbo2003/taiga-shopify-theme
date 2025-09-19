@@ -5,6 +5,15 @@
   right: 20px;
   z-index: 4;
   transition: all 0.3s ease-in-out;
+  /* Start hidden below viewport */
+  transform: translateY(120px);
+  opacity: 0;
+}
+
+/* Show state for entrance animation */
+.floating-add-to-cart.show {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .floating-add-to-cart-btn {
