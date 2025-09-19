@@ -1,8 +1,8 @@
 /* Floating Add to Cart Button */
 .floating-add-to-cart {
   position: fixed;
-  bottom: 20px;
-  left: 20px;
+  bottom: 80px;
+  right: 20px;
   z-index: 4;
   transition: all 0.3s ease-in-out;
 }
