@@ -197,7 +197,7 @@
           "gqa_theme_badgeIconColor": "#555555",
           "gqa_launchStyle": "image",
           "gqa_launchBottom": 10,
-          "gqa_launchRight": 20,
+          "gqa_launchRight": 15,
           "gqa_launchDelay": 2,
           "gqa_isGreetingsEnabled": false,
           "gqa_greetingsDelay": 10,
