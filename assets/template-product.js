@@ -421,16 +421,25 @@ class ProductBuyBar extends HTMLElement {
     "use strict";
     super();
 
-    let classes = { show: "show" };
+    let classes = { show: "show", hidden: "hidden" };
     let mainProductForm = document.querySelector(".product-form");
+    let isManuallyHidden = false;
+
+    // Get the minimized buy bar
+    const minimizedBar = document.querySelector('.product-buy-bar-minimized');
+    const closeButton = this.querySelector('.buy-bar-close');
+    const restoreButton = minimizedBar?.querySelector('.buy-bar-restore');
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            // In view -> Hide bar
-            this.classList.remove(classes.show);
-          } else if (window.scrollY > 200) {
+            // In view -> Hide bar (unless manually hidden)
+            if (!isManuallyHidden) {
+              this.classList.remove(classes.show);
+              this.hideMinimizedBar();
+            }
+          } else if (window.scrollY > 200 && !isManuallyHidden) {
             // Out of view AND scrolled a little from top -> Show bar
             this.classList.add(classes.show);
           }
@@ -439,7 +448,27 @@ class ProductBuyBar extends HTMLElement {
       { threshold: 0.25 }
     );
 
-    observer.observe(mainProductForm);
+    // Close button functionality
+    if (closeButton) {
+      closeButton.addEventListener('click', () => {
+        this.hideBuyBar();
+        this.showMinimizedBar();
+        isManuallyHidden = true;
+      });
+    }
+
+    // Restore button functionality
+    if (restoreButton) {
+      restoreButton.addEventListener('click', () => {
+        this.showBuyBar();
+        this.hideMinimizedBar();
+        isManuallyHidden = false;
+      });
+    }
+
+    if (mainProductForm) {
+      observer.observe(mainProductForm);
+    }
 
     // This script is loaded in product-template.liquid --> Footer observer after DOM ready
     document.addEventListener("DOMContentLoaded", function () {
@@ -447,6 +476,30 @@ class ProductBuyBar extends HTMLElement {
       if (!siteFooter) return;
       observer.observe(siteFooter);
     });
+  }
+
+  hideBuyBar() {
+    this.classList.remove('show');
+    this.classList.add('hidden');
+  }
+
+  showBuyBar() {
+    this.classList.remove('hidden');
+    this.classList.add('show');
+  }
+
+  hideMinimizedBar() {
+    const minimizedBar = document.querySelector('.product-buy-bar-minimized');
+    if (minimizedBar) {
+      minimizedBar.classList.add('hidden');
+    }
+  }
+
+  showMinimizedBar() {
+    const minimizedBar = document.querySelector('.product-buy-bar-minimized');
+    if (minimizedBar) {
+      minimizedBar.classList.remove('hidden');
+    }
   }
 }
 customElements.define("product-buy-bar", ProductBuyBar);
