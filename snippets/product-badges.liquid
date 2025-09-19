@@ -14,7 +14,8 @@
   endif
 
   assign is_sale = false
-  if product.compare_at_price_max > product.price_min
+  assign variant_to_check = current_variant | default: product.selected_or_first_available_variant
+  if variant_to_check and variant_to_check.compare_at_price and variant_to_check.compare_at_price > variant_to_check.price
     assign is_sale = true
     assign show_badges = true
   endif

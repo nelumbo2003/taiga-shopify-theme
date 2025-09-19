@@ -33,7 +33,7 @@
   # Product bages
   if settings.product_card_badges
     capture product_badges
-      render 'product-badges', product: product
+      render 'product-badges', product: product, current_variant: product.selected_or_first_available_variant
     endcapture
   endif
  -%}
