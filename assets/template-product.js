@@ -432,8 +432,8 @@ class FloatingAddToCart {
     // Add click event listener to floating button
     this.addToCartBtn.addEventListener('click', this.handleAddToCart.bind(this));
 
-    // Listen for cart updates from other sources
-    document.addEventListener('cart:updated', this.updateCartCount.bind(this));
+    // Listen for cart updates from existing system
+    document.addEventListener('cart:update', this.updateCartBadge.bind(this));
   }
 
   async handleAddToCart(evt) {
@@ -485,14 +485,14 @@ class FloatingAddToCart {
   }
 
   onAddToCartSuccess(item) {
-    // Update cart count
-    this.updateCartCountFromAPI();
-
-    // Trigger custom event for other components
-    document.dispatchEvent(new CustomEvent('cart:updated', { detail: item }));
+    // Trigger the same event that existing cart system uses
+    document.dispatchEvent(new CustomEvent('ajaxProduct:added', { detail: item }));
 
     // Show brief success feedback
     this.showSuccessFeedback();
+
+    // Open cart drawer to show the added item
+    this.openCartDrawer();
   }
 
   onAddToCartError(error) {
@@ -500,22 +500,12 @@ class FloatingAddToCart {
     // Could show error feedback here
   }
 
-  async updateCartCountFromAPI() {
-    try {
-      const response = await fetch(window.routes.cart_url + '.js');
-      if (response.ok) {
-        const cart = await response.json();
-        this.updateCartBadge(cart.item_count);
-      }
-    } catch (error) {
-      console.error('Failed to update cart count:', error);
-    }
-  }
-
-  updateCartBadge(count) {
-    if (this.cartBadge) {
-      this.cartBadge.textContent = count;
-      if (count > 0) {
+  updateCartBadge(event) {
+    // Extract cart data from the existing system's event
+    const cart = event.detail;
+    if (this.cartBadge && cart && typeof cart.item_count !== 'undefined') {
+      this.cartBadge.textContent = cart.item_count;
+      if (cart.item_count > 0) {
         this.cartBadge.removeAttribute('hidden');
       } else {
         this.cartBadge.setAttribute('hidden', '');
@@ -523,9 +513,21 @@ class FloatingAddToCart {
     }
   }
 
-  updateCartCount(event) {
-    // Handle cart updates from other sources
-    this.updateCartCountFromAPI();
+  openCartDrawer() {
+    // Find the cart link and trigger it to open the drawer
+    const cartLink = document.querySelector('a[href="#drawer-cart"]');
+    if (cartLink) {
+      cartLink.click();
+    } else {
+      // Fallback: directly trigger drawer opening
+      const drawer = document.getElementById('drawer-cart');
+      if (drawer) {
+        drawer.classList.add('is-open');
+        drawer.style.opacity = '1';
+        drawer.style.display = 'block';
+        document.body.classList.add('overflow-hidden');
+      }
+    }
   }
 
   showSuccessFeedback() {
