@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "general": {
     "share": {
@@ -19,7 +28,9 @@
       "label": "Stránkování",
       "next": "Další stránka",
       "page": "Stránka {{ number }}",
-      "previous": "Předchozí stránka"
+      "previous": "Předchozí stránka",
+      "load_more": "Načíst více",
+      "all_loaded": "Vše je naloženo"
     },
     "password_page": {
       "admin_link_html": "Jste majitelem obchodu? <a href=\"/admin\" class=\"link underlined-link\">Přihlaste se zde</a>",
