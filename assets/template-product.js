@@ -575,22 +575,22 @@ class FloatingAddToCart {
   }
 
   setupScrollDetection() {
-    // Find the main product buy bar to monitor its visibility
-    const mainBuyBar = document.querySelector('.product-buy-bar');
-    if (!mainBuyBar) return;
+    // Find the main product form to monitor its visibility
+    const mainProductForm = document.querySelector('.product-form:not(.floating-add-to-cart .product-form)');
+    if (!mainProductForm) return;
 
     // Throttle scroll events for performance
     let ticking = false;
 
     const checkScrollPosition = () => {
-      const buyBarRect = mainBuyBar.getBoundingClientRect();
-      const isMainBuyBarVisible = buyBarRect.bottom > 0 && buyBarRect.top < window.innerHeight;
+      const formRect = mainProductForm.getBoundingClientRect();
+      const isMainFormVisible = formRect.bottom > 0 && formRect.top < window.innerHeight;
 
-      if (!isMainBuyBarVisible && !this.floatingButton.classList.contains('show')) {
-        // Main buy bar is out of view, show floating button
+      if (!isMainFormVisible && !this.floatingButton.classList.contains('show')) {
+        // Main form is out of view, show floating button
         this.floatingButton.classList.add('show');
-      } else if (isMainBuyBarVisible && this.floatingButton.classList.contains('show')) {
-        // Main buy bar is visible, hide floating button
+      } else if (isMainFormVisible && this.floatingButton.classList.contains('show')) {
+        // Main form is visible, hide floating button
         this.floatingButton.classList.remove('show');
       }
 

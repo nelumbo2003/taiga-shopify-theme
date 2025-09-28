@@ -1,3 +1,8 @@
+/* Hide the main product buy bar - we only want the floating button */
+.product-buy-bar {
+  display: none !important;
+}
+
 /* Floating Add to Cart Button */
 .floating-add-to-cart {
   position: fixed;
