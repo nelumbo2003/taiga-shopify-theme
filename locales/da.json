@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "general": {
     "share": {
@@ -19,7 +28,9 @@
       "label": "Paginering",
       "next": "Næste side",
       "page": "Side {{ number }}",
-      "previous": "Forrige side"
+      "previous": "Forrige side",
+      "load_more": "Læs mere",
+      "all_loaded": "Alle indlæste"
     },
     "password_page": {
       "admin_link_html": "Er du butiksejer? <a href=\"/admin\" class=\"link underlined-link\">Log ind her</a>",
