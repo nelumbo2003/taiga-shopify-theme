@@ -471,8 +471,8 @@ class FloatingAddToCart {
     document.addEventListener('ajaxProduct:added', this.updateCartBadge.bind(this));
     document.addEventListener('cart:update', this.updateCartBadge.bind(this));
 
-    // Trigger entrance animation after a short delay
-    this.showEntranceAnimation();
+    // Add scroll listener to show/hide based on main buy bar visibility
+    this.setupScrollDetection();
   }
 
   async handleAddToCart(evt) {
@@ -574,13 +574,41 @@ class FloatingAddToCart {
     }
   }
 
-  showEntranceAnimation() {
-    // Smooth entrance animation with delay for better page load experience
-    setTimeout(() => {
-      if (this.floatingButton) {
+  setupScrollDetection() {
+    // Find the main product buy bar to monitor its visibility
+    const mainBuyBar = document.querySelector('.product-buy-bar');
+    if (!mainBuyBar) return;
+
+    // Throttle scroll events for performance
+    let ticking = false;
+
+    const checkScrollPosition = () => {
+      const buyBarRect = mainBuyBar.getBoundingClientRect();
+      const isMainBuyBarVisible = buyBarRect.bottom > 0 && buyBarRect.top < window.innerHeight;
+
+      if (!isMainBuyBarVisible && !this.floatingButton.classList.contains('show')) {
+        // Main buy bar is out of view, show floating button
         this.floatingButton.classList.add('show');
+      } else if (isMainBuyBarVisible && this.floatingButton.classList.contains('show')) {
+        // Main buy bar is visible, hide floating button
+        this.floatingButton.classList.remove('show');
       }
-    }, 300); // 300ms delay after DOM ready
+
+      ticking = false;
+    };
+
+    const onScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(checkScrollPosition);
+        ticking = true;
+      }
+    };
+
+    // Initial check
+    checkScrollPosition();
+
+    // Listen for scroll events
+    window.addEventListener('scroll', onScroll, { passive: true });
   }
 
   showSuccessFeedback() {
