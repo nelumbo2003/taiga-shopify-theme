@@ -1,5 +1,16 @@
 {{ 'component-product-buy-bar.css' | asset_url | stylesheet_tag }}
 
+<!-- Floating Add to Cart Button -->
+<div class="floating-add-to-cart" data-product-id="{{ product.id }}">
+  <button class="floating-add-to-cart-btn" type="button" aria-label="{{ 'products.product.add_to_cart' | t }}">
+    {% render 'icon-cart' %}
+    <span class="cart-count-badge" aria-hidden="true"{% if cart.item_count == 0 %} hidden{% endif %}>
+      {{ cart.item_count }}
+    </span>
+    <span class="sr-only">{{ 'products.product.add_to_cart' | t }}</span>
+  </button>
+</div>
+
 {%- liquid
   assign buy_bar_product_form_id = product_form_id | append: '-product-buy-bar'
   if product.selected_or_first_available_variant.featured_media != blank

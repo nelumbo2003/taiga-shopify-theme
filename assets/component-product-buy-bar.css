@@ -1,3 +1,80 @@
+/* Floating Add to Cart Button */
+.floating-add-to-cart {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  z-index: 4;
+  transition: all 0.3s ease-in-out;
+  /* Start hidden below viewport */
+  transform: translateY(120px);
+  opacity: 0;
+}
+
+/* Show state for entrance animation */
+.floating-add-to-cart.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.floating-add-to-cart-btn {
+  position: relative;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--color-button-background);
+  color: var(--color-button-foreground);
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.floating-add-to-cart-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.floating-add-to-cart-btn svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Cart count badge */
+.cart-count-badge {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 20px;
+  height: 20px;
+  background: var(--cart-dot-background, #e74c3c);
+  color: var(--cart-dot-foreground, white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1;
+  min-width: 20px;
+}
+
+/* Screen reader only text */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Original Product Buy Bar Styles (preserved for compatibility) */
 .product-buy-bar {
   position: fixed;
   left: 0;
