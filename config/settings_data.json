@@ -44,7 +44,7 @@
     "image_padding": 0,
     "product_card_options": "default",
     "product_card_text_alignment": "text-align-left",
-    "product_card_show_vendor": false,
+    "product_card_show_vendor": true,
     "product_card_show_secondary_image": true,
     "product_card_show_rating": false,
     "product_card_quick_buy": false,
