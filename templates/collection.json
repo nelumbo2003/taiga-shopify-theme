@@ -67,7 +67,7 @@
         "enable_sorting": true,
         "enable_filtering": true,
         "enable_swatches": true,
-        "pagination_type": "default",
+        "pagination_type": "infinite",
         "enable_full_width": true,
         "md_items_per_row": 4,
         "sm_grid_gap": -1,

@@ -49,7 +49,7 @@
     "product_card_show_rating": false,
     "product_card_quick_buy": false,
     "enable_swatches": false,
-    "show_variant_availability": false,
+    "show_variant_availability": true,
     "product_card_badges": false,
     "product_card_badges_position": "vertical-bottom horizontal-left",
     "custom_badges": "popular:#C85C3D:#FFFFFF;\nclearance:#f7b829:#000000;",
