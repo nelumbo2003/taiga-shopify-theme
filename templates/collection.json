@@ -66,7 +66,7 @@
         "show_count": true,
         "enable_sorting": true,
         "enable_filtering": true,
-        "enable_swatches": true,
+        "enable_swatches": false,
         "pagination_type": "infinite",
         "enable_full_width": true,
         "md_items_per_row": 4,
