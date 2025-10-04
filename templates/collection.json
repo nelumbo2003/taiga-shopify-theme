@@ -63,9 +63,9 @@
       "settings": {
         "color_scheme": "color-main",
         "products_per_page": 48,
-        "show_count": false,
-        "enable_sorting": false,
-        "enable_filtering": false,
+        "show_count": true,
+        "enable_sorting": true,
+        "enable_filtering": true,
         "enable_swatches": true,
         "pagination_type": "default",
         "enable_full_width": true,
