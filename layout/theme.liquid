@@ -34,8 +34,8 @@
     {%- comment -%} CSS that includes @import below here {%- endcomment -%}
 
     {%- comment -%} Synchronous JS and CSS below here {% endcomment %}
-    {%- comment -%} Critical CSS variables only for faster initial render {%- endcomment -%}
-    {% render 'css-critical-variables' %}
+    {%- comment -%} All CSS variables needed for the site {%- endcomment -%}
+    {% render 'css-settings-and-variables' %}
 
     {%- comment -%} Critical CSS - Load immediately with render-blocking (required for initial render) {%- endcomment -%}
     {{ 'accessibility.css' | asset_url | stylesheet_tag }}
