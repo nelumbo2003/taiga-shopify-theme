@@ -181,11 +181,6 @@
         "disabled": false,
         "settings": {}
       },
-      "3824936769257688723": {
-        "type": "shopify://apps/sami-product-labels/blocks/app-embed-block/b9b44663-5d51-4be1-8104-faedd68da8c5",
-        "disabled": false,
-        "settings": {}
-      },
       "11068332061543699368": {
         "type": "shopify://apps/booster-page-speed-optimizer/blocks/app-embed/d920faf3-7c60-423a-9636-22618b5561b5",
         "disabled": true,
@@ -211,6 +206,11 @@
           "customPaginationTemplateLoader": "{%- capture paginationTemplate -%}{% render 'globo.filter.pagination' %}{%- endcapture -%}{%- unless paginationTemplate contains 'Liquid error' -%}<script id=\"gspfPagination\" type=\"template/html\">{{- paginationTemplate | replace: \"script>\", \"scripttag>\" -}}</script>{%- endunless -%}",
           "customYMMTemplateLoader": "{%- capture YMMTemplate -%}{% render 'globo.filter.form' %}{%- endcapture -%}{%- unless YMMTemplate contains 'Liquid error' -%}<script id=\"gspfForm\" type=\"template/html\">{{- YMMTemplate | replace: \"script>\", \"scripttag>\" -}}</script>{%- endunless -%}"
         }
+      },
+      "3824936769257688723": {
+        "type": "shopify://apps/sami-product-labels/blocks/app-embed-block/b9b44663-5d51-4be1-8104-faedd68da8c5",
+        "disabled": true,
+        "settings": {}
       }
     },
     "color_schemes": {
