@@ -344,38 +344,11 @@
           }
         }
 
-        // Strategy 1: Load when page is idle (best for performance)
-        if ('requestIdleCallback' in window) {
-          requestIdleCallback(loadGloboTemplates, { timeout: 2000 });
-        } else {
-          // Fallback: Load after 1 second
-          setTimeout(loadGloboTemplates, 1000);
-        }
-
-        // Strategy 2: Load immediately if filter button clicked (backup)
-        document.addEventListener('click', function(e) {
-          if (e.target.closest('.filter-toggle, [data-filter-open], .globo-filter-button, .gf-filter-trigger')) {
-            loadGloboTemplates();
-          }
-        }, true);
-
-        // Strategy 3: Load when scrolling near products (backup)
-        const observer = new IntersectionObserver(function(entries) {
-          entries.forEach(function(entry) {
-            if (entry.isIntersecting) {
-              loadGloboTemplates();
-              observer.disconnect();
-            }
-          });
-        }, { rootMargin: '300px' });
-
-        // Observe product grid or filter container
-        document.addEventListener('DOMContentLoaded', function() {
-          const targets = document.querySelectorAll('.product-grid, .collection-grid, [data-globo-filter], .gf-filter-container');
-          targets.forEach(function(target) {
-            if (target) observer.observe(target);
-          });
-        });
+        // On collection/search pages, templates are critical for infinity scroll and filters
+        // Load immediately instead of deferring - they're small (~10-20KB) and needed for core functionality
+        // This fixes infinity scroll image loading issues where second page images wouldn't load
+        // because templates weren't ready yet
+        loadGloboTemplates();
       })();
     </script>
   {%- endif -%}
