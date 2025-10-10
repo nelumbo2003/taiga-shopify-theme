@@ -79,7 +79,7 @@
     {%- if src.width >= 1500 -%}{{ src | image_url: width: 1500 }} 1500w,{%- endif -%}
     {{ src | image_url }} {{ src.width }}w"
     sizes="{{ sizes | default: '100vw' }}"
-    src="{{ src | image_url: width: 1500 }}"
+    src="{{ src | image_url: width: 1200 }}"
     alt="{%- if alt -%}{{ alt }}{%- else -%}{{ src.alt }}{%- endif -%}"
     {% if lazyload %}
     loading="lazy"

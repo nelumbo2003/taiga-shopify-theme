@@ -34,18 +34,17 @@
   }
 
   // Strategy 1: ONLY load on explicit user interaction (click on reviews tab/link)
-  // This prevents the 345ms main thread task from blocking initial page load
+  // This prevents the 206ms main thread task from blocking initial page load
   document.addEventListener('click', function(e) {
-    if (e.target.closest('[data-reviews-tab], [href*="review"], [href*="#reviews"]')) {
+    if (e.target.closest('[data-reviews-tab], [href*="review"], [href*="#reviews"], .jdgm-widget, [class*="judge"]')) {
       loadReviews();
     }
   }, true);
 
-  // Strategy 2: Load after 10 seconds as backup (increased from 5s for better initial performance)
-  // This ensures reviews eventually load for users who scroll down without clicking
-  setTimeout(loadReviews, 10000);
+  // Strategy 2: NO timeout fallback - reviews only load when needed
+  // This ensures reviews ONLY load when user explicitly wants to see them
 
-  // Strategy 3: Load when scrolling near reviews section (with larger margin to delay further)
+  // Strategy 3: Load when scrolling near reviews section (SMALLER margin for later loading)
   document.addEventListener('DOMContentLoaded', function() {
     const reviewsWidget = document.querySelector(
       '[data-judge-me-widget], .jdgm-widget, [id*="judge-me"], [id*="judgeme"]'
@@ -56,8 +55,8 @@
       return;
     }
 
-    // Use IntersectionObserver with SMALLER margin (200px instead of 400px)
-    // This loads reviews later, only when user is actively scrolling toward them
+    // Use IntersectionObserver with MINIMAL margin (100px)
+    // This loads reviews only when user is very close to the reviews section
     const observer = new IntersectionObserver(function(entries) {
       entries.forEach(function(entry) {
         if (entry.isIntersecting) {
@@ -66,7 +65,7 @@
         }
       });
     }, {
-      rootMargin: '200px' // Reduced from 400px - more conservative loading
+      rootMargin: '100px' // Minimal margin - extremely conservative loading
     });
 
     observer.observe(reviewsWidget);

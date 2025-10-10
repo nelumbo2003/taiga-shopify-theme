@@ -119,8 +119,40 @@
     {% endif -%}
     </noscript>
 
+    {%- comment -%} Load analytics deferrer BEFORE content_for_header to intercept GTM/GA scripts {%- endcomment -%}
+    <script type="text/javascript" src="{{ 'lazy-analytics.js' | asset_url }}"></script>
+
     {%- comment -%} Shopify's content_for_header - moved before scripts for optimal loading {%- endcomment -%}
     {{ content_for_header }}
+
+    {%- comment -%} Block heavy Shopify checkout JS on non-checkout pages (saves 545KB) {%- endcomment -%}
+    {% unless template.name == 'cart' or template.name contains 'checkout' %}
+      <script>
+      // Prevent Shopify checkout bundle from loading on non-checkout pages
+      (function() {
+        'use strict';
+
+        if (!window.MutationObserver) return;
+
+        const observer = new MutationObserver(function(mutations) {
+          mutations.forEach(function(mutation) {
+            mutation.addedNodes.forEach(function(node) {
+              if (node.tagName === 'SCRIPT' &&
+                  node.src &&
+                  (node.src.includes('checkout-web/assets') ||
+                   node.src.includes('checkout.shopifycs.com'))) {
+                node.remove();
+                console.log('Blocked checkout script:', node.src);
+              }
+            });
+          });
+        });
+
+        observer.observe(document.head, { childList: true, subtree: true });
+        observer.observe(document.body, { childList: true, subtree: true });
+      })();
+      </script>
+    {% endunless %}
 
     {% comment -%} Deferred JS below here {% endcomment %}
     <script type="text/javascript" src="{{ 'global.js' | asset_url }}" defer></script>

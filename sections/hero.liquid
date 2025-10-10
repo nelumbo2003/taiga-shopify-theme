@@ -107,7 +107,8 @@
               preload: is_priority_image,
               wrapped: false,
               src: media_block.settings.image,
-              src_mobile: media_block.settings.image_mobile
+              src_mobile: media_block.settings.image_mobile,
+              sizes: "(max-width: 767px) 100vw, (max-width: 1200px) 100vw, 1200px"
             -%}
           {%- else -%}
             {{ 'lifestyle-2' | placeholder_svg_tag }}
