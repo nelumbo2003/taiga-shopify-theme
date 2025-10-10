@@ -100,7 +100,7 @@
       }
     },
 
-    // Variant Swatch King: Load on user interaction with products
+    // Variant Swatch King: Context-aware loading
     variantSwatch: {
       patterns: [
         'variant-swatch',
@@ -108,7 +108,12 @@
         'variantSwatch'
       ],
       shouldDefer: function() {
-        // Always defer - swatches not needed until user interacts
+        // Don't defer on product pages - swatches are critical for variant selection
+        const template = document.documentElement.className;
+        if (template.includes('template-product')) {
+          return false;  // Load immediately on product pages
+        }
+        // Defer on collection/homepage - swatches less critical there
         return true;
       },
       loadTrigger: function(callback) {
