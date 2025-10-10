@@ -87,8 +87,8 @@
     {% endif %}
     {%- comment -%} Preload LCP images for faster rendering {%- endcomment -%}
     {% if template.name == 'product' and product.featured_image != empty -%}
-      <link rel="preload" as="image" href="{{ product.featured_image | image_url: width: 800 }}" media="(min-width: 768px)" fetchpriority="high">
-      <link rel="preload" as="image" href="{{ product.featured_image | image_url: width: 600 }}" media="(max-width: 767px)" fetchpriority="high">
+      {%- comment -%} Product image preload removed: creates URL mismatch when variant images change {%- endcomment -%}
+      {%- comment -%} Product images still load fast via fetchpriority="high" in product-media-slider {%- endcomment -%}
     {% elsif template.name == 'index' -%}
       {%- comment -%} Homepage hero preload removed: file_img_url creates URL mismatch causing "preload not used" warnings {%- endcomment -%}
       {%- comment -%} Hero image still loads with fetchpriority="high" attribute for fast loading {%- endcomment -%}
