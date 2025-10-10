@@ -356,6 +356,8 @@ window.preventScrollToProduct = true;
 <script>document.addEventListener("DOMContentLoaded",function(){var e=document.getElementById("PBarNextFrameWrapper"),n=document.querySelectorAll("admin");e?(document.body.classList.add("admin"),n.forEach(function(e){e.style.display="block"})):n.forEach(function(e){e.remove()})})</script><style>admin{display:none}</style>{% if request.design_mode %}<style>admin{display:block}</style>{% endif %}
 {% # ADMIN ONLY VIEW END# %}
 
+  {%- comment -%} Defer Trustpilot widget loading for better performance {%- endcomment -%}
+  <script src="{{ 'lazy-trustpilot.js' | asset_url }}" defer></script>
 
   </body>
 </html>
