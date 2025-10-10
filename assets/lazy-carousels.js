@@ -51,7 +51,7 @@
   function setupLazyCarousels() {
     // Check for Intersection Observer support
     if (!('IntersectionObserver' in window)) {
-      // Fallback: load all carousels immediately on older browsers
+      console.log('⚠️ IntersectionObserver not supported, loading all carousels immediately');
       loadAllCarousels();
       return;
     }
@@ -69,10 +69,17 @@
       '.bought-together'
     ].join(', ');
 
+    console.log('🔍 Searching for carousels with selectors:', carouselSelectors.split(', ').length, 'patterns');
+
     const carousels = document.querySelectorAll(carouselSelectors);
 
     if (carousels.length === 0) {
-      console.log('No carousels found for lazy loading');
+      console.log('⚠️ No carousels found for lazy loading');
+      console.log('📊 Page info:', {
+        template: document.documentElement.className,
+        sections: document.querySelectorAll('[class*="section"]').length,
+        appBlocks: document.querySelectorAll('[id*="shopify-block"]').length
+      });
       return;
     }
 
@@ -105,7 +112,8 @@
       }
     });
 
-    console.log('Lazy carousel loading initialized for', carousels.length, 'carousels');
+    console.log('✅ Lazy carousel loading initialized for', carousels.length, 'carousels');
+    console.log('📦 Carousel IDs:', Array.from(carousels).map(c => c.id || c.className).slice(0, 3));
   }
 
   /**
