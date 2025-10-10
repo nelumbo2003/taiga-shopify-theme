@@ -37,11 +37,13 @@
   assign background_color = background_color | default: 'transparent'
 -%}
 
-{%- if preload -%}
-  {%- comment -%} Responsive preload for LCP optimization {%- endcomment -%}
-  <link rel="preload" as="image" href="{{ src | image_url: width: 1200 }}" media="(min-width: 768px)" fetchpriority="high">
-  <link rel="preload" as="image" href="{{ src | image_url: width: 800 }}" media="(max-width: 767px)" fetchpriority="high">
-{%- endif -%}
+{%- comment -%}
+  PRELOAD REMOVED: All critical image preloads are now handled in theme.liquid <head>
+  for optimal performance and to avoid duplicate preload warnings.
+
+  The preload parameter is kept for backward compatibility but is now a no-op.
+  Critical images (hero, product featured) are preloaded via theme.liquid lines 88-100.
+{%- endcomment -%}
 
 {%- if wrapped -%}
   <figure class="media {{ sizing_rule }} {{ aspect_ratio | default: 'natural' }}{% if src == blank %} media--empty{% endif %} {{ custom_classes }}"{% if item_id != blank %} id="{{ item_id }}"{% endif %}{% if background_color != 'transparent' %} style="background-color: {{ background_color }};"{% endif %}>
