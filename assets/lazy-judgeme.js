@@ -33,7 +33,19 @@
     console.log('Judge.me reviews loaded');
   }
 
-  // Strategy 1: Load when scrolling near reviews section (most common)
+  // Strategy 1: ONLY load on explicit user interaction (click on reviews tab/link)
+  // This prevents the 345ms main thread task from blocking initial page load
+  document.addEventListener('click', function(e) {
+    if (e.target.closest('[data-reviews-tab], [href*="review"], [href*="#reviews"]')) {
+      loadReviews();
+    }
+  }, true);
+
+  // Strategy 2: Load after 10 seconds as backup (increased from 5s for better initial performance)
+  // This ensures reviews eventually load for users who scroll down without clicking
+  setTimeout(loadReviews, 10000);
+
+  // Strategy 3: Load when scrolling near reviews section (with larger margin to delay further)
   document.addEventListener('DOMContentLoaded', function() {
     const reviewsWidget = document.querySelector(
       '[data-judge-me-widget], .jdgm-widget, [id*="judge-me"], [id*="judgeme"]'
@@ -44,7 +56,8 @@
       return;
     }
 
-    // Use IntersectionObserver to detect when reviews are approaching viewport
+    // Use IntersectionObserver with SMALLER margin (200px instead of 400px)
+    // This loads reviews later, only when user is actively scrolling toward them
     const observer = new IntersectionObserver(function(entries) {
       entries.forEach(function(entry) {
         if (entry.isIntersecting) {
@@ -53,19 +66,9 @@
         }
       });
     }, {
-      rootMargin: '400px' // Start loading 400px before widget enters viewport
+      rootMargin: '200px' // Reduced from 400px - more conservative loading
     });
 
     observer.observe(reviewsWidget);
   });
-
-  // Strategy 2: Load immediately if user clicks on reviews tab or link
-  document.addEventListener('click', function(e) {
-    if (e.target.closest('[data-reviews-tab], [href*="review"], [href*="#reviews"]')) {
-      loadReviews();
-    }
-  }, true);
-
-  // Strategy 3: Load after 5 seconds as backup (ensures reviews eventually load)
-  setTimeout(loadReviews, 5000);
 })();

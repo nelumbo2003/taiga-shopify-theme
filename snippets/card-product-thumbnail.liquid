@@ -1,0 +1,54 @@
+{%- liquid
+  # ** PURPOSE **
+  # Lightweight product thumbnail for featured-look hotspots
+  # Loads ONLY small image and link - no pricing, variants, or descriptions
+  # Optimized for minimal bandwidth usage
+
+  # ** PARAMETERS **
+  # product      => REQUIRED | product object
+  # number       => OPTIONAL | hotspot number
+  # lazyload     => OPTIONAL | true/false | default: true
+
+  if lazyload == null
+    assign lazyload = true
+  endif
+
+  # Use small thumbnail size (100x100) instead of full product image
+  assign thumbnail_size = '100x100'
+-%}
+
+<div class="product-thumbnail">
+  {%- if number -%}
+    <span class="product-thumbnail__number">{{ number }}</span>
+  {%- endif -%}
+
+  <a href="{{ product.url }}" class="product-thumbnail__link">
+    {%- if product.featured_image -%}
+      <img
+        src="{{ product.featured_image | image_url: width: 100 }}"
+        srcset="{{ product.featured_image | image_url: width: 100 }} 100w,
+                {{ product.featured_image | image_url: width: 200 }} 200w"
+        sizes="100px"
+        alt="{{ product.featured_image.alt | escape }}"
+        width="100"
+        height="100"
+        {% if lazyload %}
+        loading="lazy"
+        fetchpriority="low"
+        {% else %}
+        fetchpriority="auto"
+        {% endif %}
+        decoding="async"
+        class="product-thumbnail__image">
+    {%- else -%}
+      {{ 'product-1' | placeholder_svg_tag: 'product-thumbnail__placeholder' }}
+    {%- endif -%}
+
+    <div class="product-thumbnail__info">
+      <span class="product-thumbnail__title h6">{{ product.title }}</span>
+      {%- if product.price -%}
+        <span class="product-thumbnail__price">{{ product.price | money }}</span>
+      {%- endif -%}
+    </div>
+  </a>
+</div>

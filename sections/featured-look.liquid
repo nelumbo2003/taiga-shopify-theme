@@ -1,5 +1,6 @@
 {{ 'section-featured-look.css' | asset_url | stylesheet_tag }}
 {{ 'component-hotspots.css' | asset_url | stylesheet_tag }}
+{{ 'component-product-thumbnail.css' | asset_url | stylesheet_tag }}
 
 {%- liquid
   assign product_blocks = section.blocks | where: 'type', 'product'
@@ -51,10 +52,9 @@
                 title_tag: block.settings.title_tag,
                 text: block.settings.text -%}
             {%- when 'product' -%}
-              {%- render 'card-product',
+              {%- comment -%} Use lightweight thumbnail instead of full product card for massive bandwidth savings {%- endcomment -%}
+              {%- render 'card-product-thumbnail',
                 product: block.settings.product,
-                card_layout_class: 'layout--thumbnail',
-                quick_buy: false,
                 number: product_index,
                 lazyload: true -%}
                 {%- assign product_index = product_index | plus: 1 -%}
