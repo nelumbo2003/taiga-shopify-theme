@@ -40,7 +40,14 @@
             assign custom_classes = ''
           endif
 
+         # First image should be high priority (no lazy load, preload)
+         # Second image also not lazy (for quick swipe)
+         # Images 3+ should be lazy loaded
          assign lazyload = false
+         assign preload_image = false
+         if forloop.index == 1
+           assign preload_image = true
+         endif
          if forloop.index > 2
            assign lazyload = true
          endif
@@ -53,6 +60,7 @@
           media: media,
           aspect_ratio: aspect_ratio,
           lazyload: lazyload,
+          preload: preload_image,
           sizing_rule: sizing_rule,
           background_color: background_color,
           sizes: sizes

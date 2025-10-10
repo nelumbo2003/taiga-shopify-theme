@@ -37,10 +37,12 @@
     assign use_media_link = true
   endif
 
-  # Lazyload
+  # Lazyload - Only first hero should not be lazy loaded
   assign lazyload = true
+  assign is_priority_image = false
   if section.index == 1
     assign lazyload = false
+    assign is_priority_image = true
   endif
 -%}
 
@@ -102,6 +104,7 @@
           {%- if media_block.settings.image != blank -%}
             {%- render 'img',
               lazyload: lazyload,
+              preload: is_priority_image,
               wrapped: false,
               src: media_block.settings.image,
               src_mobile: media_block.settings.image_mobile

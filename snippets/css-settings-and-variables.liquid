@@ -9,10 +9,12 @@
 -%}
 
 {% style %}
+  {%- comment -%} Base font with swap for immediate text display {%- endcomment -%}
   {{ settings.base_font | font_face: font_display: 'swap' }}
-  {{ body_font_bold | font_face: font_display: 'swap' }}
-  {{ body_font_italic | font_face: font_display: 'swap' }}
-  {{ body_font_bold_italic | font_face: font_display: 'swap' }}
+  {%- comment -%} Font variations with optional for better performance - system fallback if slow {%- endcomment -%}
+  {{ body_font_bold | font_face: font_display: 'optional' }}
+  {{ body_font_italic | font_face: font_display: 'optional' }}
+  {{ body_font_bold_italic | font_face: font_display: 'optional' }}
   {{ settings.header_font | font_face: font_display: 'swap' }}
 
   /* Colors - Schemes */

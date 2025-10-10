@@ -361,7 +361,7 @@
           "settings": {
             "heading": "Bought together",
             "layout": "carousel",
-            "limit": 8,
+            "limit": 4,
             "columns_desktop": 4,
             "columns_tablet": 3,
             "columns_mobile": 2,
@@ -385,7 +385,7 @@
           "settings": {
             "heading": "Trending products",
             "layout": "carousel",
-            "limit": 8,
+            "limit": 4,
             "columns_desktop": 4,
             "columns_tablet": 3,
             "columns_mobile": 2,
@@ -458,7 +458,7 @@
       "type": "custom-liquid",
       "settings": {
         "color_scheme": "",
-        "custom_liquid": "<script type=\"text/javascript\">\n  var _learnq = _learnq || [];\n\n  // Function to track the Add to Cart event\n  function trackAddToCart() {\n    // Shopify product data via Liquid\n    var productName = \"{{ product.title }}\";\n    var productId = \"{{ product.id }}\";\n    var productPrice = \"{{ product.price | money }}\";\n    var productQuantity = document.querySelector('[name=\"quantity\"]').value || 1; // Default to 1 if no quantity is set\n    var productUrl = window.location.href;\n\n    // Define the product details\n    var item = {\n      'ProductName': productName,\n      'ProductID': productId,\n      'Price': productPrice,\n      'Quantity': productQuantity,\n      'URL': productUrl\n    };\n\n    // Push the 'Added to Cart' event to Klaviyo\n    _learnq.push(['track', 'Added to Cart', item]);\n  }\n\n  // Attach the function to Shopify's Add to Cart button click event\n  document.addEventListener(\"DOMContentLoaded\", function() {\n    // Get the Add to Cart button by class or other identifiers\n    var addToCartButton = document.querySelector('.product-form__submit');\n\n    // If button exists, add event listener\n    if (addToCartButton) {\n      addToCartButton.addEventListener('click', function(event) {\n        // Trigger the Klaviyo tracking event on button click\n        trackAddToCart();\n\n        // Optional: delay to ensure the event gets tracked before other actions\n        setTimeout(function() {\n          // Additional code for any after-click logic\n        }, 300); // Delay 300ms to let the event trigger\n      });\n    }\n  });\n\n  // Also listen for Shopify's cart updates (useful if you're using AJAX)\n  document.addEventListener(\"cart:updated\", function() {\n    // Re-trigger tracking on cart update, if necessary\n    trackAddToCart();\n  });\n</script>",
+        "custom_liquid": "<script type=\"text/javascript\">\n  // Klaviyo product data (used by external tracking script)\n  window.klaviyoProductData = {\n    title: \"{{ product.title | escape }}\",\n    id: \"{{ product.id }}\",\n    price: \"{{ product.price | money }}\"\n  };\n</script>",
         "enable_full_width": false,
         "md_padding_top": 40,
         "md_padding_bottom": 40,
@@ -474,7 +474,7 @@
           "settings": {
             "heading": "Best sellers",
             "layout": "carousel",
-            "limit": 8,
+            "limit": 4,
             "columns_desktop": 4,
             "columns_tablet": 3,
             "columns_mobile": 2,
@@ -498,7 +498,7 @@
           "settings": {
             "heading": "New arrival",
             "layout": "carousel",
-            "limit": 8,
+            "limit": 4,
             "columns_desktop": 4,
             "columns_tablet": 3,
             "columns_mobile": 2,

@@ -1,0 +1,85 @@
+{%- liquid
+  assign body_font_bold = settings.base_font | font_modify: 'weight', 'bold'
+  assign body_font_italic = settings.base_font | font_modify: 'style', 'italic'
+  assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
+  assign letter_spacing_multiplier = 0.01
+-%}
+
+{% style %}
+  {%- comment -%} CRITICAL CSS VARIABLES ONLY - For above-the-fold rendering {%- endcomment -%}
+
+  {%- comment -%} Fonts - Critical for text rendering {%- endcomment -%}
+  {{ settings.base_font | font_face: font_display: 'swap' }}
+  {{ body_font_bold | font_face: font_display: 'optional' }}
+  {{ body_font_italic | font_face: font_display: 'optional' }}
+  {{ body_font_bold_italic | font_face: font_display: 'optional' }}
+  {{ settings.header_font | font_face: font_display: 'swap' }}
+
+  {%- comment -%} Color Schemes - Only first (default) scheme for critical render {%- endcomment -%}
+  {%- assign first_scheme = settings.color_schemes | first -%}
+  {%- assign background_lightness = first_scheme.settings.background | color_extract: 'lightness' -%}
+
+  :root,
+  .color-{{ first_scheme.id }} {
+    --color-foreground: {{ first_scheme.settings.foreground }};
+    --color-background: {{ first_scheme.settings.background }};
+    --color-button-foreground: {{ first_scheme.settings.button_foreground }};
+    --color-button-background: {{ first_scheme.settings.button_background }};
+    --color-outlines: {{ first_scheme.settings.outlines }};
+    --color-borders: {{ first_scheme.settings.borders }};
+    --color-card-foreground: {{ first_scheme.settings.card_foreground }};
+    --color-card-background: {{ first_scheme.settings.card_background }};
+    {% if background_lightness > 60 -%}
+      --color-background-alt: {{ first_scheme.settings.background | color_darken: 6 }};
+    {% else -%}
+      --color-background-alt: {{ first_scheme.settings.background | color_lighten: 6 }};
+    {% endif -%}
+  }
+
+  body {
+    color: var(--color-foreground);
+    background-color: var(--color-background);
+  }
+
+  :root {
+    /* Layout - Critical for initial render */
+    --ideal-width: {{ settings.content_ideal_width | append: 'px' }};
+    --container-inner-width: min(100vw - var(--container-margin)*2, var(--ideal-width));
+
+    /* Typography - Critical */
+    --font-body-family: {{ settings.base_font.family }}, {{ settings.base_font.fallback_families }};
+    --font-body-style: {{ settings.base_font.style }};
+    --font-body-weight: {{ settings.base_font.weight }};
+    --font-heading-family: {{ settings.header_font.family }}, {{ settings.header_font.fallback_families }};
+    --font-heading-style: {{ settings.header_font.style }};
+    --font-heading-weight: {{ settings.header_font.weight }};
+
+    --font-body-scale: {{ settings.font_scaling_property | divided_by: 100.00 }};
+    --font-body-size: calc(1.6rem * var(--font-body-scale));
+    --font-body-line-height: {{ settings.body_line_height }};
+
+    /* Spacing - Critical */
+    --gutter: {{ settings.gutter | append: 'px' }};
+    --container-margin: {{ settings.container_margin | append: 'px' }};
+
+    /* Essential UI */
+    --button-border-radius: {{ settings.button_border_radius | append: 'px' }};
+    --card-border-radius: {{ settings.card_border_radius | append: 'px' }};
+  }
+
+  html {
+    {%- assign font_scale_property = settings.font_scaling_property | divided_by: 16.00 -%}
+    font-size: {{ 62.5 | times: font_scale_property | append: '%' }};
+    --gutter: {{ settings.gutter | append: 'px' }};
+    --container-margin: {{ settings.container_margin | append: 'px' }};
+  }
+
+  @media only screen and (min-width: 768px) {
+    html {
+      {%- assign font_desktop_scale_property = settings.font_scaling_desktop_property | divided_by: 18.00 -%}
+      font-size: {{ 62.5 | times: font_desktop_scale_property | append: '%' }};
+      --gutter: {{ settings.gutter_sm | append: 'px' }};
+      --container-margin: {{ settings.container_margin_sm | append: 'px' }};
+    }
+  }
+{% endstyle %}

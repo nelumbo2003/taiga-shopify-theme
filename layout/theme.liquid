@@ -22,37 +22,54 @@
       <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
     {% endunless -%}
 
+    {%- comment -%} DNS prefetch for third-party domains {%- endcomment -%}
+    <link rel="dns-prefetch" href="https://judge.me">
+    <link rel="dns-prefetch" href="https://cdn.judge.me">
+    {%- if template.name == 'collection' or template.name == 'search' -%}
+      <link rel="dns-prefetch" href="https://globo.productfiltersearch.com">
+    {%- endif -%}
+
     {%- comment -%} Asynchronous JS below here {%- endcomment -%}
 
     {%- comment -%} CSS that includes @import below here {%- endcomment -%}
 
     {%- comment -%} Synchronous JS and CSS below here {% endcomment %}
-    {% render 'css-settings-and-variables' %}
+    {%- comment -%} Critical CSS variables only for faster initial render {%- endcomment -%}
+    {% render 'css-critical-variables' %}
 
-    {{ 'accessibility.css' | asset_url | stylesheet_tag: preload: true }}
-    {{ 'custom.css' | asset_url | stylesheet_tag: preload: true }}
+    {%- comment -%} Critical CSS - Load immediately with render-blocking (required for initial render) {%- endcomment -%}
+    {{ 'accessibility.css' | asset_url | stylesheet_tag }}
+    {{ 'reset.css' | asset_url | stylesheet_tag }}
+    {{ 'critical.css' | asset_url | stylesheet_tag }}
 
-    {{ 'reset.css' | asset_url | stylesheet_tag: preload: true }}
-    {{ 'critical.css' | asset_url | stylesheet_tag: preload: true }}
+    {%- comment -%} Template-specific critical CSS {% endcomment %}
     {% if template.name == 'product' -%}
-      {{ 'template-product.css' | asset_url | stylesheet_tag: preload: true }}
+      {{ 'template-product.css' | asset_url | stylesheet_tag }}
     {% elsif template.name == 'collection' or template.name == 'search' -%}
-      {{ 'component-product-grid.css' | asset_url | stylesheet_tag: preload: true }}
+      {{ 'component-product-grid.css' | asset_url | stylesheet_tag }}
     {% endif -%}
-    {{ 'component-grid.css' | asset_url | stylesheet_tag: preload: true }}
-    {{ 'component-card.css' | asset_url | stylesheet_tag: preload: true }}
-    {{ 'component-gridy-slider.css' | asset_url | stylesheet_tag: preload: true }}
+
+    {{ 'component-grid.css' | asset_url | stylesheet_tag }}
+    {{ 'component-card.css' | asset_url | stylesheet_tag }}
+    {{ 'component-gridy-slider.css' | asset_url | stylesheet_tag }}
+
+    {%- comment -%} Defer non-critical CSS {% endcomment %}
+    <link rel="stylesheet" href="{{ 'non-critical-variables.css' | asset_url }}" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="{{ 'custom.css' | asset_url }}" media="print" onload="this.media='all'">
+
     {% if settings.product_card_show_rating -%}
-      {{ 'component-rating.css' | asset_url | stylesheet_tag: preload: true }}
+      <link rel="stylesheet" href="{{ 'component-rating.css' | asset_url }}" media="print" onload="this.media='all'">
     {% endif -%}
 
     {%- comment -%} Preload links below here {% endcomment %}
     {% # theme-check-disable %}
+    {%- comment -%} Only preload fonts that are critical for above-the-fold content {%- endcomment -%}
     {% unless settings.base_font.system? -%}
       <link rel="preload" as="font" fetchpriority="high" href="{{ settings.base_font | font_url }}" type="font/woff2" crossorigin>
     {% endunless -%}
+    {%- comment -%} Header font gets lower priority - usually below fold or less text {%- endcomment -%}
     {% unless settings.header_font.system? -%}
-      <link rel="preload" as="font" fetchpriority="high" href="{{ settings.header_font | font_url }}" type="font/woff2" crossorigin>
+      <link rel="preload" as="font" href="{{ settings.header_font | font_url }}" type="font/woff2" crossorigin>
     {% endunless -%}
     {% if settings.css_animations -%}
       <link rel="preload" as="style" fetchpriority="low" href="{{ 'animations.css' | asset_url }}" onload="this.rel='stylesheet'">
@@ -68,16 +85,28 @@
         <link rel="stylesheet" fetchpriority="low" media="print" href="{{ 'component-product-form.css' | asset_url }}" onload="this.media='all'">
       {%- endif -%}
     {% endif %}
+    {%- comment -%} Preload LCP images for faster rendering {%- endcomment -%}
     {% if template.name == 'product' and product.featured_image != empty -%}
-      <link rel="preload" as="image" href="{{ product.featured_image | image_url: width: 800 }}" media="(min-width: 768px)">
+      <link rel="preload" as="image" href="{{ product.featured_image | image_url: width: 800 }}" media="(min-width: 768px)" fetchpriority="high">
+      <link rel="preload" as="image" href="{{ product.featured_image | image_url: width: 600 }}" media="(max-width: 767px)" fetchpriority="high">
+    {% elsif template.name == 'index' -%}
+      {%- comment -%} Preload first hero image on homepage - Note: Hero image set in theme customizer {%- endcomment -%}
+      {%- comment -%} This will be populated when the first hero section renders {%- endcomment -%}
+    {% elsif template.name == 'collection' and collection.image != blank -%}
+      <link rel="preload" as="image" href="{{ collection.image | image_url: width: 1200 }}" media="(min-width: 768px)" fetchpriority="high">
     {% endif %}
     {% if template.name != 'cart' -%}
       <link rel="stylesheet" href="{{ 'component-cart.css' | asset_url }}" media="print" onload="this.media='all'">
     {% endif %}
     {% # theme-check-enable %}
     <noscript>
+    {{ 'non-critical-variables.css' | asset_url | stylesheet_tag }}
+    {{ 'custom.css' | asset_url | stylesheet_tag }}
     {% if settings.css_animations -%}
       {{ 'animations.css' | asset_url | stylesheet_tag }}
+    {% endif -%}
+    {% if settings.product_card_show_rating -%}
+      {{ 'component-rating.css' | asset_url | stylesheet_tag }}
     {% endif -%}
     {% if settings.product_card_quick_buy -%}
       {{ 'component-modals.css' | asset_url | stylesheet_tag }}
@@ -90,20 +119,28 @@
     {% endif -%}
     </noscript>
 
-    {% comment -%} Deferred JS below here. Content for header after. {% endcomment %}
+    {%- comment -%} Shopify's content_for_header - moved before scripts for optimal loading {%- endcomment -%}
+    {{ content_for_header }}
+
+    {% comment -%} Deferred JS below here {% endcomment %}
     <script type="text/javascript" src="{{ 'global.js' | asset_url }}" defer></script>
+    <script type="text/javascript" src="{{ 'lazy-app-blocks.js' | asset_url }}" defer></script>
     <script type="text/javascript" data-loading="lazy" data-src="{{ 'component-predictive-search.js' | asset_url }}"></script>
     {% if settings.product_card_quick_buy -%}
       <script type="text/javascript" data-loading="lazy" data-src="{{ 'component-quick-buy.js' | asset_url }}"></script>
     {% endif -%}
     {% if template.name == 'product' -%}
       <script type="text/javascript" src="{{ 'component-product-form.js' | asset_url }}" defer></script>
+      {%- comment -%} Lazy load Judge.me reviews for better performance {%- endcomment -%}
+      <script type="text/javascript" src="{{ 'lazy-judgeme.js' | asset_url }}" defer></script>
+      {%- comment -%} Lazy load product carousels (Best Sellers, Trending, etc.) {%- endcomment -%}
+      <script type="text/javascript" src="{{ 'lazy-carousels.js' | asset_url }}" defer></script>
+      {%- comment -%} Klaviyo product tracking (externalized from inline script) {%- endcomment -%}
+      <script type="text/javascript" src="{{ 'klaviyo-product-tracking.js' | asset_url }}" defer></script>
     {% elsif settings.product_card_quick_buy -%}
       <script type="text/javascript" data-loading="lazy" data-src="{{ 'component-product-form.js' | asset_url }}"></script>
     {% endif -%}
     <script type="text/javascript" src="{{ 'component-animations.js' | asset_url }}" defer></script>
-
-    {{ content_for_header }}
 
     {%- comment -%} Everything else, e.g. SEO metas etc. below here {% endcomment %}
     {% if page_description -%}
@@ -124,65 +161,10 @@
     {% if settings.head_custom_liquid != blank -%}
       {{ settings.head_custom_liquid }}
     {% endif %}
-    <script>
-      // OPTIMIZE THUMB SIZES 
-      
-      document.addEventListener("DOMContentLoaded", function () {
-        const imageWrappers = document.querySelectorAll('.spf-product-card__image-wrapper img');
-        imageWrappers.forEach(img => {
-          if (!img.hasAttribute('loading')) {
-            img.setAttribute('loading', 'lazy');
-          }
-        });
-
-        document.querySelectorAll('.spf-product-card__image-wrapper img, .card--product img').forEach(img => {
-          const updateUrl = (url) => {
-            try {
-              const parsedUrl = new URL(url, location.origin);
-              const parts = parsedUrl.pathname.split('/');
-              const filename = parts.pop();
-        
-              // Support modifiers AND no-modifier variants (.jpg, .webp, etc.)
-              const match = filename.match(/^(.+?)(?:_[0-9]+x[0-9]+_crop_[a-z]+)?(\.(jpe?g|png|webp|gif))$/i);
-        
-              if (!match) return url;
-        
-              const baseName = match[1];
-              const extension = match[2]; // includes the dot (e.g., .webp)
-              const newFilename = `${baseName}_360x360_crop_center${extension}`;
-        
-              parts.push(newFilename);
-              parsedUrl.pathname = parts.join('/');
-              return parsedUrl.toString();
-            } catch (e) {
-              return url;
-            }
-          };
-        
-          // src
-          if (img.src) {
-            img.src = updateUrl(img.src);
-          }
-        
-          // srcset
-          if (img.srcset) {
-            img.srcset = updateUrl(img.srcset.trim());
-          }
-        
-          // data-srcset
-          if (img.dataset && img.dataset.srcset) {
-            img.dataset.srcset = updateUrl(img.dataset.srcset.trim());
-          }
-        });
-
-
-
-
-      });
-
-      
-
-    </script>
+    {%- comment -%}
+    Image optimization is now handled server-side via Shopify's image_url filter
+    with proper sizing parameters. This improves LCP and prevents layout shifts.
+    {%- endcomment -%}
   </head>
 
   <body class="woolman template-{{ template.name }} {{ template.suffix }} country-{{ localization.country | handleize }} language-{{  request.locale.iso_code }}">
@@ -283,12 +265,87 @@
     {%- if settings.body_custom_liquid != blank -%}
       {{ settings.body_custom_liquid }}
     {%- endif -%}
-  {%- capture productTemplate -%}{% render 'globo.filter.product', themeTranslation: shop.metafields.globoFilter.themeTranslation.value[request.locale.iso_code] %}{%- endcapture -%}{%- unless productTemplate contains 'Liquid error' -%}<script id="gspfProduct" type="template/html">{{- productTemplate | replace: "script>", "scripttag>" -}}</script>{%- endunless -%} 
-{%- capture treeTemplate -%}{% render 'globo.filter.tree' %}{%- endcapture -%}{%- unless treeTemplate contains 'Liquid error' -%}<script id="gspfFilterTree" type="template/html">{{- treeTemplate | replace: "script>", "scripttag>" -}}</script>{%- endunless -%} 
-{%- capture sortTemplate -%}{% render 'globo.filter.sort' %}{%- endcapture -%}{%- unless sortTemplate contains 'Liquid error' -%}<script id="gspfFilterSort" type="template/html">{{- sortTemplate | replace: "script>", "scripttag>" -}}</script>{%- endunless -%} 
-{%- capture searchTemplate -%}{% render 'globo.filter.search' %}{%- endcapture -%}{%- unless searchTemplate contains 'Liquid error' -%}<script id="gspfSearchResult" type="template/html">{{- searchTemplate | replace: "script>", "scripttag>" -}}</script>{%- endunless -%} 
-{%- capture paginationTemplate -%}{% render 'globo.filter.pagination' %}{%- endcapture -%}{%- unless paginationTemplate contains 'Liquid error' -%}<script id="gspfPagination" type="template/html">{{- paginationTemplate | replace: "script>", "scripttag>" -}}</script>{%- endunless -%} 
-{%- capture YMMTemplate -%}{% render 'globo.filter.form' %}{%- endcapture -%}{%- unless YMMTemplate contains 'Liquid error' -%}<script id="gspfForm" type="template/html">{{- YMMTemplate | replace: "script>", "scripttag>" -}}</script>{%- endunless -%}
+  {%- comment -%} Deferred Globo Filter template loading - Load templates when user needs them {%- endcomment -%}
+  {%- if template.name == 'collection' or template.name == 'search' -%}
+    {%- comment -%} Capture all templates in JavaScript strings for deferred injection {%- endcomment -%}
+    {%- capture productTemplate -%}{% render 'globo.filter.product', themeTranslation: shop.metafields.globoFilter.themeTranslation.value[request.locale.iso_code] %}{%- endcapture -%}
+    {%- capture treeTemplate -%}{% render 'globo.filter.tree' %}{%- endcapture -%}
+    {%- capture sortTemplate -%}{% render 'globo.filter.sort' %}{%- endcapture -%}
+    {%- capture searchTemplate -%}{% render 'globo.filter.search' %}{%- endcapture -%}
+    {%- capture paginationTemplate -%}{% render 'globo.filter.pagination' %}{%- endcapture -%}
+    {%- capture YMMTemplate -%}{% render 'globo.filter.form' %}{%- endcapture -%}
+
+    <script>
+      // Deferred Globo Filter Template Loader - Optimized for performance & localization
+      (function() {
+        let globoTemplatesLoaded = false;
+
+        // Store templates as strings (preserves translations)
+        const globoTemplates = {
+          gspfProduct: {{ productTemplate | replace: "script>", "scripttag>" | json }},
+          gspfFilterTree: {{ treeTemplate | replace: "script>", "scripttag>" | json }},
+          gspfFilterSort: {{ sortTemplate | replace: "script>", "scripttag>" | json }},
+          gspfSearchResult: {{ searchTemplate | replace: "script>", "scripttag>" | json }},
+          gspfPagination: {{ paginationTemplate | replace: "script>", "scripttag>" | json }},
+          gspfForm: {{ YMMTemplate | replace: "script>", "scripttag>" | json }}
+        };
+
+        function loadGloboTemplates() {
+          if (globoTemplatesLoaded) return;
+          globoTemplatesLoaded = true;
+
+          // Inject all templates into DOM
+          Object.keys(globoTemplates).forEach(function(id) {
+            if (globoTemplates[id] && !globoTemplates[id].includes('Liquid error')) {
+              const script = document.createElement('script');
+              script.id = id;
+              script.type = 'template/html';
+              script.textContent = globoTemplates[id];
+              document.body.appendChild(script);
+            }
+          });
+
+          // Trigger Globo re-initialization if needed
+          if (window.GlobalFiltering && window.GlobalFiltering.init) {
+            window.GlobalFiltering.init();
+          }
+        }
+
+        // Strategy 1: Load when page is idle (best for performance)
+        if ('requestIdleCallback' in window) {
+          requestIdleCallback(loadGloboTemplates, { timeout: 2000 });
+        } else {
+          // Fallback: Load after 1 second
+          setTimeout(loadGloboTemplates, 1000);
+        }
+
+        // Strategy 2: Load immediately if filter button clicked (backup)
+        document.addEventListener('click', function(e) {
+          if (e.target.closest('.filter-toggle, [data-filter-open], .globo-filter-button, .gf-filter-trigger')) {
+            loadGloboTemplates();
+          }
+        }, true);
+
+        // Strategy 3: Load when scrolling near products (backup)
+        const observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              loadGloboTemplates();
+              observer.disconnect();
+            }
+          });
+        }, { rootMargin: '300px' });
+
+        // Observe product grid or filter container
+        document.addEventListener('DOMContentLoaded', function() {
+          const targets = document.querySelectorAll('.product-grid, .collection-grid, [data-globo-filter], .gf-filter-container');
+          targets.forEach(function(target) {
+            if (target) observer.observe(target);
+          });
+        });
+      })();
+    </script>
+  {%- endif -%}
 <script>
 window.preventScrollToProduct = true;
 </script>

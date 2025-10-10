@@ -1,0 +1,61 @@
+/* Non-Critical CSS Variables - Loaded after initial render */
+/* This file contains variables only needed for interactions and below-the-fold content */
+
+:root {
+  /* Badges - Not visible above fold */
+  --font-badge-size: 1.2rem;
+  --font-badge-letter-spacing: 0.02em;
+  --font-badge-text-transform: uppercase;
+  --badge-border-radius: 4px;
+
+  /* Drawers & Modals - Only for interactions */
+  --drawers-overlay-alpha: 0.6;
+  --drawers-overlay-blur: 4px;
+  --modals-overlay-alpha: 0.6;
+  --modals-overlay-blur: 4px;
+  --modal-border-radius: 8px;
+
+  /* Forms - Usually below fold */
+  --input-background: #FFFFFF;
+  --input-foreground: #111111;
+  --input-border-width: 0px;
+  --input-border-color: #DDDDDD;
+  --input-border-radius: 6px;
+  --input-box-shadow: inset 1px 1px 4px rgba(0,0,0,.25);
+  --input-letter-spacing: 0;
+
+  /* Cards - Extended properties */
+  --card-body-padding: 24px;
+  --card-media-padding: 24px;
+
+  /* Button - Extended */
+  --button-padding: 12px 24px;
+  --button-round-padding: 12px;
+
+  /* Icons */
+  --icon-stroke: 2;
+  --icon-stroke-px: 2px;
+
+  /* Status Colors */
+  --success: #31862D;
+  --success-foreground: #FFFFFF;
+  --error: #DD4242;
+  --error-foreground: #FFFFFF;
+  --soldout: #999999;
+  --placeholder-bg: rgba(233, 233, 233);
+
+  /* Grid */
+  --grid-gap: 24px;
+  --max-col-width: 100px;
+
+  /* Other */
+  --sticky-header-margin-top: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  :root {
+    --grid-gap: 32px;
+  }
+}
+
+/* Additional color schemes loaded here for non-critical use */

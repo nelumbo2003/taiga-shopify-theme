@@ -25,12 +25,19 @@
       assign show_banner = false
     endif
 
+    # Optimize image loading: First row should be high priority
+    # Mobile: typically 2 items per row, so first 2-4 images
+    # Desktop: typically 4 items per row, so first 4-8 images
     assign lazy_load = false
-    if forloop.index > section.settings.products_per_row_mobile
+    assign priority_load = false
+
+    if forloop.index > 8
       assign lazy_load = true
+    elsif forloop.index <= 4
+      assign priority_load = true
     endif
 
-    render 'card-product', product: product, lazyload: lazy_load, preload: lazy_load, ipr_desktop: section.settings.products_per_row_desktop, ipr_mobile: section.settings.products_per_row_mobile
+    render 'card-product', product: product, lazyload: lazy_load, priority: priority_load, ipr_desktop: section.settings.products_per_row_desktop, ipr_mobile: section.settings.products_per_row_mobile
     if current_block and show_banner == true
       render 'card-banner', current_block: current_block, lazyload: lazy_load, section: section, ipr_array: ipr_array
     endif

@@ -23,9 +23,10 @@
 
   # Card media
 	capture card_images
-    render 'img', src: product.featured_media, aspect_ratio: aspect_ratio, lazyload: lazyload, sizes: sizes, placeholder: 'product-1', sizing_rule: sizing_rule
+    render 'img', src: product.featured_media, aspect_ratio: aspect_ratio, lazyload: lazyload, preload: priority, sizes: sizes, placeholder: 'product-1', sizing_rule: sizing_rule
     if product.media.size > 1 and settings.product_card_show_secondary_image == true
       assign secondary_image = product.media[1]
+      # Secondary image always lazy loaded
       render 'img', src: secondary_image, aspect_ratio: aspect_ratio, lazyload: true, sizes: sizes, placeholder: 'product-2', sizing_rule: sizing_rule
     endif
   endcapture
