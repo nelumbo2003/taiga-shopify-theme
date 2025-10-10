@@ -859,7 +859,7 @@
           "settings": {
             "heading": "Trending products",
             "layout": "carousel",
-            "limit": 10,
+            "limit": 6,
             "columns_desktop": 5,
             "columns_tablet": 5,
             "columns_mobile": 2,
@@ -874,7 +874,7 @@
           "settings": {
             "heading": "Top viewed products",
             "layout": "carousel",
-            "limit": 10,
+            "limit": 6,
             "columns_desktop": 5,
             "columns_tablet": 5,
             "columns_mobile": 2,

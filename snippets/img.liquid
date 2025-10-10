@@ -38,7 +38,9 @@
 -%}
 
 {%- if preload -%}
-  <link rel="preload" as="image" href="{{ src | image_url: width: 480 }}">
+  {%- comment -%} Responsive preload for LCP optimization {%- endcomment -%}
+  <link rel="preload" as="image" href="{{ src | image_url: width: 1200 }}" media="(min-width: 768px)" fetchpriority="high">
+  <link rel="preload" as="image" href="{{ src | image_url: width: 800 }}" media="(max-width: 767px)" fetchpriority="high">
 {%- endif -%}
 
 {%- if wrapped -%}

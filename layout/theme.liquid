@@ -90,8 +90,11 @@
       <link rel="preload" as="image" href="{{ product.featured_image | image_url: width: 800 }}" media="(min-width: 768px)" fetchpriority="high">
       <link rel="preload" as="image" href="{{ product.featured_image | image_url: width: 600 }}" media="(max-width: 767px)" fetchpriority="high">
     {% elsif template.name == 'index' -%}
-      {%- comment -%} Preload first hero image on homepage - Note: Hero image set in theme customizer {%- endcomment -%}
-      {%- comment -%} This will be populated when the first hero section renders {%- endcomment -%}
+      {%- comment -%} Preload homepage hero image - CRITICAL for LCP optimization {%- endcomment -%}
+      {%- comment -%} Desktop: larger image for better quality on wide screens {%- endcomment -%}
+      <link rel="preload" as="image" href="{{ 'Web_Large-wheatcroft_w_0832_BP.jpg' | file_img_url: '1200x' }}" media="(min-width: 768px)" fetchpriority="high">
+      {%- comment -%} Mobile: optimized size for smaller viewports {%- endcomment -%}
+      <link rel="preload" as="image" href="{{ 'Web_Large-wheatcroft_w_0832_BP.jpg' | file_img_url: '800x' }}" media="(max-width: 767px)" fetchpriority="high">
     {% elsif template.name == 'collection' and collection.image != blank -%}
       <link rel="preload" as="image" href="{{ collection.image | image_url: width: 1200 }}" media="(min-width: 768px)" fetchpriority="high">
     {% endif %}
