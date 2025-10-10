@@ -119,8 +119,9 @@
     {% endif -%}
     </noscript>
 
-    {%- comment -%} Load analytics deferrer BEFORE content_for_header to intercept GTM/GA scripts {%- endcomment -%}
+    {%- comment -%} Load script deferres BEFORE content_for_header to intercept heavy app scripts {%- endcomment -%}
     <script type="text/javascript" src="{{ 'lazy-analytics.js' | asset_url }}"></script>
+    <script type="text/javascript" src="{{ 'lazy-app-extensions.js' | asset_url }}"></script>
 
     {%- comment -%} Shopify's content_for_header - moved before scripts for optimal loading {%- endcomment -%}
     {{ content_for_header }}
