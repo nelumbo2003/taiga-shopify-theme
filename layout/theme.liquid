@@ -409,8 +409,8 @@ window.preventScrollToProduct = true;
 <script>document.addEventListener("DOMContentLoaded",function(){var e=document.getElementById("PBarNextFrameWrapper"),n=document.querySelectorAll("admin");e?(document.body.classList.add("admin"),n.forEach(function(e){e.style.display="block"})):n.forEach(function(e){e.remove()})})</script><style>admin{display:none}</style>{% if request.design_mode %}<style>admin{display:block}</style>{% endif %}
 {% # ADMIN ONLY VIEW END# %}
 
-  {%- comment -%} Trustpilot: Using static badge instead of live widget for better performance {%- endcomment -%}
-  {%- comment -%} <script src="{{ 'lazy-trustpilot.js' | asset_url }}" defer></script> {%- endcomment -%}
+  {%- comment -%} Trustpilot: Lazy load widget when footer approaches viewport {%- endcomment -%}
+  <script src="{{ 'lazy-trustpilot.js' | asset_url }}" defer></script>
 
   </body>
 </html>

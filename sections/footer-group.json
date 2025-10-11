@@ -60,7 +60,7 @@
       "type": "custom-liquid",
       "settings": {
         "color_scheme": "",
-        "custom_liquid": "",
+        "custom_liquid": "<!-- TrustBox widget - Micro Review Count (Lazy loaded via lazy-trustpilot.js) -->\n{% comment %} Set locale-specific Trustpilot settings {% endcomment %}\n{% if request.locale.iso_code == 'en-GB' %}\n  {% assign trustpilot_locale = 'en-GB' %}\n  {% assign trustpilot_token = 'bbdf17d8-8716-4b50-bfcc-4a2e21945708' %}\n  {% assign trustpilot_link = 'https://uk.trustpilot.com/review/www.weekendbee.com' %}\n{% elsif request.locale.iso_code == 'nl-NL' %}\n  {% assign trustpilot_locale = 'nl-NL' %}\n  {% assign trustpilot_token = '594c769d-6e06-4237-ad6d-1aea62e826cf' %}\n  {% assign trustpilot_link = 'https://nl.trustpilot.com/review/www.weekendbee.com' %}\n{% else %}\n  {% assign trustpilot_locale = 'en-GB' %}\n  {% assign trustpilot_token = 'bbdf17d8-8716-4b50-bfcc-4a2e21945708' %}\n  {% assign trustpilot_link = 'https://uk.trustpilot.com/review/www.weekendbee.com' %}\n{% endif %}\n\n<div class=\"trustpilot-widget\" \n     data-locale=\"{{ trustpilot_locale }}\" \n     data-template-id=\"5419b6a8b0d04a076446a9ad\" \n     data-businessunit-id=\"5ef08a297261100001f7508f\" \n     data-style-height=\"24px\" \n     data-style-width=\"100%\" \n     data-token=\"{{ trustpilot_token }}\" \n     data-min-review-count=\"0\" \n     data-style-alignment=\"center\">\n  <a href=\"{{ trustpilot_link }}\" target=\"_blank\" rel=\"noopener\">Trustpilot</a>\n</div>\n<!-- End TrustBox widget -->",
         "enable_full_width": true,
         "md_padding_top": 24,
         "md_padding_bottom": 24,
