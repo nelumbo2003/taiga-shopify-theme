@@ -140,6 +140,38 @@
         // Strategy 4: Fallback after 7 seconds
         setTimeout(callback, 7000);
       }
+    },
+
+    // Judge.me Reviews: Aggressively defer (always below fold)
+    judgeme: {
+      patterns: [
+        'judge.me',
+        'judgeme',
+        'jdgm',
+        'judge-me'
+      ],
+      shouldDefer: function() {
+        // Always defer - reviews are below fold on all pages
+        return true;
+      },
+      loadTrigger: function(callback) {
+        // Strategy 1: Load when scrolling near reviews section
+        const reviewsSection = document.querySelector('.jdgm-widget, .jdgm-rev-widg, [data-reviews], #judgeme_product_reviews');
+        if (reviewsSection) {
+          const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+              if (entry.isIntersecting) {
+                callback();
+                observer.disconnect();
+              }
+            });
+          }, { rootMargin: '400px' });  // Load 400px before visible
+          observer.observe(reviewsSection);
+        }
+
+        // Strategy 2: Load after 10 seconds as fallback
+        setTimeout(callback, 10000);
+      }
     }
   };
 
