@@ -1990,3 +1990,39 @@ margin-bottom: 3rem;
   content-visibility: auto; /* Browser optimizes rendering of off-screen content */
   contain-intrinsic-size: 0 200px; /* Hint at size without creating visible blank space */
 }
+
+/* ------------------ */
+/* Eliminate "Blink" from App Replacements (Major CLS Fix) */
+/* ------------------ */
+
+/* Hide native variant picker on product pages - Variant Swatch King will replace it */
+.template-product .product-form__input {
+  opacity: 0;
+  pointer-events: none; /* Prevent interaction with hidden elements */
+  transition: opacity 0.2s ease;
+}
+
+/* Show variant picker after Variant Swatch King loads */
+.template-product .product-form__input.starapps-vsk-loaded,
+.template-product .product-form__input:has(.starapps-vsk) {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Fallback: Show native picker after 3 seconds if app doesn't load */
+.template-product .product-form__input {
+  animation: showFallback 0s 3s forwards;
+}
+
+@keyframes showFallback {
+  to {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+/* Hide native product title briefly if Variant Title King is replacing it */
+.template-product h1.h1 {
+  min-height: 2em; /* Reserve space to prevent layout shift */
+  transition: opacity 0.2s ease;
+}
