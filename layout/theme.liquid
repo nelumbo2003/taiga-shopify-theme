@@ -90,8 +90,28 @@
       {%- comment -%} Product image preload removed: creates URL mismatch when variant images change {%- endcomment -%}
       {%- comment -%} Product images still load fast via fetchpriority="high" in product-media-slider {%- endcomment -%}
     {% elsif template.name == 'index' -%}
-      {%- comment -%} Homepage hero preload removed: file_img_url creates URL mismatch causing "preload not used" warnings {%- endcomment -%}
-      {%- comment -%} Hero image still loads with fetchpriority="high" attribute for fast loading {%- endcomment -%}
+      {%- comment -%} Homepage hero preload: Critical for LCP optimization (target <2.5s from 4.5s) {%- endcomment -%}
+      {%- comment -%} Preload first hero section image with responsive srcset for optimal LCP {%- endcomment -%}
+      {%- for section in sections -%}
+        {%- if section.type == 'hero' -%}
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'image' and block.settings.image != blank -%}
+              {%- assign hero_img = block.settings.image -%}
+              <link rel="preload" as="image"
+                    href="{{ hero_img | image_url: width: 1200 }}"
+                    imagesrcset="{{ hero_img | image_url: width: 390 }} 390w,
+                                {{ hero_img | image_url: width: 767 }} 767w,
+                                {{ hero_img | image_url: width: 1023 }} 1023w,
+                                {{ hero_img | image_url: width: 1200 }} 1200w,
+                                {{ hero_img | image_url: width: 2400 }} 2400w"
+                    imagesizes="(max-width: 390px) 390px, (max-width: 767px) 767px, (max-width: 1023px) 1023px, 1200px"
+                    fetchpriority="high">
+              {%- break -%}
+            {%- endif -%}
+          {%- endfor -%}
+          {%- break -%}
+        {%- endif -%}
+      {%- endfor -%}
     {% elsif template.name == 'collection' and collection.image != blank -%}
       <link rel="preload" as="image" href="{{ collection.image | image_url: width: 1200 }}" media="(min-width: 768px)" fetchpriority="high">
     {% endif %}
@@ -180,6 +200,10 @@
       <script type="text/javascript" src="{{ 'lazy-carousels.js' | asset_url }}" defer></script>
     {% endif -%}
     <script type="text/javascript" src="{{ 'component-animations.js' | asset_url }}" defer></script>
+
+    {%- comment -%} Web Vitals Tracker: Measures LCP, FID, CLS, INP, TTFB for performance monitoring {%- endcomment -%}
+    {%- comment -%} Target: LCP75 < 2.5s (currently ~4.5s) {%- endcomment -%}
+    <script type="text/javascript" src="{{ 'web-vitals-tracker.js' | asset_url }}" defer></script>
 
     {%- comment -%} Everything else, e.g. SEO metas etc. below here {% endcomment %}
     {% if page_description -%}
