@@ -117,7 +117,15 @@
               return; // Let CookieYes load immediately
             }
 
-            if (node.src.includes('googletagmanager.com') ||
+            // IMPORTANT: Don't defer GTM - CookieYes consent banner loads through GTM
+            // GTM must load immediately so consent banner appears for legal compliance
+            if (node.src.includes('googletagmanager.com/gtm.js')) {
+              console.log('GTM loading immediately (required for CookieYes consent banner)');
+              return; // Let GTM load immediately
+            }
+
+            // Still defer other analytics scripts (gtag, GA, Google Ads)
+            if (node.src.includes('googletagmanager.com/gtag') ||
                 node.src.includes('google-analytics.com') ||
                 node.src.includes('gtag')) {
 
