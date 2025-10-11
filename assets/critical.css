@@ -2018,3 +2018,18 @@ margin-bottom: 3rem;
     opacity: 1;
   }
 }
+
+/* ------------------ */
+/* Desktop Layout Optimizations */
+/* ------------------ */
+@media only screen and (min-width: 1024px) {
+  /* Reduce content padding on desktop for tighter layout */
+  .template-product .pdp-content.sm-p {
+    --sm-p: 24px !important;
+  }
+
+  /* Smaller swatches on desktop to fit 5 in one row */
+  .product-form__input .swatch {
+    --single-swatch-size: 24px;
+  }
+}
