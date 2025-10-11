@@ -97,6 +97,18 @@ class VariantSelects extends HTMLElement {
     if (isDesktop && isGrid) {
       document.getElementById(`item-${this.currentVariant.featured_media.id}`)?.scrollIntoView();
     }
+
+    // Scroll to product images on mobile when variant changes (especially for color swatches)
+    const isMobile = window.matchMedia('(max-width: 1023px)').matches;
+    if (isMobile) {
+      const mediaSection = document.querySelector('.pdp-media');
+      if (mediaSection) {
+        mediaSection.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    }
   }
 
   updateURL() {
