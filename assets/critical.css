@@ -1978,21 +1978,15 @@ margin-bottom: 3rem;
 /* CLS Prevention for App Embeds */
 /* ------------------ */
 
-/* Reserve space for variant swatch app before it loads */
-.template-product .product-form__input {
-  min-height: 50px; /* Reserve space for swatch options */
-  transition: min-height 0.3s ease; /* Smooth transition when content loads */
+/* Prevent layout shift from app embeds without creating visible blank space */
+[data-shopify-app-embed] {
+  contain: layout; /* Isolate layout calculations to prevent cascading shifts */
 }
 
-/* Reserve space for Judge.me reviews widget before it loads */
+/* Judge.me reviews: Use content-visibility for better rendering performance */
 .jdgm-widget,
 .jdgm-rev-widg,
 #judgeme_product_reviews {
-  min-height: 200px; /* Reserve space for reviews section */
-  transition: min-height 0.3s ease;
-}
-
-/* Prevent layout shift from app embeds loading */
-[data-shopify-app-embed] {
-  contain: layout; /* Isolate layout calculations */
+  content-visibility: auto; /* Browser optimizes rendering of off-screen content */
+  contain-intrinsic-size: 0 200px; /* Hint at size without creating visible blank space */
 }
