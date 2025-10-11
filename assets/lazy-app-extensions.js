@@ -64,7 +64,7 @@
       }
     },
 
-    // Samita Product Labels: Load when product grid visible
+    // Samita Product Labels: DISABLED - Block completely (customer confirmed disabled)
     samita: {
       patterns: [
         'samita',
@@ -72,31 +72,12 @@
         'product-labels'
       ],
       shouldDefer: function() {
-        // Always defer - labels not critical for initial render
+        // Always block - app is disabled
         return true;
       },
       loadTrigger: function(callback) {
-        // Strategy 1: Load when product grid enters viewport
-        const productGrid = document.querySelector('.product-grid, .collection-grid, .product-list, [data-products]');
-        if (productGrid) {
-          const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(function(entry) {
-              if (entry.isIntersecting) {
-                callback();
-                observer.disconnect();
-              }
-            });
-          }, { rootMargin: '200px' });
-          observer.observe(productGrid);
-        } else {
-          // No product grid found, load after delay
-          setTimeout(callback, 5000);
-        }
-
-        // Strategy 2: Load on idle
-        if ('requestIdleCallback' in window) {
-          requestIdleCallback(callback, { timeout: 6000 });
-        }
+        // NEVER load - app is disabled
+        console.log('Samita Labels blocked (app is disabled)');
       }
     },
 

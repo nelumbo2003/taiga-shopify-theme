@@ -142,6 +142,7 @@
     {%- comment -%} Load script deferres BEFORE content_for_header to intercept heavy app scripts {%- endcomment -%}
     <script type="text/javascript" src="{{ 'lazy-analytics.js' | asset_url }}"></script>
     <script type="text/javascript" src="{{ 'lazy-app-extensions.js' | asset_url }}"></script>
+    <script type="text/javascript" src="{{ 'lazy-clevertar-search.js' | asset_url }}"></script>
 
     {%- comment -%} Shopify's content_for_header - moved before scripts for optimal loading {%- endcomment -%}
     {{ content_for_header }}
@@ -389,8 +390,8 @@ window.preventScrollToProduct = true;
 <script>document.addEventListener("DOMContentLoaded",function(){var e=document.getElementById("PBarNextFrameWrapper"),n=document.querySelectorAll("admin");e?(document.body.classList.add("admin"),n.forEach(function(e){e.style.display="block"})):n.forEach(function(e){e.remove()})})</script><style>admin{display:none}</style>{% if request.design_mode %}<style>admin{display:block}</style>{% endif %}
 {% # ADMIN ONLY VIEW END# %}
 
-  {%- comment -%} Defer Trustpilot widget loading for better performance {%- endcomment -%}
-  <script src="{{ 'lazy-trustpilot.js' | asset_url }}" defer></script>
+  {%- comment -%} Trustpilot: Using static badge instead of live widget for better performance {%- endcomment -%}
+  {%- comment -%} <script src="{{ 'lazy-trustpilot.js' | asset_url }}" defer></script> {%- endcomment -%}
 
   </body>
 </html>
