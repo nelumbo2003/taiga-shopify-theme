@@ -169,8 +169,8 @@
           observer.observe(reviewsSection);
         }
 
-        // Strategy 2: Load after 10 seconds as fallback
-        setTimeout(callback, 10000);
+        // Strategy 2: Load after 15 seconds as fallback (more aggressive deferral)
+        setTimeout(callback, 15000);
       }
     }
   };
