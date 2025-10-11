@@ -82,7 +82,7 @@
     "enable_search": true,
     "search_recommendations": "",
     "head_custom_liquid": "<!-- Google Tag Manager -->\n<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer','GTM-MK59RSK');</script>\n<!-- End Google Tag Manager -->\n<script async=\"true\" type=\"text/javascript\" src=\"https://s.kk-resources.com/leadtag.js\"></script>\n <meta name=\"format-detection\" content=\"telephone=no\">\n  <!-- Other head content -->\n<script>\n  window.cstbr = window.cstbr || [];\n  window.cstbr.push({\n    type: 'BASKET_ADD',\n    product_id: \"{{ product.selected_or_first_available_variant.id }}\" // Using variant ID in Shopify\n  });\n</script>",
-    "body_custom_liquid": "<!-- Google Tag Manager (noscript) -->\n<noscript><iframe src=\"https://www.googletagmanager.com/ns.html?id=GTM-MK59RSK\"\nheight=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe></noscript>\n<!-- End Google Tag Manager (noscript) -->\n\n<!-- Cookieyes script -->\n<script src=\"https://cdn-cookieyes.com/common/shopify.js\"></script>",
+    "body_custom_liquid": "<!-- Google Tag Manager (noscript) -->\n<noscript><iframe src=\"https://www.googletagmanager.com/ns.html?id=GTM-MK59RSK\"\nheight=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe></noscript>\n<!-- End Google Tag Manager (noscript) -->",
     "disable_product_structured_data": false,
     "product_grid_gap": 3,
     "announcement_font": "header",
@@ -206,11 +206,6 @@
           "customPaginationTemplateLoader": "{%- capture paginationTemplate -%}{% render 'globo.filter.pagination' %}{%- endcapture -%}{%- unless paginationTemplate contains 'Liquid error' -%}<script id=\"gspfPagination\" type=\"template/html\">{{- paginationTemplate | replace: \"script>\", \"scripttag>\" -}}</script>{%- endunless -%}",
           "customYMMTemplateLoader": "{%- capture YMMTemplate -%}{% render 'globo.filter.form' %}{%- endcapture -%}{%- unless YMMTemplate contains 'Liquid error' -%}<script id=\"gspfForm\" type=\"template/html\">{{- YMMTemplate | replace: \"script>\", \"scripttag>\" -}}</script>{%- endunless -%}"
         }
-      },
-      "3824936769257688723": {
-        "type": "shopify://apps/sami-product-labels/blocks/app-embed-block/b9b44663-5d51-4be1-8104-faedd68da8c5",
-        "disabled": true,
-        "settings": {}
       }
     },
     "color_schemes": {
