@@ -173,6 +173,12 @@
     {% elsif settings.product_card_quick_buy -%}
       <script type="text/javascript" data-loading="lazy" data-src="{{ 'component-product-form.js' | asset_url }}"></script>
     {% endif -%}
+
+    {%- comment -%} Load lazy-carousels on homepage to optimize New Arrivals/Best Sellers blocks {%- endcomment -%}
+    {%- comment -%} These blocks appear right after hero and should load immediately (above fold) {%- endcomment -%}
+    {% if template.name == 'index' -%}
+      <script type="text/javascript" src="{{ 'lazy-carousels.js' | asset_url }}" defer></script>
+    {% endif -%}
     <script type="text/javascript" src="{{ 'component-animations.js' | asset_url }}" defer></script>
 
     {%- comment -%} Everything else, e.g. SEO metas etc. below here {% endcomment %}
