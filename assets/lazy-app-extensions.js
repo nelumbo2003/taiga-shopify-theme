@@ -20,13 +20,15 @@
    * App-specific loading strategies
    */
   const appStrategies = {
-    // Globo Filter: Load immediately on collection/search, defer on homepage
+    // Globo Filter / Smart Product Filter: Context-aware with above-fold detection
     globo: {
       patterns: [
         'globo.filter',
         'globoFilter',
         'globo-filter',
-        'productfiltersearch.com'
+        'productfiltersearch.com',
+        'filter-eu9.globo.io',
+        'smart-product-filter'
       ],
       shouldDefer: function() {
         // Don't defer on collection or search pages (filters needed)
@@ -34,7 +36,27 @@
         if (template.includes('template-collection') || template.includes('template-search')) {
           return false;
         }
-        // Defer on homepage and product pages
+
+        // On homepage: Check if there are above-fold app sections (New Arrivals, Best Sellers)
+        if (template.includes('template-index')) {
+          // Look for Smart Product Filter app blocks above fold
+          const appSections = document.querySelectorAll(
+            '[id*="shopify-block"][id*="smart_product_filter"], ' +
+            '[class*="spf-"], ' +
+            '.shopify-section[id*="apps"]'
+          );
+
+          // Check if any are above fold (within first 800px)
+          for (let i = 0; i < appSections.length; i++) {
+            const rect = appSections[i].getBoundingClientRect();
+            if (rect.top < 800 && rect.top >= 0) {
+              console.log('Globo/Smart Product Filter: Above-fold section detected, loading immediately');
+              return false; // Don't defer - load immediately
+            }
+          }
+        }
+
+        // Defer on product pages or if no above-fold sections
         return true;
       },
       loadTrigger: function(callback) {
