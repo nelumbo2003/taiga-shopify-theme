@@ -260,8 +260,22 @@
       });
     });
 
-    observer.observe(document.head, { childList: true, subtree: true });
-    observer.observe(document.body, { childList: true, subtree: true });
+    // Observe head if it exists
+    if (document.head) {
+      observer.observe(document.head, { childList: true, subtree: true });
+    }
+
+    // Observe body if it exists, otherwise wait for it
+    if (document.body) {
+      observer.observe(document.body, { childList: true, subtree: true });
+    } else {
+      // Body doesn't exist yet, wait for DOMContentLoaded
+      document.addEventListener('DOMContentLoaded', function() {
+        if (document.body) {
+          observer.observe(document.body, { childList: true, subtree: true });
+        }
+      });
+    }
 
     // Stop observing after 5 seconds (apps should be loaded by then)
     setTimeout(function() {

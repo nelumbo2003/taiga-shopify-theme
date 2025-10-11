@@ -67,11 +67,11 @@
     const events = ['click', 'scroll', 'touchstart', 'mousemove', 'keydown'];
 
     events.forEach(function(eventName) {
-      document.addEventListener(eventName, function() {
+      document.addEventListener(eventName, function handler() {
         loadAnalytics();
         // Remove listeners after first trigger
         events.forEach(function(e) {
-          document.removeEventListener(e, arguments.callee);
+          document.removeEventListener(e, handler);
         });
       }, { once: true, passive: true });
     });

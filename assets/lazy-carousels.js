@@ -58,6 +58,7 @@
 
     // Find all carousel/app sections on the page
     // These selectors target Smart Product Filter/Search app blocks and carousels
+    // Use specific selectors to avoid matching child elements
     const carouselSelectors = [
       '[id*="shopify-block"][id*="smart_product_filter"]',
       '[id*="shopify-block"][id*="new_products"]',
@@ -66,7 +67,6 @@
       '[id*="shopify-block"][id*="globo"]',
       '.shopify-section[id*="apps"]',
       '[data-section-type="apps"]',
-      '[class*="spf-"]',
       '.product-carousel',
       '.trending-products',
       '.best-sellers',

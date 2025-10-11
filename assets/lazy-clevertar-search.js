@@ -50,11 +50,17 @@
    * Identify if a script is a Clevertar Search script
    */
   function isClevertarScript(src) {
-    return src && (
+    if (!src) return false;
+
+    // Don't defer this lazy loader script itself!
+    if (src.includes('lazy-clevertar-search.js')) {
+      return false;
+    }
+
+    return (
       src.includes('clevertar.app') ||
-      src.includes('cs-search') ||
-      src.includes('clever-search') ||
-      src.includes('clevertar')
+      src.includes('cs-search.js') ||  // More specific to avoid self-match
+      src.includes('clever-search')
     );
   }
 
@@ -176,8 +182,22 @@
       });
     });
 
-    observer.observe(document.head, { childList: true, subtree: true });
-    observer.observe(document.body, { childList: true, subtree: true });
+    // Observe head if it exists
+    if (document.head) {
+      observer.observe(document.head, { childList: true, subtree: true });
+    }
+
+    // Observe body if it exists, otherwise wait for it
+    if (document.body) {
+      observer.observe(document.body, { childList: true, subtree: true });
+    } else {
+      // Body doesn't exist yet, wait for DOMContentLoaded
+      document.addEventListener('DOMContentLoaded', function() {
+        if (document.body) {
+          observer.observe(document.body, { childList: true, subtree: true });
+        }
+      });
+    }
 
     // Stop observing after 5 seconds (Clevertar should be loaded by then)
     setTimeout(function() {
