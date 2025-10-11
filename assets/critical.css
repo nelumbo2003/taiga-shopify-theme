@@ -1994,35 +1994,29 @@ margin-bottom: 3rem;
 /* ------------------ */
 /* Eliminate "Blink" from App Replacements (Major CLS Fix) */
 /* ------------------ */
+/* Fix for multiple Star Apps causing sequential layout shifts */
 
-/* Hide native variant picker on product pages - Variant Swatch King will replace it */
-.template-product .product-form__input {
+/* Hide only specific elements that Star Apps will replace */
+.template-product .product-form__input,
+.template-product .main-product h1.h1 {
   opacity: 0;
-  pointer-events: none; /* Prevent interaction with hidden elements */
-  transition: opacity 0.2s ease;
+  transition: opacity 0.3s ease-in;
 }
 
-/* Show variant picker after Variant Swatch King loads */
-.template-product .product-form__input.starapps-vsk-loaded,
-.template-product .product-form__input:has(.starapps-vsk) {
+/* Show elements when Star Apps are loaded (JavaScript will add this class) */
+.template-product.starapps-loaded .product-form__input,
+.template-product.starapps-loaded .main-product h1.h1 {
   opacity: 1;
-  pointer-events: auto;
 }
 
-/* Fallback: Show native picker after 3 seconds if app doesn't load */
-.template-product .product-form__input {
-  animation: showFallback 0s 3s forwards;
+/* Fallback: Show content after 2 seconds even if apps don't finish loading */
+.template-product .product-form__input,
+.template-product .main-product h1.h1 {
+  animation: showProductContent 0s 2s forwards;
 }
 
-@keyframes showFallback {
+@keyframes showProductContent {
   to {
     opacity: 1;
-    pointer-events: auto;
   }
-}
-
-/* Hide native product title briefly if Variant Title King is replacing it */
-.template-product h1.h1 {
-  min-height: 2em; /* Reserve space to prevent layout shift */
-  transition: opacity 0.2s ease;
 }
