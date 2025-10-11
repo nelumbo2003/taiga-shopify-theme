@@ -19,6 +19,13 @@
             "margin_top": 8
           }
         },
+        "text_tfg3xK": {
+          "type": "text",
+          "settings": {
+            "text": "<p>{{ product.vendor }}</p>",
+            "margin_top": 8
+          }
+        },
         "title": {
           "type": "title",
           "settings": {
@@ -268,18 +275,11 @@
             "to_exclude": "",
             "margin_top": 32
           }
-        },
-        "text_tfg3xK": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "text": "<p>Text block</p>",
-            "margin_top": 8
-          }
         }
       },
       "block_order": [
         "badges_LEQFRt",
+        "text_tfg3xK",
         "title",
         "custom_liquid_Y7eCYD",
         "daf71f1d-b216-4922-9744-4983430bae22",
@@ -308,8 +308,7 @@
         "d3e581c9-791c-4611-8e4d-93678a7581d7",
         "e8b620fb-28a6-41f0-9b4b-eb4f14e48c37",
         "6e3c1ffa-e4bd-48ea-a5f1-940e28142f1f",
-        "similar_collections_b7dgrF",
-        "text_tfg3xK"
+        "similar_collections_b7dgrF"
       ],
       "settings": {
         "product_image_aspect_ratio": "natural",
@@ -445,6 +444,8 @@
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
             "review_data": "sample_data",
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget",
             "max_width": 1200
           }
         }
