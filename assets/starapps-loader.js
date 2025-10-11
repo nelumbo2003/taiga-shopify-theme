@@ -5,7 +5,6 @@
  * Prevents cumulative layout shift from sequential app loading
  *
  * Active Apps:
- * - Variant Title King (VTK)
  * - Variant Descriptions King (VDK)
  * - Variant Image King (VIA)
  * - Swatch King (VSK)
@@ -20,7 +19,6 @@
   }
 
   const appDetectors = {
-    vtk: false,  // Variant Title King
     vdk: false,  // Variant Descriptions King
     via: false,  // Variant Image King
     vsk: false   // Swatch King
@@ -35,11 +33,6 @@
    */
   function checkAppsLoaded() {
     attempts++;
-
-    // Check Variant Title King (VTK)
-    if (!appDetectors.vtk) {
-      appDetectors.vtk = !!document.querySelector('[data-starapps-vtk], .starapps-vtk-loaded');
-    }
 
     // Check Variant Descriptions King (VDK)
     if (!appDetectors.vdk) {
@@ -57,7 +50,7 @@
     }
 
     // Check if all apps are loaded OR we've tried enough times
-    const allLoaded = appDetectors.vtk && appDetectors.vdk && appDetectors.via && appDetectors.vsk;
+    const allLoaded = appDetectors.vdk && appDetectors.via && appDetectors.vsk;
     const shouldReveal = allLoaded || attempts >= maxAttempts;
 
     if (shouldReveal) {
@@ -75,7 +68,6 @@
     document.documentElement.classList.add('starapps-loaded');
 
     console.log('Star Apps loaded:', {
-      VTK: appDetectors.vtk,
       VDK: appDetectors.vdk,
       VIA: appDetectors.via,
       VSK: appDetectors.vsk,

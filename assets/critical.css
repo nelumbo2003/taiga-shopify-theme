@@ -1994,24 +1994,21 @@ margin-bottom: 3rem;
 /* ------------------ */
 /* Eliminate "Blink" from App Replacements (Major CLS Fix) */
 /* ------------------ */
-/* Fix for multiple Star Apps causing sequential layout shifts */
+/* Fix for 3 Star Apps (VDK, VIA, VSK) causing sequential layout shifts */
 
 /* Hide only specific elements that Star Apps will replace */
-.template-product .product-form__input,
-.template-product .main-product h1.h1 {
+.template-product .product-form__input {
   opacity: 0;
   transition: opacity 0.3s ease-in;
 }
 
 /* Show elements when Star Apps are loaded (JavaScript will add this class) */
-.template-product.starapps-loaded .product-form__input,
-.template-product.starapps-loaded .main-product h1.h1 {
+.template-product.starapps-loaded .product-form__input {
   opacity: 1;
 }
 
 /* Fallback: Show content after 2 seconds even if apps don't finish loading */
-.template-product .product-form__input,
-.template-product .main-product h1.h1 {
+.template-product .product-form__input {
   animation: showProductContent 0s 2s forwards;
 }
 
