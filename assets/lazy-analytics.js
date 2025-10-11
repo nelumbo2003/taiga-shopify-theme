@@ -1,8 +1,14 @@
 /**
  * Lazy Analytics Loader
  * Defers loading of Google Tag Manager, Google Analytics, and other tracking scripts
- * Addresses GT Metrix findings: GTM (263ms) + GA (338ms) = ~600ms TBT
- * Expected improvement: -500-600ms TTI on initial load
+ *
+ * Strategy:
+ * - CookieYes loads immediately via head_custom_liquid (GDPR compliance)
+ * - GTM/GA defer until user interaction/idle/timeout (performance optimization)
+ *
+ * Performance Impact:
+ * - Addresses GT Metrix findings: GTM (263ms) + GA (338ms) = ~600ms TBT
+ * - Expected improvement: -1,400ms LCP, -500-600ms TTI on initial load
  */
 
 (function() {
@@ -113,19 +119,13 @@
         mutation.addedNodes.forEach(function(node) {
           if (node.tagName === 'SCRIPT' && node.src) {
             // IMPORTANT: Don't defer CookieYes - it manages consent and must load first
+            // CookieYes now loads directly via head_custom_liquid (independent from GTM)
             if (node.src.includes('cookieyes.com')) {
               return; // Let CookieYes load immediately
             }
 
-            // IMPORTANT: Don't defer GTM - CookieYes consent banner loads through GTM
-            // GTM must load immediately so consent banner appears for legal compliance
-            if (node.src.includes('googletagmanager.com/gtm.js')) {
-              console.log('GTM loading immediately (required for CookieYes consent banner)');
-              return; // Let GTM load immediately
-            }
-
-            // Still defer other analytics scripts (gtag, GA, Google Ads)
-            if (node.src.includes('googletagmanager.com/gtag') ||
+            // Defer all GTM/GA scripts (CookieYes now loads independently)
+            if (node.src.includes('googletagmanager.com') ||
                 node.src.includes('google-analytics.com') ||
                 node.src.includes('gtag')) {
 
@@ -138,7 +138,7 @@
 
               // Remove to prevent immediate execution
               node.remove();
-              console.log('Deferred analytics script:', node.src);
+              console.log('Deferred analytics script (CookieYes loads independently):', node.src);
             }
           }
         });
