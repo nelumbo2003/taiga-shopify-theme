@@ -112,6 +112,11 @@
       mutations.forEach(function(mutation) {
         mutation.addedNodes.forEach(function(node) {
           if (node.tagName === 'SCRIPT' && node.src) {
+            // IMPORTANT: Don't defer CookieYes - it manages consent and must load first
+            if (node.src.includes('cookieyes.com')) {
+              return; // Let CookieYes load immediately
+            }
+
             if (node.src.includes('googletagmanager.com') ||
                 node.src.includes('google-analytics.com') ||
                 node.src.includes('gtag')) {
