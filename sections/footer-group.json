@@ -60,7 +60,7 @@
       "type": "custom-liquid",
       "settings": {
         "color_scheme": "",
-        "custom_liquid": "<!-- Static Trustpilot Badge (Performance optimized - replaces live widget) -->\n<a href=\"https://{{ shop.locale | split: '-' | first }}.trustpilot.com/review/www.weekendbee.com\" \n   target=\"_blank\" \n   rel=\"noopener\"\n   style=\"display: inline-flex; align-items: center; gap: 8px; text-decoration: none; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;\">\n  <span style=\"color: #191919; font-size: 14px; font-weight: 600;\">Excellent</span>\n  <img src=\"https://cdn.trustpilot.net/brand-assets/4.1.0/stars/stars-4.5.svg\" \n       alt=\"4.5 out of 5 stars\" \n       width=\"120\" \n       height=\"24\" \n       style=\"display: block;\" \n       loading=\"lazy\">\n  <span style=\"color: #191919; font-size: 14px;\">349 reviews on</span>\n  <svg width=\"80\" height=\"24\" viewBox=\"0 0 126 31\" style=\"display: block;\">\n    <path fill=\"#00B67A\" d=\"M0 0h126v31H0z\"/>\n    <path fill=\"#FFF\" d=\"M30.1 11.3l-3.7 2.8 1.4 4.5-3.7-2.7-3.7 2.7 1.4-4.5-3.7-2.8h4.6l1.4-4.5 1.4 4.5h4.6zM15.8 23.1l-1.4-4.5-3.7 2.7 1.4-4.5-3.7-2.8h4.6l1.4-4.5 1.4 4.5h4.6l-3.7 2.8 1.4 4.5-3.7-2.7-3.6 2.7z\"/>\n  </svg>\n</a>\n<!-- End Static Trustpilot Badge -->",
+        "custom_liquid": "",
         "enable_full_width": true,
         "md_padding_top": 24,
         "md_padding_bottom": 24,
