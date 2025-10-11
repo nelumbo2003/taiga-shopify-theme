@@ -136,11 +136,6 @@
         "disabled": false,
         "settings": {}
       },
-      "1306064247955555917": {
-        "type": "shopify://apps/variant-title-king/blocks/starapps-vtk-embed/b9b7a642-58c3-4fe1-8f1b-ed3e502da04b",
-        "disabled": false,
-        "settings": {}
-      },
       "starapps-vsk": {
         "type": "shopify://apps/swatch-king/blocks/variant-swatch-king/0850b1e4-ba30-4a0d-a8f4-f9a939276d7d",
         "disabled": false,
@@ -206,6 +201,11 @@
           "customPaginationTemplateLoader": "{%- capture paginationTemplate -%}{% render 'globo.filter.pagination' %}{%- endcapture -%}{%- unless paginationTemplate contains 'Liquid error' -%}<script id=\"gspfPagination\" type=\"template/html\">{{- paginationTemplate | replace: \"script>\", \"scripttag>\" -}}</script>{%- endunless -%}",
           "customYMMTemplateLoader": "{%- capture YMMTemplate -%}{% render 'globo.filter.form' %}{%- endcapture -%}{%- unless YMMTemplate contains 'Liquid error' -%}<script id=\"gspfForm\" type=\"template/html\">{{- YMMTemplate | replace: \"script>\", \"scripttag>\" -}}</script>{%- endunless -%}"
         }
+      },
+      "1306064247955555917": {
+        "type": "shopify://apps/variant-title-king/blocks/starapps-vtk-embed/b9b7a642-58c3-4fe1-8f1b-ed3e502da04b",
+        "disabled": true,
+        "settings": {}
       }
     },
     "color_schemes": {
