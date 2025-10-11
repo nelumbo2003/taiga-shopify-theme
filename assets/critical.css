@@ -2000,6 +2000,7 @@ margin-bottom: 3rem;
 .template-product .product-form__input {
   opacity: 0;
   transition: opacity 0.3s ease-in;
+  min-height: 70px; /* Reserve space for label + swatch row to prevent CLS when images load */
 }
 
 /* Show elements when Star Apps are loaded (JavaScript will add this class) */
