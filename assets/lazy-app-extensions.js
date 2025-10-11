@@ -31,32 +31,21 @@
         'smart-product-filter'
       ],
       shouldDefer: function() {
-        // Don't defer on collection or search pages (filters needed)
         const template = document.documentElement.className;
+
+        // Don't defer on collection or search pages (filters needed immediately)
         if (template.includes('template-collection') || template.includes('template-search')) {
           return false;
         }
 
-        // On homepage: Check if there are above-fold app sections (New Arrivals, Best Sellers)
+        // Don't defer on homepage (has critical above-fold carousels: New Arrivals, Best Sellers)
+        // Previous above-fold detection ran too early before DOM elements existed
         if (template.includes('template-index')) {
-          // Look for Smart Product Filter app blocks above fold
-          const appSections = document.querySelectorAll(
-            '[id*="shopify-block"][id*="smart_product_filter"], ' +
-            '[class*="spf-"], ' +
-            '.shopify-section[id*="apps"]'
-          );
-
-          // Check if any are above fold (within first 800px)
-          for (let i = 0; i < appSections.length; i++) {
-            const rect = appSections[i].getBoundingClientRect();
-            if (rect.top < 800 && rect.top >= 0) {
-              console.log('Globo/Smart Product Filter: Above-fold section detected, loading immediately');
-              return false; // Don't defer - load immediately
-            }
-          }
+          console.log('Globo/Smart Product Filter: Homepage detected, loading immediately for carousels');
+          return false;
         }
 
-        // Defer on product pages or if no above-fold sections
+        // Defer only on product pages (no critical carousels there)
         return true;
       },
       loadTrigger: function(callback) {
